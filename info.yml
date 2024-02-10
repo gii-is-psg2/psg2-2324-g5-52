@@ -1,32 +1,29 @@
 project:
-  name: 'PSG2-2324-GX-XY Petclinic'
-  owner: 'LX'
-  teamId: 'XY'
+  name: 'PSG2-2324-G5-52 Petclinic'
+  owner: 'L5'
+  teamId: '52'
   identities:
     github:
       url: 'https://github.com/gii-is-psg2/react-petclinic'
   members:
     member1:
-      name: 'José María'
-      surname: 'García' 
-      githubUsername: 'josemgarcia'
+      name: 'David'
+      surname: 'Godoy Fernández' 
+      githubUsername: 'Davgodfer'
     member2:
-      name: 'Jose Antonio'
-      surname: 'Parejo'
-      githubUsername: 'japarejo'
+      name: 'Benjamín'
+      surname: 'Maureira Flores'
+      githubUsername: 'benjimrfl'
     member3:
-      name: 'Amador'
-      surname: 'Durán'
-      githubUsername: 'amador-duran-toro'
+      name: 'Ramón José'
+      surname: 'Guerrero Romero'
+      githubUsername: 'ramguerom'
     member4:
-      name: 'Carlos'
-      surname: 'Müller'
-      githubUsername: 'cmullercejas'
+      name: 'Miguel'
+      surname: 'Hernández Sánchez'
+      githubUsername: 'Yato03'
     member5:
-      name: 'Lola'
-      surname: 'De Acuña'
-      githubUsername: 'loladacuna'
-    member6:
-      name: 'Alfonso'
-      surname: 'Márquez'
-      githubUsername: 'alfedu'
+      name: 'Rafael David'
+      surname: 'Caro Medina'
+      githubUsername: 'rafcarmed'
+    
