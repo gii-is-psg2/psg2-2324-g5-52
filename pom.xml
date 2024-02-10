@@ -34,6 +34,27 @@
 
 	</properties>
 
+	<developers>
+
+		<developer>
+			<id>rafcarmed</id>
+			<name>Rafael David Caro Medina</name>
+			<email>rafcarmed@alum.us.es</email>
+			<url>http://rafcarmed.us.es</url>
+			<organization>ETSII</organization>
+			<organizationUrl>https://informatica.us.es/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europa Central/Zona horaria de Madrid (GMT+1)</timezone>
+			<properties>
+				<picUrl>http://informatica.us.es/rafcarmed/pic</picUrl>
+			</properties>
+		</developer>
+    
+	</developers>
+
 	<dependencies>
 
 		<!-- Spring and Spring Boot dependencies -->
