@@ -47,7 +47,7 @@
 				<role>architect</role>
 				<role>developer</role>
 			</roles>
-			<timezone>Europa Central/Zona horaria de Madrid (GMT+1)</timezone>
+			<timezone>Europe/Madrid</timezone>
 			<properties>
 				<picUrl>http://informatica.us.es/rafcarmed/pic</picUrl>
 			</properties>
