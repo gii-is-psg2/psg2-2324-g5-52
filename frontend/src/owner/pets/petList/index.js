@@ -114,7 +114,7 @@ export default function OwnerPetList() {
           <Link
             to="/myPets/new"
             className="auth-button"
-            style={{ textDecoration: "none", marginBottom: "2rem" }}
+            style={{ textDecoration: "none", marginBottom: "2rem", background: "#923B28", color: "white" }}
           >
             Add Pet
           </Link>
@@ -135,14 +135,15 @@ export default function OwnerPetList() {
                 <div className="pet-options">
                   <Link
                     to={"/myPets/" + pet.id}
-                    className="auth-button blue"
-                    style={{ textDecoration: "none" }}
+                    className="auth-button"
+                    style={{ textDecoration: "none", background: "#5B281D", color: "white" }}
                   >
                     Edit
                   </Link>
                   <button
                     onClick={() => removePet(pet.id)}
-                    className="auth-button danger"
+                    className="auth-button brown"
+                    style={{ background: "#573A34", color: "white" }}
                   >
                     Delete
                   </button>
@@ -178,7 +179,7 @@ export default function OwnerPetList() {
                               <Link
                                 to={`/myPets/${pet.id}/visits/${visit.id}`}
                                 className="edit-visit-button"
-                                style={{ textDecoration: "none" }}
+                                style={{ textDecoration: "none", color: "white", background: "#31110B"}}
                               >
                                 Edit
                               </Link>
@@ -192,8 +193,8 @@ export default function OwnerPetList() {
                   )}
                   <Link
                     to={`/myPets/${pet.id}/visits/new`}
-                    className="auth-button blue"
-                    style={{ textDecoration: "none", marginTop: "20px" }}
+                    className="auth-button"
+                    style={{ textDecoration: "none", marginTop: "20px", background: "#691708", color: "white"}}
                   >
                     Add Visit
                   </Link>
