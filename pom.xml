@@ -69,6 +69,23 @@
 				<picUrl>http://informatica.us.es/rafcarmed/pic</picUrl>
 			</properties>
 		</developer>
+
+		<developer>
+			<id>benmauflo</id>
+			<name>Benjamin Maureira Flores</name>
+			<email>benmauflo@alum.us.es</email>
+			<url>http://benmauflo.us.es</url>
+			<organization>ETSII</organization>
+			<organizationUrl>https://informatica.us.es/</organizationUrl>
+			<roles>
+				<role>documenter</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+			<properties>
+				<picUrl>http://informatica.us.es/benmauflo/pic</picUrl>
+			</properties>
+		</developer>
     
 	</developers>
 
