@@ -78,12 +78,29 @@
 			<organization>ETSII</organization>
 			<organizationUrl>https://informatica.us.es/</organizationUrl>
 			<roles>
-				<role>documenter</role>
+				<role>architect</role>
 				<role>developer</role>
 			</roles>
 			<timezone>Europe/Madrid</timezone>
 			<properties>
 				<picUrl>http://informatica.us.es/benmauflo/pic</picUrl>
+			</properties>
+		</developer>
+
+		<developer>
+			<id>davgodfer</id>
+			<name>David Godoy Fernández</name>
+			<email>davgodfer@alum.us.es</email>
+			<url>http://davgodfer.us.es</url>
+			<organization>ETSII</organization>
+			<organizationUrl>https://informatica.us.es/</organizationUrl>
+			<roles>
+				<role>documenter</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+			<properties>
+				<picUrl>http://informatica.us.es/davgodfer/pic</picUrl>
 			</properties>
 		</developer>
     
