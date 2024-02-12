@@ -52,6 +52,23 @@
 				<picUrl>http://informatica.us.es/rafcarmed/pic</picUrl>
 			</properties>
 		</developer>
+
+		<developer>
+			<id>ramguerom</id>
+			<name>Ramon Jose Guerrero Romero</name>
+			<email>ramguerom@alum.us.es</email>
+			<url>http://ramguerom.us.es</url>
+			<organization>ETSII</organization>
+			<organizationUrl>https://informatica.us.es/</organizationUrl>
+			<roles>
+				<role>documenter</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+			<properties>
+				<picUrl>http://informatica.us.es/rafcarmed/pic</picUrl>
+			</properties>
+		</developer>
     
 	</developers>
 
