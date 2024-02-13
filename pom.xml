@@ -103,6 +103,22 @@
 				<picUrl>http://informatica.us.es/davgodfer/pic</picUrl>
 			</properties>
 		</developer>
+		<developer>
+			<id>mighersan1</id>
+			<name>Miguel Hernández Sánchez</name>
+			<email>mighersan1@alum.us.es</email>
+			<url>http://mighersan1.us.es</url>
+			<organization>ETSII</organization>
+			<organizationUrl>https://informatica.us.es/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+			<properties>
+				<picUrl>http://informatica.us.es/mighersan1/pic</picUrl>
+			</properties>
+		</developer>
     
 	</developers>
 
