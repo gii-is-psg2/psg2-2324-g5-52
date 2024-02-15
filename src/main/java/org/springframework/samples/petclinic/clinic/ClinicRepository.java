@@ -19,4 +19,7 @@ public interface ClinicRepository extends CrudRepository<Clinic, Integer> {
 
     @Query("SELECT c FROM Clinic c WHERE c.clinicOwner.user.id = :userId")
     List<Clinic> findClinicsByUserId(int userId);
+
+    @Query("SELECT c FROM Clinic c WHERE c.name = :name")
+    Clinic findClinicByName(String name);
 }

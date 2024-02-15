@@ -32,6 +32,11 @@ public class ClinicService {
 	}
 
 	@Transactional(readOnly = true)
+	public Clinic findClinicByName(String name) throws DataAccessException {
+		return clinicRepository.findClinicByName(name);
+	}
+
+	@Transactional(readOnly = true)
 	public Clinic findClinicById(int clinicId) throws DataAccessException {
 		
 		Optional<Clinic> clinic = clinicRepository.findById(clinicId);
