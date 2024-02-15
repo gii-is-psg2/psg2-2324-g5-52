@@ -49,10 +49,12 @@ public interface ConsultationRepository extends CrudRepository<Consultation, Int
 			+ " FROM  Consultation c WHERE c.owner.id = :ownerId GROUP BY YEAR(c.creationDate)")
 	public List<Map<String, Integer>> countConsultationsGroupedByYear(int ownerId);
 
-	@Query("SELECT c FROM Consultation c WHERE c.owner.clinic.clinicOwner.user.id = :userId")
+	// Solo muestra los clinic comment a true a los clinic owner
+	@Query("SELECT c FROM Consultation c WHERE c.owner.clinic.clinicOwner.user.id = :userId AND c.isClinicComment = TRUE")
 	public List<Consultation> findAllByClinicOwnerUserId(int userId);
 
-	@Query("SELECT c FROM Consultation c WHERE c.owner.clinic.id = :clinicId")
+	// Solo muestra los clinic comment a false a los vets
+	@Query("SELECT c FROM Consultation c WHERE c.owner.clinic.id = :clinicId AND c.isClinicComment = FALSE")
 	public List<Consultation> findAllByClinicId(int clinicId);
 
 }
