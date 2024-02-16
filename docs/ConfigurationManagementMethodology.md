@@ -2,10 +2,10 @@
 
 En este informe se describe la metodología de gestión de la configuración seguida por el grupo de trabajo G5-52, siendo aplicable al proyecto actual y a proyectos futuros que se puedan desarrollar.
 
-## Estandares de Codificación
+## Estandares de Codificación (ramon y miguel)
 
 Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se aplican de manera consistente en todo el proyecto. Esto incluye convenciones de nomenclatura, estilo de código y prácticas recomendadas como las siguientes:
-- **Formato del código**: 4 espacios, maxima longitud (?), indentación, line break antes de un operador, blank lines, imports (java style guide)
+- **Formato del código**: 4 espacios, maxima longitud 70 caracteres, indentación, line break antes de un operador, blank lines, imports (java style guide)
 - **Operadores**: espacio antes y despues
 - **Casting**: espacio despues del casting
 - **Estructuras de control**: (drupal)
@@ -17,7 +17,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 
 
-## Política de Mensajes de Commit
+## Política de Mensajes de Commit (benji)
 
 presentacion de ev
 
@@ -55,7 +55,7 @@ La estrategia de ramas se basa en Git Flow y revisiones por parejas para asegura
 3. Fusionar la rama de hotfix con `main` y `develop`.
 4. Etiquetar la versión corregida.
 
-## Semántica de Versionado
+## Semántica de Versionado (david)
 
 presentacion de ev
 
@@ -63,9 +63,9 @@ presentacion de ev
 
 Una tarea se considera "hecha" cuando se han completado las siguientes acciones:
 
+- Toda la funcionalidad de la tarea está satisfecha.
 - El código ha sido revisado y aprobado por al menos un compañero de equipo.
-- Se han pasado todas las pruebas automatizadas.
-- La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `master` según corresponda).
+- La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
 
 ## Gestión de Documentos
 
