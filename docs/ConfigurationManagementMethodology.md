@@ -55,9 +55,21 @@ La estrategia de ramas se basa en Git Flow y revisiones por parejas para asegura
 3. Fusionar la rama de hotfix con `main` y `develop`.
 4. Etiquetar la versión corregida.
 
-## Semántica de Versionado (david)
+## Semántica de Versionado
 
-presentacion de ev
+La semántica de versionado definida es la siguiente:
+
+**X.y.z-ETIQUETA**
+
+- **X-Versión mayor**: Cambios mayores, rompe la compatibiladad de la API, la versión inicial será 0.y.z, la versión 1.0.0 definirá la primera API pública.
+
+- **y-Versión menor**: Cambios menores, no rompen la compatibilidad de la API, incluyen nuevas funcionalidades y mejoras, puede incluir parches.
+
+- **z-Parche**: Elimincación de bugs, no rompen la compatibilidad de la API, solo cambios internos para arreglar comportamientos incorrectos.
+
+- **ETIQUETA**: Indican versiones preliminares, utilizado también para metadata, cuidado al comparar la procedencia de las versiones.
+
+- **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demas, cuando se incremente la versión menor, se resetea el parche.
 
 ## Definición de "Hecho"
 
