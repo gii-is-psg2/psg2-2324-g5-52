@@ -17,9 +17,40 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 
 
-## Política de Mensajes de Commit (benji)
+## Política de Mensajes de Commit
+Los commits se realizarán siguiendo el siguiente patrón:
+`<type>[optional scope]: <description>`
+`<blank line>`
+`[optional body]`
+`<blank line>`
+`[optional footer(s)]`
 
-presentacion de ev
+Donde `type` puede ser:
+- **fix**: si se arregla un bug de código.
+- **feat**: si se añade alguna funcionalidad.
+- **docs**: si sólo se modifica documentación.
+- **refactor**: si se refactorizan partes del código.
+- **test**: si se añaden test o se corrigen los existentes.
+- **style**: si son cambios que no modifican la funcionalidad del código.
+- **perf**: si los cambios mejoran el rendimiento.
+- **chore**: otros cambios que no modifican el código o los tests, (organización de carpetas, por ejemplo).
+- **type!**: se añade **!** después del tipo si el commit introduce un **Breaking Change**.
+
+Un ejemplo de mensaje de commit sería:
+`feat: #1 Añadido que el usuario pueda hacer pedidos desde la aplicación`
+
+`Desde la página de pedidos, el usuario puede realizar un nuevo pedido,`
+`cumpliendo así los requisitos de nuestro cliente.`
+
+Además, seguiremos las 7 reglas siguientes:
+1. Separar el título del cuerpo con una línea en blanco.
+2. Limitar el título a 50 caracteres.
+3. Capitalizar el título.
+4. No acabar el título con un punto.
+5. Usar el modo imperativo en el título.
+6. Envolver el cuerpo en 72 caracteres.
+7. Usar el cuerpo para explicar qué y porqué frente al cómo.
+
 
 ## Estructura del Repositorio y Ramas Base
 
