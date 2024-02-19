@@ -2,13 +2,99 @@
 
 En este informe se describe la metodología de gestión de la configuración seguida por el grupo de trabajo G5-52, siendo aplicable al proyecto actual y a proyectos futuros que se puedan desarrollar.
 
-## Estandares de Codificación (ramon y miguel)
+## Estandares de Codificación
 
 Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se aplican de manera consistente en todo el proyecto. Esto incluye convenciones de nomenclatura, estilo de código y prácticas recomendadas como las siguientes:
-- **Formato del código**: 4 espacios, maxima longitud 70 caracteres, indentación, line break antes de un operador, blank lines, imports (java style guide)
-- **Operadores**: espacio antes y despues
-- **Casting**: espacio despues del casting
-- **Estructuras de control**: (drupal)
+- **Formato del código**: 
+  - Los imports deben de realizarse al principio y cada uno en una línea.
+    - Ejemplo:
+      - ✅
+      ```java
+      package org.springframework.samples.petclinic.owner;
+
+      import java.net.URISyntaxException;
+      import java.util.List;
+      import java.util.Map;
+        ```
+        - ⛔
+        ```java
+        package org.springframework.samples.petclinic.owner;
+      import java.net.URISyntaxException;      import java.util.List;      import java.util.Map;
+        ```
+  - La indentación debe de tener un tamaño de 4 espacios
+    - Ejemplo:
+    - ✅
+    ```java
+    @Autowired
+    public OwnerPlanController(OwnerService ownerService, UserService userService) {
+        this.ownerService = ownerService;
+        this.userService = userService;
+    }
+    ```
+    - ⛔
+    ```java
+    @Autowired
+    public OwnerPlanController(OwnerService ownerService, UserService userService) {
+      this.ownerService = ownerService;
+      this.userService = userService;
+    }
+    ```
+  - El máximo tamaño de una línea es de 90 caracteres:
+    - Ejemplo:
+      - ✅
+    ```java
+    @Autowired
+    public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) 
+    throws URISyntaxException {
+      ...
+    }
+    ```
+    - ⛔
+    ```java
+    public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) throws URISyntaxException {
+      ...
+    }
+    ```
+- **Operadores**: 
+  - Escribir espacio antes y despues
+  - Ejemplos:
+    - ✅
+    ```java
+    if (userId == null)
+    ```
+    - ⛔
+    ```java
+    if(userId==null)
+    ```
+- **Casting**: 
+  - Escribir un espacio despues del casting
+  - Ejemplos:
+    - ✅
+    ```java
+    return (List<PetHotelRoom>) petHotelRooms;
+    ```
+    - ⛔
+    ```java
+    return (List<PetHotelRoom>)petHotelRooms;
+    ```
+- **Estructuras de control**:  (drupal)
+  - Siempre colocar las llaves `{}` en la misma línea que la declaración de la estructura de control.
+  - Incluir un espacio antes de la llave de apertura.
+  - El bloque de código dentro de la estructura de control debe estar indentado.
+  - Ejemplos:
+    - ✅
+    ```java
+    if (visit.getPet() == null) {
+        errors.rejectValue("pet", REQUIRED, REQUIRED);
+    }
+    ```
+    - ⛔
+    ```java
+    if (visit.getPet() == null) 
+    {
+    errors.rejectValue("pet", REQUIRED, REQUIRED);
+    }
+    ```
 - **Constantes**: (drupal)
 - **Comentarios en el codigo**: (drupal) https://www.drupal.org/node/1354
 - **Espacios en blanco en expresiones y declaraciones**: (pet peeves, PEP8)
