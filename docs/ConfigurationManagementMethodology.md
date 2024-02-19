@@ -86,6 +86,16 @@ La estrategia de ramas se basa en Git Flow y revisiones por parejas para asegura
 3. Fusionar la rama de hotfix con `main` y `develop`.
 4. Etiquetar la versión corregida.
 
+### Revisión por pares
+A la hora de hacer pull requests, hemos definido la siguiente organización:
+1. Benji
+2. Ramón
+3. Miguel
+4. David
+5. Rafa
+
+De manera que se realizan las revisiones en cascada, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
+
 ## Semántica de Versionado
 
 La semántica de versionado definida es la siguiente:
