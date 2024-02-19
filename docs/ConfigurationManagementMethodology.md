@@ -5,6 +5,7 @@ En este informe se describe la metodología de gestión de la configuración seg
 ## Estandares de Codificación
 
 Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se aplican de manera consistente en todo el proyecto. Esto incluye convenciones de nomenclatura, estilo de código y prácticas recomendadas como las siguientes:
+
 - **Formato del código**: 
   - Los imports deben de realizarse al principio y cada uno en una línea.
     - Ejemplo:
@@ -95,17 +96,45 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     errors.rejectValue("pet", REQUIRED, REQUIRED);
     }
     ```
-- **Constantes**: (drupal)
-- **Comentarios en el codigo**: (drupal) https://www.drupal.org/node/1354
-- **Espacios en blanco en expresiones y declaraciones**: (pet peeves, PEP8)
-- **Nombres de variables y métodos**: (java style guide)
-- **Manejo de excepciones**: (java style guide)
+- **Constantes**: para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
+- **Comentarios en el codigo**: se pondran mediante: /** (esto abre el comentario); * (para las lineas con el comentario); */ (para cerrar el comentario).
+- **Espacios en blanco en expresiones y declaraciones**: dejaremos espaciones en blanco tanto por delante como por detras en las expresiones y declaraciones.
+- **Nombres de variables y métodos**: estos nombres tienen que ser lo mas explicativos posibles, comenzando por minuscula y usando camelCase.
+- **Manejo de excepciones**: se realizaran mediante "Try" y "Catch", indicnado en el Catch que tipo de excepción es. El mensaje de dicha excepcion tiene que ser lo mas significativo posible.
 
+## Política de Mensajes de Commit
+Los commits se realizarán siguiendo el siguiente patrón:
+`<type>[optional scope]: <description>`
+`<blank line>`
+`[optional body]`
+`<blank line>`
+`[optional footer(s)]`
 
+Donde `type` puede ser:
+- **fix**: si se arregla un bug de código.
+- **feat**: si se añade alguna funcionalidad.
+- **docs**: si sólo se modifica documentación.
+- **refactor**: si se refactorizan partes del código.
+- **test**: si se añaden test o se corrigen los existentes.
+- **style**: si son cambios que no modifican la funcionalidad del código.
+- **perf**: si los cambios mejoran el rendimiento.
+- **chore**: otros cambios que no modifican el código o los tests, (organización de carpetas, por ejemplo).
+- **type!**: se añade **!** después del tipo si el commit introduce un **Breaking Change**.
 
-## Política de Mensajes de Commit (benji)
+Un ejemplo de mensaje de commit sería:
+`feat: #1 Añadido que el usuario pueda hacer pedidos desde la aplicación`
 
-presentacion de ev
+`Desde la página de pedidos, el usuario puede realizar un nuevo pedido,`
+`cumpliendo así los requisitos de nuestro cliente.`
+
+Además, seguiremos las 7 reglas siguientes:
+1. Separar el título del cuerpo con una línea en blanco.
+2. Limitar el título a 50 caracteres.
+3. Capitalizar el título.
+4. No acabar el título con un punto.
+5. Usar el modo imperativo en el título.
+6. Envolver el cuerpo en 72 caracteres.
+7. Usar el cuerpo para explicar qué y porqué frente al cómo.
 
 ## Estructura del Repositorio y Ramas Base
 
@@ -141,9 +170,31 @@ La estrategia de ramas se basa en Git Flow y revisiones por parejas para asegura
 3. Fusionar la rama de hotfix con `main` y `develop`.
 4. Etiquetar la versión corregida.
 
-## Semántica de Versionado (david)
+### Revisión por pares
+A la hora de hacer pull requests, hemos definido la siguiente organización:
+1. Benji
+2. Ramón
+3. Miguel
+4. David
+5. Rafa
 
-presentacion de ev
+De manera que se realizan las revisiones en cascada, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
+
+## Semántica de Versionado
+
+La semántica de versionado definida es la siguiente:
+
+**X.y.z-ETIQUETA**
+
+- **X-Versión mayor**: Cambios mayores, rompe la compatibiladad de la API, la versión inicial será 0.y.z, la versión 1.0.0 definirá la primera API pública.
+
+- **y-Versión menor**: Cambios menores, no rompen la compatibilidad de la API, incluyen nuevas funcionalidades y mejoras, puede incluir parches.
+
+- **z-Parche**: Elimincación de bugs, no rompen la compatibilidad de la API, solo cambios internos para arreglar comportamientos incorrectos.
+
+- **ETIQUETA**: Indican versiones preliminares, utilizado también para metadata, cuidado al comparar la procedencia de las versiones.
+
+- **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demas, cuando se incremente la versión menor, se resetea el parche.
 
 ## Definición de "Hecho"
 
