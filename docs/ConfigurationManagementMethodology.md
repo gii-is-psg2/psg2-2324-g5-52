@@ -16,12 +16,12 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       import java.net.URISyntaxException;
       import java.util.List;
       import java.util.Map;
-        ```
+      ```
       - ⛔
-        ```java
+      ```java
         package org.springframework.samples.petclinic.owner;
-      import java.net.URISyntaxException;      import java.util.List;      import java.util.Map;
-        ```
+        import java.net.URISyntaxException; import java.util.List; import java.util.Map;
+      ```
   - La indentación debe de tener un tamaño de 4 espacios.
     - Ejemplo:
       - ✅
@@ -31,7 +31,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
           this.ownerService = ownerService;
           this.userService = userService;
       }
-    ```
+      ```
       - ⛔
       ```java
       @Autowired
