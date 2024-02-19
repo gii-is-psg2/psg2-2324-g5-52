@@ -9,11 +9,11 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 - **Operadores**: espacio antes y despues
 - **Casting**: espacio despues del casting
 - **Estructuras de control**: (drupal)
-- **Constantes**: (drupal)
-- **Comentarios en el codigo**: (drupal) https://www.drupal.org/node/1354
-- **Espacios en blanco en expresiones y declaraciones**: (pet peeves, PEP8)
-- **Nombres de variables y métodos**: (java style guide)
-- **Manejo de excepciones**: (java style guide)
+- **Constantes**: para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
+- **Comentarios en el codigo**: se pondran mediante: /** (esto abre el comentario); * (para las lineas con el comentario); */ (para cerrar el comentario).
+- **Espacios en blanco en expresiones y declaraciones**: dejaremos espaciones en blanco tanto por delante como por detras en las expresiones y declaraciones.
+- **Nombres de variables y métodos**: estos nombres tienen que ser lo mas explicativos posibles, comenzando por minuscula y usando camelCase.
+- **Manejo de excepciones**: se realizaran mediante "Try" y "Catch", indicnado en el Catch que tipo de excepción es. El mensaje de dicha excepcion tiene que ser lo mas significativo posible.
 
 
 
