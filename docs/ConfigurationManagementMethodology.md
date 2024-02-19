@@ -17,47 +17,47 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       import java.util.List;
       import java.util.Map;
         ```
-        - ⛔
+      - ⛔
         ```java
         package org.springframework.samples.petclinic.owner;
       import java.net.URISyntaxException;      import java.util.List;      import java.util.Map;
         ```
-  - La indentación debe de tener un tamaño de 4 espacios
+  - La indentación debe de tener un tamaño de 4 espacios.
     - Ejemplo:
-    - ✅
-    ```java
-    @Autowired
-    public OwnerPlanController(OwnerService ownerService, UserService userService) {
+      - ✅
+      ```java
+      @Autowired
+      public OwnerPlanController(OwnerService ownerService, UserService userService) {
+          this.ownerService = ownerService;
+          this.userService = userService;
+      }
+    ```
+      - ⛔
+      ```java
+      @Autowired
+      public OwnerPlanController(OwnerService ownerService, UserService userService) {
         this.ownerService = ownerService;
         this.userService = userService;
-    }
-    ```
-    - ⛔
-    ```java
-    @Autowired
-    public OwnerPlanController(OwnerService ownerService, UserService userService) {
-      this.ownerService = ownerService;
-      this.userService = userService;
-    }
-    ```
+      }
+      ```
   - El máximo tamaño de una línea es de 90 caracteres:
     - Ejemplo:
       - ✅
-    ```java
-    @Autowired
-    public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) 
-    throws URISyntaxException {
+      ```java
+      @Autowired
+      public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) 
+      throws URISyntaxException {
+        ...
+      }
+      ```
+      - ⛔
+      ```java
+      public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) throws URISyntaxException {
       ...
-    }
-    ```
-    - ⛔
-    ```java
-    public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) throws URISyntaxException {
-      ...
-    }
-    ```
+      }
+      ```
 - **Operadores**: 
-  - Escribir espacio antes y despues
+  - Escribir espacio antes y después.
   - Ejemplos:
     - ✅
     ```java
@@ -68,7 +68,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     if(userId==null)
     ```
 - **Casting**: 
-  - Escribir un espacio despues del casting
+  - Escribir un espacio después del casting.
   - Ejemplos:
     - ✅
     ```java
@@ -97,10 +97,10 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     }
     ```
 - **Constantes**: para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
-- **Comentarios en el codigo**: se pondran mediante: /** (esto abre el comentario); * (para las lineas con el comentario); */ (para cerrar el comentario).
-- **Espacios en blanco en expresiones y declaraciones**: dejaremos espaciones en blanco tanto por delante como por detras en las expresiones y declaraciones.
-- **Nombres de variables y métodos**: estos nombres tienen que ser lo mas explicativos posibles, comenzando por minuscula y usando camelCase.
-- **Manejo de excepciones**: se realizaran mediante "Try" y "Catch", indicnado en el Catch que tipo de excepción es. El mensaje de dicha excepcion tiene que ser lo mas significativo posible.
+- **Comentarios en el código**: se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
+- **Espacios en blanco en expresiones y declaraciones**: dejaremos espaciones en blanco tanto por delante como por detrás en las expresiones y declaraciones.
+- **Nombres de variables y métodos**: estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
+- **Manejo de excepciones**: se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es. El mensaje de dicha excepción tiene que ser lo más significativo posible.
 
 ## Política de Mensajes de Commit
 Los commits se realizarán siguiendo el siguiente patrón:
@@ -148,7 +148,16 @@ El repositorio sigue una estructura organizada que incluye las siguientes ramas:
 
 ## Estrategia de Ramas
 
-La estrategia de ramas se basa en Git Flow y revisiones por parejas para asegurar la calidad del código. Se sigue el siguiente proceso:
+La estrategia de ramas se basa en Git Flow con DOS adaptaciones para el curso :
+
+- realización de `Pull Request` para implementar las revisiones por parejas ( Peer Reviews ) 
+para asegurar la calidad del código, contemplación de los standares de codificación, 
+aprendizaje y comprensión compartidos por el equipo, etc ... 
+
+- subida de ramas de trabajo locales a repositorio remoto, para que los profesores puedan ver
+ y comprobar el trabajo realizado por cada miembro del equipo. 
+
+Se sigue el siguiente proceso: 
 
 ### i. Desarrollo de Ramas que Añadan Funcionalidad
 
@@ -171,14 +180,14 @@ La estrategia de ramas se basa en Git Flow y revisiones por parejas para asegura
 4. Etiquetar la versión corregida.
 
 ### Revisión por pares
-A la hora de hacer pull requests, hemos definido la siguiente organización:
+A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
 1. Benji
 2. Ramón
 3. Miguel
 4. David
 5. Rafa
 
-De manera que se realizan las revisiones en cascada, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
+De manera que se realizan las revisiones en cascada, es decir, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
 
 ## Semántica de Versionado
 
@@ -190,15 +199,15 @@ La semántica de versionado definida es la siguiente:
 
 - **y-Versión menor**: Cambios menores, no rompen la compatibilidad de la API, incluyen nuevas funcionalidades y mejoras, puede incluir parches.
 
-- **z-Parche**: Elimincación de bugs, no rompen la compatibilidad de la API, solo cambios internos para arreglar comportamientos incorrectos.
+- **z-Parche**: Elimincación de bugs, no rompen la compatibilidad de la API, sólo cambios internos para arreglar comportamientos incorrectos.
 
 - **ETIQUETA**: Indican versiones preliminares, utilizado también para metadata, cuidado al comparar la procedencia de las versiones.
 
-- **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demas, cuando se incremente la versión menor, se resetea el parche.
+- **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demás, cuando se incremente la versión menor, se resetea el parche.
 
 ## Definición de "Hecho"
 
-Una tarea se considera "hecha" cuando se han completado las siguientes acciones:
+Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
 
 - Toda la funcionalidad de la tarea está satisfecha.
 - El código ha sido revisado y aprobado por al menos un compañero de equipo.
