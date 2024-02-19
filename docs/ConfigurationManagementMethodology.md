@@ -19,8 +19,8 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       ```
       - ⛔
       ```java
-        package org.springframework.samples.petclinic.owner;
-        import java.net.URISyntaxException; import java.util.List; import java.util.Map;
+      package org.springframework.samples.petclinic.owner;
+      import java.net.URISyntaxException; import java.util.List; import java.util.Map;
       ```
   - La indentación debe de tener un tamaño de 4 espacios.
     - Ejemplo:
@@ -154,8 +154,7 @@ La estrategia de ramas se basa en Git Flow con DOS adaptaciones para el curso :
 para asegurar la calidad del código, contemplación de los standares de codificación, 
 aprendizaje y comprensión compartidos por el equipo, etc ... 
 
-- subida de ramas de trabajo locales a repositorio remoto, para que los profesores puedan ver
- y comprobar el trabajo realizado por cada miembro del equipo. 
+- subida de ramas de trabajo locales a repositorio remoto, sin borrarlas posteriormente, para que los profesores puedan ver y comprobar el trabajo realizado por cada miembro del equipo. 
 
 Se sigue el siguiente proceso: 
 
