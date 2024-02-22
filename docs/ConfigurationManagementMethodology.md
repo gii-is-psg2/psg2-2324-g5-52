@@ -1,10 +1,42 @@
 # Metodología de Gestión de la Configuración
 
+# Indice
+[Introducción](#id1)  
+
+[Estándares de Codificación](#id2)
+- [Formato del código](#id3)
+- [Operadores](#id4)
+- [Casting](#id5)
+- [Estructuras de control](#id6)
+- [Constantes](#id7)
+- [Comentarios en el código](#id8)
+- [Espacios en blanco en expresiones y declaraciones](#id9)
+- [Nombres de variables y métodos](#id10)
+- [Manejo de excepciones](#id11)
+ 
+[Política de Mensajes de Commit](#id12)  
+[Estructura del Repositorio y Ramas Base](#id13)  
+[Estrategia de Ramas](#id14)  
+[Semántica de Versionado](#id15)  
+[Definición de "Hecho"](#id16)  
+[Gestión de Documentos](#id17)
+
+___
+  
+
+<div id='id1'/>
+
+## Introducción
+
 En este informe se describe la metodología de gestión de la configuración seguida por el grupo de trabajo G5-52, siendo aplicable al proyecto actual y a proyectos futuros que se puedan desarrollar.
 
-## Estandares de Codificación
+<div id='id2'/>
+
+## Estándares de Codificación
 
 Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se aplican de manera consistente en todo el proyecto. Esto incluye convenciones de nomenclatura, estilo de código y prácticas recomendadas como las siguientes:
+
+<div id='id3'/>
 
 - **Formato del código**: 
   - Los imports deben de realizarse al principio y cada uno en una línea.
@@ -56,6 +88,8 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       ...
       }
       ```
+<div id='id4'/>
+
 - **Operadores**: 
   - Escribir espacio antes y después.
   - Ejemplos:
@@ -67,6 +101,9 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     ```java
     if(userId==null)
     ```
+  
+  <div id='id5'/>
+
 - **Casting**: 
   - Escribir un espacio después del casting.
   - Ejemplos:
@@ -78,6 +115,9 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     ```java
     return (List<PetHotelRoom>)petHotelRooms;
     ```
+
+<div id='id6'/>
+
 - **Estructuras de control**:  (drupal)
   - Siempre colocar las llaves `{}` en la misma línea que la declaración de la estructura de control.
   - Incluir un espacio antes de la llave de apertura.
@@ -96,11 +136,28 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     errors.rejectValue("pet", REQUIRED, REQUIRED);
     }
     ```
+
+<div id='id7'/>
+
 - **Constantes**: para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
+
+<div id='id8'/>
+
 - **Comentarios en el código**: se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
+
+<div id='id9'/>
+
 - **Espacios en blanco en expresiones y declaraciones**: dejaremos espaciones en blanco tanto por delante como por detrás en las expresiones y declaraciones.
+
+<div id='id10'/>
+
 - **Nombres de variables y métodos**: estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
+
+<div id='id11'/>
+
 - **Manejo de excepciones**: se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es. El mensaje de dicha excepción tiene que ser lo más significativo posible.
+
+<div id='id12'/>
 
 ## Política de Mensajes de Commit
 Los commits se realizarán siguiendo el siguiente patrón:
@@ -136,6 +193,8 @@ Además, seguiremos las 7 reglas siguientes:
 6. Envolver el cuerpo en 72 caracteres.
 7. Usar el cuerpo para explicar qué y porqué frente al cómo.
 
+<div id='id13'/>
+
 ## Estructura del Repositorio y Ramas Base
 
 El repositorio sigue una estructura organizada que incluye las siguientes ramas:
@@ -145,6 +204,8 @@ El repositorio sigue una estructura organizada que incluye las siguientes ramas:
 - **hotfix**: Rama que servirá para arreglar bugs críticos que se encuentren en producción.
 - **develop**: Rama de desarrollo principal donde se fusionan las funcionalidades completadas.
 - **feature branches**: Ramas para el desarrollo de nuevas funcionalidades.
+
+<div id='id14'/>
 
 ## Estrategia de Ramas
 
@@ -188,6 +249,8 @@ A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
 
 De manera que se realizan las revisiones en cascada, es decir, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
 
+<div id='id15'/>
+
 ## Semántica de Versionado
 
 La semántica de versionado definida es la siguiente:
@@ -204,6 +267,8 @@ La semántica de versionado definida es la siguiente:
 
 - **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demás, cuando se incremente la versión menor, se resetea el parche.
 
+<div id='id16'/>
+
 ## Definición de "Hecho"
 
 Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
@@ -211,6 +276,8 @@ Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
 - Toda la funcionalidad de la tarea está satisfecha.
 - El código ha sido revisado y aprobado por al menos un compañero de equipo.
 - La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
+
+<div id='id17'/>
 
 ## Gestión de Documentos
 
