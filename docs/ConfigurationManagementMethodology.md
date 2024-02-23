@@ -139,23 +139,128 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id7'/>
 
-- **Constantes**: para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
+- **Constantes**:  (drupal)
+  - para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
+    - ✅
+    ```java
+    public static final int MAX_ATTEMPTS = 5;
+    public static final String ERROR_MESSAGE = "Ha ocurrido un error.";
+    ```
+    - ⛔
+    ```java
+    public static final int maximo = 5;
+    public static final String mensaje_error = "Ha ocurrido un error.";
+    ```
 
 <div id='id8'/>
 
-- **Comentarios en el código**: se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
+- **Cometarios en el código**:  (drupal)
+  - se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
+  - En caso de que sea solo una linea, se podrá poner con //
+    - ✅
+    ```java
+    /**
+     * Esto es un ejemplo
+     * de como poner un comentario
+     * que tenga más de una linea
+    */
+
+    //Esto es un comentario de una sola linea
+    ```
+    - ⛔
+    ```java
+    #No comentario
+    ```
 
 <div id='id9'/>
 
-- **Espacios en blanco en expresiones y declaraciones**: dejaremos espaciones en blanco tanto por delante como por detrás en las expresiones y declaraciones.
+- **Espacios en blanco en expresiones y declaraciones**:  (drupal)
+  - dejaremos espacios en blanco tanto por delante como por detrás en las expresiones y declaraciones.
+    - ✅
+    ```java
+    public static void main(String[] args) {
+        // Declaración con espacios en blanco
+        int    x   =   5   ;
 
+        // Expresión con espacios en blanco
+        int resultado =   suma(  x  ,  3  );
+        System.out.println("El resultado es: " + resultado);
+    }
+    ```
+    - ⛔
+    ```java
+    public static void main(String[] args) {
+        int x=5;
+    }
+    ```
 <div id='id10'/>
 
-- **Nombres de variables y métodos**: estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
+- **Nombres de variables y métodos**:  (drupal)
+  - estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
+  - Ejemplos:
+    - ✅
+    ```java
+    public void createUser(@Valid SignupRequest request) {
+		  User user = new User();
+      ...
+    }
+    ```
+    - ⛔
+    ```java
+    public void create_user(@Valid SignupRequest request) {
+		  User user = new User();
+      ...
+    }
+    ```
 
 <div id='id11'/>
 
-- **Manejo de excepciones**: se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es. El mensaje de dicha excepción tiene que ser lo más significativo posible.
+- **Manejo de excepciones**:  (drupal)
+  - se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es.
+  - El mensaje de dicha excepción tiene que ser lo más significativo posible.
+  - Ejemplos:
+    - ✅
+    ```java
+    public static void main(String[] args) {
+        int dividendo = 10;
+        int divisor = 0;
+
+        try {
+            double resultado = dividir(dividendo, divisor);
+            System.out.println("El resultado de la división es: " + resultado);
+        } catch (ArithmeticException e) {
+            System.out.println("Error al intentar dividir: " + e.getMessage());
+        }
+    }
+
+    public static double dividir(int dividendo, int divisor) {
+        if (divisor == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero");
+        }
+        return (double) dividendo / divisor;
+    }
+    ```
+    - ⛔
+    ```java
+    public static void main(String[] args) {
+        int dividendo = 10;
+        int divisor = 0;
+
+        try {
+            double resultado = dividir(dividendo, divisor);
+            System.out.println("Sale: " + resultado);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public static double dividir(int dividendo, int divisor) {
+        if (divisor == 0) {
+            throw new ArithmeticException("Error");
+        }
+        return (double) dividendo / divisor;
+    }
+    ```
 
 <div id='id12'/>
 
