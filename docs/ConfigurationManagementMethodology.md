@@ -19,7 +19,10 @@
 [Estrategia de Ramas](#id14)  
 [Semántica de Versionado](#id15)  
 [Definición de "Hecho"](#id16)  
-[Gestión de Documentos](#id17)
+[Gestión de Documentos](#id17)  
+[Resumen del trabajo con la CMDB iTop](#id18)  
+- [Qué es, objetivos y alcance de la CMDB](#id19)  
+- [Estructura de la CMDB](#id20)
 
 ___
   
@@ -388,3 +391,32 @@ Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
 
 Los documentos generados durante el proyecto se gestionan en el repositorio según las estrategias descritas anteriormente. Se utilizará la carpeta `docs` para organizar la documentación relacionada con el desarrollo, las pruebas y la gestión del proyecto.
 
+<div id='id18'/>
+
+## Resumen del trabajo con la CMDB iTop
+
+Para el desarrollo del presente proyecto utilizaremos la CMDB iTop (IT Operational Portal)), una aplicación web de código abierto para administrar hardware, software y servicios IT, además de otras características como un lenguaje de consulta propio.
+
+<div id='id19'/>
+
+**Qué es, objetivos y alcance de la CMDB**
+
+Una CMDB, o Base de Datos de Gestión de la Configuración (Configuration Management DataBase, por sus siglas en inglés), es una base de datos centralizada que contiene detalles sobre los componentes de la infraestructura de tecnología de una organización y sus relaciones. Estos componentes pueden incluir hardware, software, documentos, usuarios y cualquier otro elemento que sea relevante para la gestión de la configuración y tenga atributos controlables específicos. A estos elementos se les conoce como `Elementos de Configuración` (Configuration Items). 
+
+Una CMDB puede dar soporte a procesos dentro de la propia organización y proporciona información para gestionar incidencias, despliegues, riesgos, cambios y auditorias.
+
+Los objetivos principales de una CMDB son:
+
+Gestión de la configuración: Proporcionar una visión completa y precisa de los elementos de configuración (CI) dentro del entorno de tecnología de la organización, incluyendo su estado, relaciones y versiones.
+
+Control de cambios: Facilitar la gestión de cambios al proporcionar información detallada sobre los elementos de configuración y sus relaciones, lo que permite evaluar el impacto de los cambios planificados y controlar la propagación de cambios no autorizados.
+
+Soporte de procesos de TI: Servir como una fuente de datos centralizada para varios procesos de gestión de servicios de TI, como gestión de incidentes, gestión de problemas, gestión de cambios y gestión de activos.
+
+Mejora de la eficiencia y reducción de riesgos: Al mantener información precisa y actualizada sobre la configuración de la infraestructura de TI, una CMDB puede ayudar a mejorar la eficiencia operativa al facilitar la resolución de problemas, reducir los tiempos de inactividad y minimizar los riesgos asociados con cambios no planificados.
+
+El alcance de una CMDB puede variar según las necesidades y la complejidad de la organización, pero generalmente abarca todos los componentes de TI que son relevantes para la prestación de servicios de TI, incluyendo servidores, dispositivos de red, aplicaciones, bases de datos, configuraciones de software, licencias, configuraciones de red, documentación y   relaciones entre estos elementos.
+
+<div id='id20'/>
+
+**Estructura de la CMDB**
