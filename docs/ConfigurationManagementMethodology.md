@@ -420,3 +420,19 @@ El alcance de una CMDB puede variar según las necesidades y la complejidad de l
 <div id='id20'/>
 
 **Estructura de la CMDB**
+
+- La estructura de información en iTop está diseñada para proporcionar a las organizaciones una plataforma integral para administrar servicios, activos y operaciones de TI de una manera estructurada y eficiente.
+
+- Los elementos de configuración (CI) son uno de los componentes clave dentro de la estructura de información de iTop.
+
+- La información de los CI siempre está asociada con una organización.
+
+- Los propietarios de productos han creado una organización para cada equipo (PSG2-2324-G5-52)
+
+**Lista de los elementos de configuración agregados por cada miembro del grupo**
+
+![Ruta erronea o archivo inexistente](/docs/static/Functional%20CI-1.png)
+![Ruta erronea o archivo inexistente](/docs/static/Functional%20CI-2.png)
+
+
+**Relaciones**
