@@ -1,6 +1,6 @@
 ## Cumplimiento de Done.
 
-El día 16 de febreo, se realizó una reunión en la que se definió entre todos los miembros del grupo, cual iba a ser la definición de hecho.
+El día 16 de febrero, se realizó una reunión en la que se definió entre todos los miembros del grupo, cual iba a ser la definición de hecho.
 
 Tras esta definición, se comprobaron que todas las tareas realizadas anteriormente se cumpliese con dicha definición.
 
@@ -14,8 +14,6 @@ Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
 - El código ha sido revisado y aprobado por al menos un compañero de equipo.
 - La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
 
-<div id='id17'/>
-
 ### Revisión por pares
 A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
 1. Benji
@@ -26,4 +24,3 @@ A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
 
 De manera que se realizan las revisiones en cascada, es decir, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
 
-<div id='id15'/>
