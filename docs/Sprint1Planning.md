@@ -62,4 +62,4 @@ Debido al contexto en el que desarrollamos el proyecto, ya que no disponemos del
 Hemos definido un único criterio de aceptación durante los sprints, y es que cuando una tarea se finalice, se debe adherir a la definición de "hecho" que ha acordado el grupo en el documento de gestión de la configuración.
 
 ## Notas Adicionales
-- [Cualquier otra información relevante o notas sobre el sprint]
+- Se ha asignado a Benjamín como Project Manager.

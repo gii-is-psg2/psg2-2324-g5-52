@@ -3,9 +3,9 @@
 # Indice
 [Introducción](#id1)  
 
-[Estándares de Codificación](#id2)
+[Estándares de codificación](#id2)
 - [Formato del código](#id3)
-- [Operadores](#id4)
+- [Operadores binarios](#id4)
 - [Casting](#id5)
 - [Estructuras de control](#id6)
 - [Constantes](#id7)
@@ -14,15 +14,20 @@
 - [Nombres de variables y métodos](#id10)
 - [Manejo de excepciones](#id11)
  
-[Política de Mensajes de Commit](#id12)  
-[Estructura del Repositorio y Ramas Base](#id13)  
-[Estrategia de Ramas](#id14)  
-[Semántica de Versionado](#id15)  
-[Definición de "Hecho"](#id16)  
-[Gestión de Documentos](#id17)  
-[Resumen del trabajo con la CMDB iTop](#id18)  
-- [Qué es, objetivos y alcance de la CMDB](#id19)  
-- [Estructura de la CMDB](#id20)
+[Política de mensajes de commit](#id12)  
+[Estructura del repositorio y ramas base](#id13)  
+[Estrategia de ramas](#id14)
+- [Desarrollo de ramas que añadan funcionalidad](#id15)
+- [Preparación de releases](#id16)
+- [Arreglar bugs en producción](#id17)
+- [Revisión por pares](#id18)
+
+[Semántica de versionado](#id19)  
+[Definición de "Hecho"](#id20)  
+[Gestión de documentos](#id21)  
+[Resumen del trabajo con la CMDB iTop](#id22)  
+- [Qué es, objetivos y alcance de la CMDB](#id23)  
+- [Estructura de la CMDB](#id24)
 
 ___
   
@@ -35,7 +40,7 @@ En este informe se describe la metodología de gestión de la configuración seg
 
 <div id='id2'/>
 
-## Estándares de Codificación
+## Estándares de codificación
 
 Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se aplican de manera consistente en todo el proyecto. Esto incluye convenciones de nomenclatura, estilo de código y prácticas recomendadas como las siguientes:
 
@@ -93,12 +98,12 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       ```
 <div id='id4'/>
 
-- **Operadores**: 
+- **Operadores binarios**: 
   - Escribir espacio antes y después.
   - Ejemplos:
     - ✅
     ```java
-    if (userId == null)
+    if(userId == null)
     ```
     - ⛔
     ```java
@@ -121,7 +126,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id6'/>
 
-- **Estructuras de control**:  (drupal)
+- **Estructuras de control**:
   - Siempre colocar las llaves `{}` en la misma línea que la declaración de la estructura de control.
   - Incluir un espacio antes de la llave de apertura.
   - El bloque de código dentro de la estructura de control debe estar indentado.
@@ -142,8 +147,8 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id7'/>
 
-- **Constantes**:  (drupal)
-  - para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
+- **Constantes**:
+  - Para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
     - ✅
     ```java
     public static final int MAX_ATTEMPTS = 5;
@@ -157,8 +162,8 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id8'/>
 
-- **Cometarios en el código**:  (drupal)
-  - se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
+- **Cometarios en el código**:
+  - Se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
   - En caso de que sea solo una linea, se podrá poner con //
     - ✅
     ```java
@@ -177,16 +182,16 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id9'/>
 
-- **Espacios en blanco en expresiones y declaraciones**:  (drupal)
-  - dejaremos espacios en blanco tanto por delante como por detrás en las expresiones y declaraciones.
+- **Espacios en blanco en expresiones y declaraciones**:
+  - Dejaremos espacios en blanco tanto por delante como por detrás en las expresiones y declaraciones.
     - ✅
     ```java
     public static void main(String[] args) {
         // Declaración con espacios en blanco
-        int    x   =   5   ;
+        int x = 5;
 
         // Expresión con espacios en blanco
-        int resultado =   suma(  x  ,  3  );
+        int resultado = suma(x, 3);
         System.out.println("El resultado es: " + resultado);
     }
     ```
@@ -198,8 +203,8 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     ```
 <div id='id10'/>
 
-- **Nombres de variables y métodos**:  (drupal)
-  - estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
+- **Nombres de variables y métodos**:
+  - Estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
   - Ejemplos:
     - ✅
     ```java
@@ -218,8 +223,8 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id11'/>
 
-- **Manejo de excepciones**:  (drupal)
-  - se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es.
+- **Manejo de excepciones**:
+  - Se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es.
   - El mensaje de dicha excepción tiene que ser lo más significativo posible.
   - Ejemplos:
     - ✅
@@ -267,8 +272,9 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
 <div id='id12'/>
 
-## Política de Mensajes de Commit
+## Política de mensajes de commit
 Los commits se realizarán siguiendo el siguiente patrón:
+
 `<type>[optional scope]: <description>`
 `<blank line>`
 `[optional body]`
@@ -303,7 +309,7 @@ Además, seguiremos las 7 reglas siguientes:
 
 <div id='id13'/>
 
-## Estructura del Repositorio y Ramas Base
+## Estructura del repositorio y ramas base
 
 El repositorio sigue una estructura organizada que incluye las siguientes ramas:
 
@@ -315,51 +321,55 @@ El repositorio sigue una estructura organizada que incluye las siguientes ramas:
 
 <div id='id14'/>
 
-## Estrategia de Ramas
+## Estrategia de ramas
 
-La estrategia de ramas se basa en Git Flow con DOS adaptaciones para el curso :
+La estrategia de ramas se basa en Git Flow con **dos adaptaciones** para el curso :
 
-- realización de `Pull Request` para implementar las revisiones por parejas ( Peer Reviews ) 
-para asegurar la calidad del código, contemplación de los standares de codificación, 
-aprendizaje y comprensión compartidos por el equipo, etc ... 
+- Realización de `Pull Request` para implementar las revisiones por parejas (Peer reviews) y así asegurar la calidad del código, contemplación de los standares de codificación, aprendizaje y comprensión compartidos por el equipo, etc. 
 
-- subida de ramas de trabajo locales a repositorio remoto, sin borrarlas posteriormente, para que los profesores puedan ver y comprobar el trabajo realizado por cada miembro del equipo. 
+- Subida de ramas de trabajo locales a repositorio remoto, sin borrarlas posteriormente, para que los profesores puedan ver y comprobar el trabajo realizado por cada miembro del equipo. 
 
 Se sigue el siguiente proceso: 
 
-### i. Desarrollo de Ramas que Añadan Funcionalidad
+<div id='id15'/>
 
-1. Crear una rama de función desde `develop`.
-2. Desarrollar y probar la funcionalidad en la rama de la función.
-3. Solicitar una revisión por pareja antes de fusionar con `develop`.
+- ### Desarrollo de ramas que añadan funcionalidad:
+  1. Crear una rama de función desde `develop`.
+  2. Desarrollar y probar la funcionalidad en la rama de la función.
+  3. Solicitar una revisión por pareja antes de fusionar con `develop`.
 
-### ii. Preparación de Releases
+<div id='id16'/>
 
-1. Crear una rama de lanzamiento desde `develop`.
-2. Realizar pruebas finales y correcciones necesarias.
-3. Fusionar la rama de lanzamiento con `main` y `develop`.
-4. Etiquetar la versión.
+- ### Preparación de releases
+  1. Crear una rama de lanzamiento desde `develop`.
+  2. Realizar pruebas finales y correcciones necesarias.
+  3. Fusionar la rama de lanzamiento con `main` y `develop`.
+  4. Etiquetar la versión.
 
-### iii. Arreglar Bugs en Producción
+<div id='id17'/>
 
-1. Crear una rama de hotfix desde `main`.
-2. Corregir el error.
-3. Fusionar la rama de hotfix con `main` y `develop`.
-4. Etiquetar la versión corregida.
+- ### Arreglar bugs en producción
 
-### Revisión por pares
-A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
-1. Benji
-2. Ramón
-3. Miguel
-4. David
-5. Rafa
+  1. Crear una rama de hotfix desde `main`.
+  2. Corregir el error.
+  3. Fusionar la rama de hotfix con `main` y `develop`.
+  4. Etiquetar la versión corregida.
+
+<div id='id18'/>
+
+- ### Revisión por pares
+  A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
+  1. Benji
+  2. Ramón
+  3. Miguel
+  4. David
+  5. Rafa
 
 De manera que se realizan las revisiones en cascada, es decir, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
 
-<div id='id15'/>
+<div id='id19'/>
 
-## Semántica de Versionado
+## Semántica de versionado
 
 La semántica de versionado definida es la siguiente:
 
@@ -369,13 +379,13 @@ La semántica de versionado definida es la siguiente:
 
 - **y-Versión menor**: Cambios menores, no rompen la compatibilidad de la API, incluyen nuevas funcionalidades y mejoras, puede incluir parches.
 
-- **z-Parche**: Elimincación de bugs, no rompen la compatibilidad de la API, sólo cambios internos para arreglar comportamientos incorrectos.
+- **z-Parche**: Eliminación de bugs, no rompen la compatibilidad de la API, sólo cambios internos para arreglar comportamientos incorrectos.
 
 - **ETIQUETA**: Indican versiones preliminares, utilizado también para metadata, cuidado al comparar la procedencia de las versiones.
 
 - **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demás, cuando se incremente la versión menor, se resetea el parche.
 
-<div id='id16'/>
+<div id='id20'/>
 
 ## Definición de "Hecho"
 
@@ -385,39 +395,33 @@ Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
 - El código ha sido revisado y aprobado por al menos un compañero de equipo.
 - La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
 
-<div id='id17'/>
+<div id='id21'/>
 
-## Gestión de Documentos
+## Gestión de documentos
 
 Los documentos generados durante el proyecto se gestionan en el repositorio según las estrategias descritas anteriormente. Se utilizará la carpeta `docs` para organizar la documentación relacionada con el desarrollo, las pruebas y la gestión del proyecto.
 
-<div id='id18'/>
+<div id='id22'/>
 
 ## Resumen del trabajo con la CMDB iTop
 
-Para el desarrollo del presente proyecto utilizaremos la CMDB iTop (IT Operational Portal)), una aplicación web de código abierto para administrar hardware, software y servicios IT, además de otras características como un lenguaje de consulta propio.
+Para el desarrollo del presente proyecto utilizaremos la CMDB iTop (IT Operational Portal), una aplicación web de código abierto para administrar hardware, software y servicios IT, además de otras características como un lenguaje de consulta propio.
 
-<div id='id19'/>
+<div id='id23'/>
 
-**Qué es, objetivos y alcance de la CMDB**
+**Objetivos y alcance de la CMDB**
 
-Una CMDB, o Base de Datos de Gestión de la Configuración (Configuration Management DataBase, por sus siglas en inglés), es una base de datos centralizada que contiene detalles sobre los componentes de la infraestructura de tecnología de una organización y sus relaciones. Estos componentes pueden incluir hardware, software, documentos, usuarios y cualquier otro elemento que sea relevante para la gestión de la configuración y tenga atributos controlables específicos. A estos elementos se les conoce como `Elementos de Configuración` (Configuration Items). 
+- **Gestión de la configuración**: Proporcionar una visión completa y precisa de los elementos de configuración (CI) dentro del entorno de tecnología de la organización, incluyendo su estado, relaciones y versiones.
 
-Una CMDB puede dar soporte a procesos dentro de la propia organización y proporciona información para gestionar incidencias, despliegues, riesgos, cambios y auditorias.
+- **Control de cambios**: Facilitar la gestión de cambios al proporcionar información detallada sobre los elementos de configuración y sus relaciones, lo que permite evaluar el impacto de los cambios planificados y controlar la propagación de cambios no autorizados.
 
-Los objetivos principales de una CMDB son:
+- **Soporte de procesos de TI**: Servir como una fuente de datos centralizada para varios procesos de gestión de servicios de TI, como gestión de incidentes, gestión de problemas, gestión de cambios y gestión de activos.
 
-Gestión de la configuración: Proporcionar una visión completa y precisa de los elementos de configuración (CI) dentro del entorno de tecnología de la organización, incluyendo su estado, relaciones y versiones.
-
-Control de cambios: Facilitar la gestión de cambios al proporcionar información detallada sobre los elementos de configuración y sus relaciones, lo que permite evaluar el impacto de los cambios planificados y controlar la propagación de cambios no autorizados.
-
-Soporte de procesos de TI: Servir como una fuente de datos centralizada para varios procesos de gestión de servicios de TI, como gestión de incidentes, gestión de problemas, gestión de cambios y gestión de activos.
-
-Mejora de la eficiencia y reducción de riesgos: Al mantener información precisa y actualizada sobre la configuración de la infraestructura de TI, una CMDB puede ayudar a mejorar la eficiencia operativa al facilitar la resolución de problemas, reducir los tiempos de inactividad y minimizar los riesgos asociados con cambios no planificados.
+- **Mejora de la eficiencia y reducción de riesgos**: Al mantener información precisa y actualizada sobre la configuración de la infraestructura de TI, la CMDB puede ayudar a mejorar la eficiencia operativa al facilitar la resolución de problemas, reducir los tiempos de inactividad y minimizar los riesgos asociados con cambios no planificados.
 
 El alcance de una CMDB puede variar según las necesidades y la complejidad de la organización, pero generalmente abarca todos los componentes de TI que son relevantes para la prestación de servicios de TI, incluyendo servidores, dispositivos de red, aplicaciones, bases de datos, configuraciones de software, licencias, configuraciones de red, documentación y   relaciones entre estos elementos.
 
-<div id='id20'/>
+<div id='id24'/>
 
 **Estructura de la CMDB**
 
@@ -427,7 +431,7 @@ El alcance de una CMDB puede variar según las necesidades y la complejidad de l
 
 - La información de los CI siempre está asociada con una organización.
 
-- Los propietarios de productos han creado una organización para cada equipo (PSG2-2324-G5-52)
+- Los product owner han creado una organización para cada equipo (PSG2-2324-G5-52 en nuestro caso)
 
 **Lista de los elementos de configuración agregados por cada miembro del grupo**
 
@@ -435,6 +439,6 @@ El alcance de una CMDB puede variar según las necesidades y la complejidad de l
 ![Ruta erronea o archivo inexistente](/docs/static/Functional%20CI-2.png)
 
 
-**Diagrama UML con las relaciones entre los diferentes configurations items.**
+**Diagrama UML con las relaciones entre los diferentes configuration items**
 
 ![Ruta erronea o archivo inexistente](/docs/static/UML%20Relaciones.jpeg)
