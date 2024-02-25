@@ -435,4 +435,6 @@ El alcance de una CMDB puede variar según las necesidades y la complejidad de l
 ![Ruta erronea o archivo inexistente](/docs/static/Functional%20CI-2.png)
 
 
-**Relaciones**
+**Diagrama UML con las relaciones entre los diferentes configurations items.**
+
+![Ruta erronea o archivo inexistente](/docs/static/UML%20Relaciones.jpeg)
