@@ -41,7 +41,7 @@ export default function OwnerListClinicOwner(){
   return (
     <div>
       <div className="admin-page-container">
-        <h1 className="text-center">Owners</h1>
+        <h1 className="text-center"  style={{ backgroundColor: '#90EE90' }}>Owners</h1>
         {alerts.map((a) => a.alert)}
         {modal}
         <div>
