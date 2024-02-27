@@ -1,10 +1,14 @@
 # Sprint Planning - Sprint 1
 
+## Introducción
+La idea principal de este documento es dejar un acta de las tareas que se van a realizar en este primer Sprint. Para ello, el grupo se ha reunido para realizar este documento, en el cual se van a repartir todas las tareas, se les va a estimar un tiempo en función de su complejidad (a simple vista y por concenso del grupo) y se va definir un criterio de aceptación para dichas tareas.
+
 ## Objetivo
 El objetivo de este sprint es aprender y aplicar aspectos básicos de la gestión de la configuración en el contexto de los procesos aplicados durante el desarrollo de software.
 
 ## Duración
 Fecha de inicio: 6 de febrero de 2024
+
 Fecha de finalización: 27 de febrero de 2024
 
 ## Participantes
@@ -63,3 +67,8 @@ Hemos definido un único criterio de aceptación durante los sprints, y es que c
 
 ## Notas Adicionales
 - Se ha asignado a Benjamín como Project Manager.
+
+## Conclusión
+Se considera que a todos los miembros del grupo se le han asignado tareas que tengan una misma complejidad, haciendo así que todos los miembros del grupo tengan una carga de trabajo similar. 
+
+Este reparto ha sido consensuado por todos los miembros del grupo sin ningún inconveniente.
