@@ -63,7 +63,7 @@ export default function UserListAdmin() {
 
   return (
     <div className="admin-page-container">
-      <h1 className="text-center"  style={{ backgroundColor: '#90EE90' }}>Users</h1>
+      <h1 className="text-center"  style={{ backgroundColor: '#C4A484' }}>Users</h1>
       {alerts.map((a) => a.alert)}
       {modal}
       <Button color="success" tag={Link} to="/users/new">

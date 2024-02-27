@@ -68,7 +68,7 @@ export default function ClinicListAdmin() {
   return (
     <div>
       <div className="admin-page-container">
-        <h1 className="text-center"  style={{ backgroundColor: '#90EE90' }}>Clinic Owners</h1>
+        <h1 className="text-center"  style={{ backgroundColor: '#C4A484' }}>Clinic Owners</h1>
         {alerts.map((a) => a.alert)}
         {modal}
         <div className="float-right">
