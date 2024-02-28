@@ -358,14 +358,13 @@ Se sigue el siguiente proceso:
 <div id='id18'/>
 
 - ### Revisión por pares
-  A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
-  1. Benji
-  2. Ramón
-  3. Miguel
-  4. David
-  5. Rafa
+Para la revisión de tareas, se ha decido, que una vez acabada esta se creará un Pull Request y tendrá que poner como supervisores al resto de miembros del equipo. A su vez, este integrante, deberá avisa por otro medio (discord) que ha creado esta.
 
-De manera que se realizan las revisiones en cascada, es decir, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
+Cada miembro del equipo tendrá que revisar estas tareas y poner un comentario, ya sea este positivo si lo ve todo correcto, como de indicación de haber encontrado algún problema.
+
+Esta tarea se podrá pasar a la siguiente rama una vez todos los miembros hayan comprobado la definición de Hecho y esté la tarea con todos los "tics verdes" (comprobación que te pone en GitHub cuando revisas una tarea).
+
+ 
 
 <div id='id19'/>
 
@@ -389,11 +388,16 @@ La semántica de versionado definida es la siguiente:
 
 ## Definición de "Hecho"
 
-Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
+Una tarea se considera "Hecha" cuando se han completado las siguientes acciones.
 
+Si esta se trata de código:
 - Toda la funcionalidad de la tarea está satisfecha.
-- El código ha sido revisado y aprobado por al menos un compañero de equipo.
+- El código ha sido revisado y aprobado por el equipo.
 - La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
+
+Si esta se trata de documentación:
+- El documento recoja toda la información referente a este.
+- El documento ha sido revisado y aprobado por el equipo.
 
 <div id='id21'/>
 
