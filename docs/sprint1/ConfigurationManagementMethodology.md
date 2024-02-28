@@ -319,6 +319,12 @@ El repositorio sigue una estructura organizada que incluye las siguientes ramas:
 - **develop**: Rama de desarrollo principal donde se fusionan las funcionalidades completadas.
 - **feature branches**: Ramas para el desarrollo de nuevas funcionalidades.
 
+A la hora de crear una rama **hotfix**, se usará la siguiente nomenclatura: `hotfix/bugXX`, donde las XX se referirán al numero de la issue correspondiente.
+
+A la hora de crear una rama **feature**, se usará la siguiente nomenclatura: `feature/XX`, donde las XX se referirán al número de la issue correspondiente.
+
+A la hora de crear una rama **release**, se usará la siguiente nomenclatura: `release/X.y.z-ETIQUETA`, donde se seguirá la regla de versionado definida en este mismo documento.
+
 <div id='id14'/>
 
 ## Estrategia de ramas
@@ -403,7 +409,7 @@ Si esta se trata de documentación:
 
 ## Gestión de documentos
 
-Los documentos generados durante el proyecto se gestionan en el repositorio según las estrategias descritas anteriormente. Se utilizará la carpeta `docs` para organizar la documentación relacionada con el desarrollo, las pruebas y la gestión del proyecto.
+Los documentos generados durante el proyecto se gestionan en el repositorio según las estrategias descritas anteriormente. Se utilizará la carpeta `docs` para organizar la documentación relacionada con el desarrollo, las pruebas y la gestión del proyecto, de manera que dentro de ella, se usarán carpetas para cada sprint.
 
 <div id='id22'/>
 
