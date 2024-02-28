@@ -3,8 +3,6 @@
 # Universidad de Sevilla   
 
 ## Escuela Técnica Superior de Ingeniería Informática
-
-## **Metodología de Gestión de la Configuración**
   
 ### **Grupo de Prácticas G5-52**
 
@@ -12,19 +10,17 @@
 
 ### Grado en Ingeniería Informática – Ingeniería del Software
   
-### Proceso de Software y Gestión II
-
+### Proceso Software y Gestión II
+### Product Owner: Carlos Guillermo Müller Cejas
 ### Curso 2023 – 2024
 
-Benjamín Ignacio Maureira Flores
+### Miembros del equipo
+- Benjamín Ignacio Maureira Flores
+- David Godoy Fernández
+- Miguel Hernández Sánchez
+- Rafael David Caro Medina
+- Ramón José Guerrero Romero
 
-David Godoy Fernández
-
-Miguel Hernández Sánchez
-
-Rafael David Caro Medina
-
-Ramón José Guerrero Romero
 
 ## Introducción
 En este documento se va a dejar clara cuál es la definición de "Done" que va a tener este equipo de trabajo para la realización de sus tareas tanto de código y de documentación. Tras esta definición, se comprobaron que todas las tareas realizadas anteriormente se cumpliese con dicha definición.

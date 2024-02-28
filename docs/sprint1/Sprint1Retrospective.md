@@ -4,35 +4,23 @@
 
 ## Escuela Técnica Superior de Ingeniería Informática
 
-## **Metodología de Gestión de la Configuración**  
-
 ### **Grupo de Prácticas G5-52**
   
   ![Logo US](/docs/static/Logo_US.png)
 
 ### Grado en Ingeniería Informática – Ingeniería del Software 
 
-### Proceso de Software y Gestión II
-
+### Proceso Software y Gestión II
+### Product Owner: Carlos Guillermo Müller Cejas
 ### Curso 2023 – 2024
 
-Benjamín Ignacio Maureira Flores
-
-David Godoy Fernández
-
-Miguel Hernández Sánchez
-
-Rafael David Caro Medina
-
-Ramón José Guerrero Romero
-
-
-## Participantes
+### Miembros del equipo
 - Benjamín Ignacio Maureira Flores
 - David Godoy Fernández
 - Miguel Hernández Sánchez
 - Rafael David Caro Medina
 - Ramón José Guerrero Romero
+
 
 ## Introducción
 En este documento vamos a dejar reflejada la reunión que ha tratado la reunión a continuación de la clase.
