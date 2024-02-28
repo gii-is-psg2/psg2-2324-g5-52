@@ -1,4 +1,43 @@
-# Cumplimiento de Done.
+# Cumplimiento de Done. 
+
+
+# Universidad de Sevilla  
+  
+  
+
+## Escuela Técnica Superior de Ingeniería Informática
+  
+
+## **Metodología de Gestión de la Configuración**
+  
+
+### **Grupo de Prácticas G5-52**
+
+  
+
+  
+
+![http://recursoshumanos.us.es/images/marca-dos-tintas_300.gif](https://www.uco.es/investigacion/proyectos/SEBASENet/images/Logo_US.png)
+
+  
+
+### Grado en Ingeniería Informática – Ingeniería del Software
+  
+
+### Proceso de Software y Gestión II
+
+
+### Curso 2023 – 2024
+
+Benjamín Ignacio Maureira Flores
+
+David Godoy Fernández
+
+Miguel Hernández Sánchez
+
+Rafael David Caro Medina
+
+Ramón José Guerrero Romero
 
 ## Introducción
 En este documento se va a dejar clara cuál es la definición de "Done" que va a tener este equipo de trabajo para la realización de sus tareas tanto de código y de documentación. Tras esta definición, se comprobaron que todas las tareas realizadas anteriormente se cumpliese con dicha definición.
