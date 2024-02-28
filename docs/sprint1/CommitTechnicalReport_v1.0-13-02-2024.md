@@ -4,8 +4,6 @@
 
 ## Escuela Técnica Superior de Ingeniería Informática
 
-## **Metodología de Gestión de la Configuración**  
-
 ### **Grupo de Prácticas G5-52**
   
 
@@ -13,19 +11,16 @@
 
 ### Grado en Ingeniería Informática – Ingeniería del Software 
 
-### Proceso de Software y Gestión II
-
+### Proceso Software y Gestión II
+### Product Owner: Carlos Guillermo Müller Cejas
 ### Curso 2023 – 2024
 
-Benjamín Ignacio Maureira Flores
-
-David Godoy Fernández
-
-Miguel Hernández Sánchez
-
-Rafael David Caro Medina
-
-Ramón José Guerrero Romero
+### Miembros del equipo
+- Benjamín Ignacio Maureira Flores
+- David Godoy Fernández
+- Miguel Hernández Sánchez
+- Rafael David Caro Medina
+- Ramón José Guerrero Romero
 
 ## Introducción
 En este documento, vamos a tratar sobre la estrategía que se va a seguir para la realización de tareas. Estas dependerá de si se realiza en la rama main (si se trata de las primeras tareas) o mediante la realización de tareas en rama (una rama para cada tarea asignada).
