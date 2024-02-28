@@ -1,3 +1,32 @@
+# Sprint 1 Review. 
+
+# Universidad de Sevilla   
+
+## Escuela Técnica Superior de Ingeniería Informática
+
+## **Metodología de Gestión de la Configuración**  
+
+### **Grupo de Prácticas G5-52**
+  
+
+![http://recursoshumanos.us.es/images/marca-dos-tintas_300.gif](https://www.uco.es/investigacion/proyectos/SEBASENet/images/Logo_US.png)
+
+### Grado en Ingeniería Informática – Ingeniería del Software 
+
+### Proceso de Software y Gestión II
+
+### Curso 2023 – 2024
+
+Benjamín Ignacio Maureira Flores
+
+David Godoy Fernández
+
+Miguel Hernández Sánchez
+
+Rafael David Caro Medina
+
+Ramón José Guerrero Romero
+
 ## Introducción
 El objetivo principal de la review es mostrar los resultados del Sprint al cliente. En este documento se recogerá el contenido de dicha reunión, incluyendo el feedback proporcionado por este.
 
