@@ -9,7 +9,7 @@
 ### **Grupo de Prácticas G5-52**
   
 
-![http://recursoshumanos.us.es/images/marca-dos-tintas_300.gif](https://www.uco.es/investigacion/proyectos/SEBASENet/images/Logo_US.png)
+  ![Logo US](/docs/static/Logo_US.png)
 
 ### Grado en Ingeniería Informática – Ingeniería del Software 
 
