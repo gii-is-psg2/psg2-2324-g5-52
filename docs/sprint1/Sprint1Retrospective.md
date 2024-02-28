@@ -1,5 +1,33 @@
 # Sprint 1 Retrospective - G5-52
 
+# Universidad de Sevilla   
+
+## Escuela Técnica Superior de Ingeniería Informática
+
+## **Metodología de Gestión de la Configuración**  
+
+### **Grupo de Prácticas G5-52**
+  
+
+![http://recursoshumanos.us.es/images/marca-dos-tintas_300.gif](https://www.uco.es/investigacion/proyectos/SEBASENet/images/Logo_US.png)
+
+### Grado en Ingeniería Informática – Ingeniería del Software 
+
+### Proceso de Software y Gestión II
+
+### Curso 2023 – 2024
+
+Benjamín Ignacio Maureira Flores
+
+David Godoy Fernández
+
+Miguel Hernández Sánchez
+
+Rafael David Caro Medina
+
+Ramón José Guerrero Romero
+
+
 ## Participantes
 - Benjamín Ignacio Maureira Flores
 - David Godoy Fernández
