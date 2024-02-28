@@ -21,6 +21,12 @@
 - Rafael David Caro Medina
 - Ramón José Guerrero Romero
 
+# Indice
+- [Introducción](#introducción)
+- [Fecha](#fecha-13022024)
+- [Resultados](#resultados)
+- [Conclusiones](#conclusiones)
+
 ## Introducción
 En este documento, vamos a tratar sobre la estrategía que se va a seguir para la realización de tareas. Estas dependerá de si se realiza en la rama main (si se trata de las primeras tareas) o mediante la realización de tareas en rama (una rama para cada tarea asignada).
 
