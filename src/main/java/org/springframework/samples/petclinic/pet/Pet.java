@@ -59,4 +59,7 @@ public class Pet extends NamedEntity {
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Owner owner;
 
+	@Column(name = "on_adoption")
+	private Boolean onAdoption;
+
 }
