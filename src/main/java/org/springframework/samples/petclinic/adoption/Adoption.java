@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.adoptions;
+package org.springframework.samples.petclinic.adoption;
 
 import org.springframework.samples.petclinic.model.BaseEntity;
 import org.springframework.samples.petclinic.owner.Owner;
@@ -6,7 +6,6 @@ import org.springframework.samples.petclinic.pet.Pet;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
