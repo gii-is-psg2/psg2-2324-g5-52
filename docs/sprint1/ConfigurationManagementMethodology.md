@@ -1,55 +1,70 @@
 # Metodología de Gestión de la Configuración
 
+# Universidad de Sevilla   
+
+## Escuela Técnica Superior de Ingeniería Informática
+
+### **Grupo de Prácticas G5-52**
+  
+  ![Logo US](/docs/static/Logo_US.png)
+
+### Grado en Ingeniería Informática – Ingeniería del Software 
+
+### Proceso Software y Gestión II
+### Product Owner: Carlos Guillermo Müller Cejas
+### Curso 2023 – 2024
+
+### Miembros del equipo
+- Benjamín Ignacio Maureira Flores
+- David Godoy Fernández
+- Miguel Hernández Sánchez
+- Rafael David Caro Medina
+- Ramón José Guerrero Romero
+
+
 # Indice
-[Introducción](#id1)  
-
-[Estándares de codificación](#id2)
-- [Formato del código](#id3)
-- [Operadores binarios](#id4)
-- [Casting](#id5)
-- [Estructuras de control](#id6)
-- [Constantes](#id7)
-- [Comentarios en el código](#id8)
-- [Espacios en blanco en expresiones y declaraciones](#id9)
-- [Nombres de variables y métodos](#id10)
-- [Manejo de excepciones](#id11)
- 
-[Política de mensajes de commit](#id12)  
-[Estructura del repositorio y ramas base](#id13)  
-[Estrategia de ramas](#id14)
-- [Desarrollo de ramas que añadan funcionalidad](#id15)
-- [Preparación de releases](#id16)
-- [Arreglar bugs en producción](#id17)
-- [Revisión por pares](#id18)
-
-[Semántica de versionado](#id19)  
-[Definición de "Hecho"](#id20)  
-[Gestión de documentos](#id21)  
-[Resumen del trabajo con la CMDB iTop](#id22)  
-- [Qué es, objetivos y alcance de la CMDB](#id23)  
-- [Estructura de la CMDB](#id24)
+- [Introducción](#introducción)
+- [Estándares de codificación](#estándares-de-codificación)
+  * [Formato del código](#formato-del-código)
+  * [Operadores binarios](#operadores-binarios)
+  * [Casting](#casting)
+  * [Estructuras de control](#estructuras-de-control)
+  * [Constantes](#constantes)
+  * [Comentarios en el código](#comentarios-en-el-código)
+  * [Espacios en blanco en expresiones y declaraciones](#espacios-en-blanco-en-expresiones-y-declaraciones)
+  * [Nombres de variables y métodos](#nombres-de-variables-y-métodos)
+  * [Manejo de excepciones](#manejo-de-excepciones)
+- [Política de mensajes de commit](#política-de-mensajes-de-commit)
+- [Estructura del repositorio y ramas base](#estructura-del-repositorio-y-ramas-base)
+- [Estrategia de ramas](#estrategia-de-ramas)
+  * [Desarrollo de ramas que añadan funcionalidad](#desarrollo-de-ramas-que-añadan-funcionalidad)
+  * [Preparación de releases](#preparación-de-releases)
+  * [Arreglar bugs en producción](#arreglar-bugs-en-producción)
+  * [Revisión por pares](#revisión-por-pares)
+- [Semántica de versionado](#semántica-de-versionado)
+- [Definición de Hecho](#definición-de-hecho)
+- [Gestión de documentos](#gestión-de-documentos)
+- [Resumen del trabajo con la CMDB iTop](#resumen-del-trabajo-con-la-cmdb-itop)
+  * [Objetivos y alcance de la CMDB](#objetivos-y-alcance-de-la-cmdb)
+  * [Estructura de la CMDB](#estructura-de-la-cmdb)
 
 ___
   
 
-<div id='id1'/>
 
 ## Introducción
 
 En este informe se describe la metodología de gestión de la configuración seguida por el grupo de trabajo G5-52, siendo aplicable al proyecto actual y a proyectos futuros que se puedan desarrollar.
 
-<div id='id2'/>
-
 ## Estándares de codificación
 
 Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se aplican de manera consistente en todo el proyecto. Esto incluye convenciones de nomenclatura, estilo de código y prácticas recomendadas como las siguientes:
 
-<div id='id3'/>
 
-- **Formato del código**: 
+### **Formato del código**: 
   - Los imports deben de realizarse al principio y cada uno en una línea.
     - Ejemplo:
-      - ✅
+      - Bien
       ```java
       package org.springframework.samples.petclinic.owner;
 
@@ -57,14 +72,14 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       import java.util.List;
       import java.util.Map;
       ```
-      - ⛔
+      - Mal
       ```java
       package org.springframework.samples.petclinic.owner;
       import java.net.URISyntaxException; import java.util.List; import java.util.Map;
       ```
   - La indentación debe de tener un tamaño de 4 espacios.
     - Ejemplo:
-      - ✅
+      - Bien
       ```java
       @Autowired
       public OwnerPlanController(OwnerService ownerService, UserService userService) {
@@ -72,7 +87,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
           this.userService = userService;
       }
       ```
-      - ⛔
+      - Mal
       ```java
       @Autowired
       public OwnerPlanController(OwnerService ownerService, UserService userService) {
@@ -82,7 +97,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
       ```
   - El máximo tamaño de una línea es de 90 caracteres:
     - Ejemplo:
-      - ✅
+      - Bien
       ```java
       @Autowired
       public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) 
@@ -90,54 +105,51 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
         ...
       }
       ```
-      - ⛔
+      - Mal
       ```java
       public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) throws URISyntaxException {
       ...
       }
       ```
-<div id='id4'/>
 
-- **Operadores binarios**: 
+### **Operadores binarios**: 
   - Escribir espacio antes y después.
   - Ejemplos:
-    - ✅
+    - Bien
     ```java
     if(userId == null)
     ```
-    - ⛔
+    - Mal
     ```java
     if(userId==null)
     ```
   
-  <div id='id5'/>
 
-- **Casting**: 
+### **Casting**: 
   - Escribir un espacio después del casting.
   - Ejemplos:
-    - ✅
+    - Bien
     ```java
     return (List<PetHotelRoom>) petHotelRooms;
     ```
-    - ⛔
+    - Mal
     ```java
     return (List<PetHotelRoom>)petHotelRooms;
     ```
 
-<div id='id6'/>
 
-- **Estructuras de control**:
+### **Estructuras de control**:
   - Siempre colocar las llaves `{}` en la misma línea que la declaración de la estructura de control.
   - Incluir un espacio antes de la llave de apertura.
   - El bloque de código dentro de la estructura de control debe estar indentado.
   - Ejemplos:
-    - ✅
+    - Bien
     ```java
     if (visit.getPet() == null) {
         errors.rejectValue("pet", REQUIRED, REQUIRED);
     }
     ```
-    - ⛔
+    - Mal
     ```java
     if (visit.getPet() == null) 
     {
@@ -145,27 +157,25 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     }
     ```
 
-<div id='id7'/>
 
-- **Constantes**:
+### **Constantes**:
   - Para el nombramiento de las constantes, haremos uso del estilo SREAMING_SNAKE_CASE(HELLO_WORLD).
-    - ✅
+    - Bien
     ```java
     public static final int MAX_ATTEMPTS = 5;
     public static final String ERROR_MESSAGE = "Ha ocurrido un error.";
     ```
-    - ⛔
+    - Mal
     ```java
     public static final int maximo = 5;
     public static final String mensaje_error = "Ha ocurrido un error.";
     ```
 
-<div id='id8'/>
 
-- **Cometarios en el código**:
+### **Comentarios en el código**:
   - Se pondrán mediante: /** (esto abre el comentario); * (para las líneas con el comentario); */ (para cerrar el comentario).
   - En caso de que sea solo una linea, se podrá poner con //
-    - ✅
+    - Bien
     ```java
     /**
      * Esto es un ejemplo
@@ -175,16 +185,15 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
 
     //Esto es un comentario de una sola linea
     ```
-    - ⛔
+    - Mal
     ```java
     #No comentario
     ```
 
-<div id='id9'/>
 
-- **Espacios en blanco en expresiones y declaraciones**:
+### **Espacios en blanco en expresiones y declaraciones**:
   - Dejaremos espacios en blanco tanto por delante como por detrás en las expresiones y declaraciones.
-    - ✅
+    - Bien
     ```java
     public static void main(String[] args) {
         // Declaración con espacios en blanco
@@ -195,25 +204,24 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
         System.out.println("El resultado es: " + resultado);
     }
     ```
-    - ⛔
+    - Mal
     ```java
     public static void main(String[] args) {
         int x=5;
     }
     ```
-<div id='id10'/>
 
-- **Nombres de variables y métodos**:
+### **Nombres de variables y métodos**:
   - Estos nombres tienen que ser lo más explicativos o descriptivos posibles, comenzando por minúscula y usando camelCase.
   - Ejemplos:
-    - ✅
+    - Bien
     ```java
     public void createUser(@Valid SignupRequest request) {
 		  User user = new User();
       ...
     }
     ```
-    - ⛔
+    - Mal
     ```java
     public void create_user(@Valid SignupRequest request) {
 		  User user = new User();
@@ -221,13 +229,12 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     }
     ```
 
-<div id='id11'/>
 
-- **Manejo de excepciones**:
+### **Manejo de excepciones**:
   - Se realizarán mediante `Try` y `Catch`, indicando en el `Catch` qué tipo de excepción es.
   - El mensaje de dicha excepción tiene que ser lo más significativo posible.
   - Ejemplos:
-    - ✅
+    - Bien
     ```java
     public static void main(String[] args) {
         int dividendo = 10;
@@ -248,7 +255,7 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
         return (double) dividendo / divisor;
     }
     ```
-    - ⛔
+    - Mal
     ```java
     public static void main(String[] args) {
         int dividendo = 10;
@@ -270,7 +277,6 @@ Los estándares de codificación se basan en PEP 8, Google Java Style Guide y se
     }
     ```
 
-<div id='id12'/>
 
 ## Política de mensajes de commit
 Los commits se realizarán siguiendo el siguiente patrón:
@@ -307,7 +313,6 @@ Además, seguiremos las 7 reglas siguientes:
 6. Envolver el cuerpo en 72 caracteres.
 7. Usar el cuerpo para explicar qué y porqué frente al cómo.
 
-<div id='id13'/>
 
 ## Estructura del repositorio y ramas base
 
@@ -319,7 +324,12 @@ El repositorio sigue una estructura organizada que incluye las siguientes ramas:
 - **develop**: Rama de desarrollo principal donde se fusionan las funcionalidades completadas.
 - **feature branches**: Ramas para el desarrollo de nuevas funcionalidades.
 
-<div id='id14'/>
+A la hora de crear una rama **hotfix**, se usará la siguiente nomenclatura: `hotfix/bugXX`, donde las XX se referirán al numero de la issue correspondiente.
+
+A la hora de crear una rama **feature**, se usará la siguiente nomenclatura: `feature/XX`, donde las XX se referirán al número de la issue correspondiente.
+
+A la hora de crear una rama **release**, se usará la siguiente nomenclatura: `release/X.y.z-ETIQUETA`, donde se seguirá la regla de versionado definida en este mismo documento.
+
 
 ## Estrategia de ramas
 
@@ -331,44 +341,33 @@ La estrategia de ramas se basa en Git Flow con **dos adaptaciones** para el curs
 
 Se sigue el siguiente proceso: 
 
-<div id='id15'/>
 
-- ### Desarrollo de ramas que añadan funcionalidad:
+### Desarrollo de ramas que añadan funcionalidad:
   1. Crear una rama de función desde `develop`.
   2. Desarrollar y probar la funcionalidad en la rama de la función.
   3. Solicitar una revisión por pareja antes de fusionar con `develop`.
 
-<div id='id16'/>
-
-- ### Preparación de releases
+### Preparación de releases
   1. Crear una rama de lanzamiento desde `develop`.
   2. Realizar pruebas finales y correcciones necesarias.
   3. Fusionar la rama de lanzamiento con `main` y `develop`.
   4. Etiquetar la versión.
 
-<div id='id17'/>
-
-- ### Arreglar bugs en producción
-
+### Arreglar bugs en producción
   1. Crear una rama de hotfix desde `main`.
   2. Corregir el error.
   3. Fusionar la rama de hotfix con `main` y `develop`.
   4. Etiquetar la versión corregida.
 
-<div id='id18'/>
 
-- ### Revisión por pares
-  A la hora de hacer `Pull Requests`, hemos definido la siguiente organización:
-  1. Benji
-  2. Ramón
-  3. Miguel
-  4. David
-  5. Rafa
+### Revisión por pares
+Para la revisión de tareas, se ha decido, que una vez acabada esta se creará un Pull Request y tendrá que poner como supervisores al resto de miembros del equipo. A su vez, este integrante, deberá avisa por otro medio (discord) que ha creado esta.
 
-De manera que se realizan las revisiones en cascada, es decir, el 1 revisa el 2, el 2 al 3 y así sucesivamente, hasta que el 5 revisa al 1. 
+Cada miembro del equipo tendrá que revisar estas tareas y poner un comentario, ya sea este positivo si lo ve todo correcto, como de indicación de haber encontrado algún problema.
 
-<div id='id19'/>
+Esta tarea se podrá pasar a la siguiente rama una vez todos los miembros hayan comprobado la definición de Hecho y esté la tarea con todos los "tics verdes" (comprobación que te pone en GitHub cuando revisas una tarea).
 
+ 
 ## Semántica de versionado
 
 La semántica de versionado definida es la siguiente:
@@ -385,31 +384,32 @@ La semántica de versionado definida es la siguiente:
 
 - **Reglas de versionado**: Cuando la versión mayor sea incrementada se resetean las demás, cuando se incremente la versión menor, se resetea el parche.
 
-<div id='id20'/>
 
-## Definición de "Hecho"
+## Definición de Hecho
 
-Una tarea se considera "Hecha" cuando se han completado las siguientes acciones:
+Una tarea se considera "Hecha" cuando se han completado las siguientes acciones.
 
+Si esta se trata de código:
 - Toda la funcionalidad de la tarea está satisfecha.
-- El código ha sido revisado y aprobado por al menos un compañero de equipo.
+- El código ha sido revisado y aprobado por el equipo.
 - La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
 
-<div id='id21'/>
+Si esta se trata de documentación:
+- El documento recoja toda la información referente a este.
+- El documento ha sido revisado y aprobado por el equipo.
+
 
 ## Gestión de documentos
 
-Los documentos generados durante el proyecto se gestionan en el repositorio según las estrategias descritas anteriormente. Se utilizará la carpeta `docs` para organizar la documentación relacionada con el desarrollo, las pruebas y la gestión del proyecto.
+Los documentos generados durante el proyecto se gestionan en el repositorio según las estrategias descritas anteriormente. Se utilizará la carpeta `docs` para organizar la documentación relacionada con el desarrollo, las pruebas y la gestión del proyecto, de manera que dentro de ella, se usarán carpetas para cada sprint.
 
-<div id='id22'/>
 
 ## Resumen del trabajo con la CMDB iTop
 
 Para el desarrollo del presente proyecto utilizaremos la CMDB iTop (IT Operational Portal), una aplicación web de código abierto para administrar hardware, software y servicios IT, además de otras características como un lenguaje de consulta propio.
 
-<div id='id23'/>
 
-**Objetivos y alcance de la CMDB**
+### **Objetivos y alcance de la CMDB**
 
 - **Gestión de la configuración**: Proporcionar una visión completa y precisa de los elementos de configuración (CI) dentro del entorno de tecnología de la organización, incluyendo su estado, relaciones y versiones.
 
@@ -421,9 +421,8 @@ Para el desarrollo del presente proyecto utilizaremos la CMDB iTop (IT Operation
 
 El alcance de una CMDB puede variar según las necesidades y la complejidad de la organización, pero generalmente abarca todos los componentes de TI que son relevantes para la prestación de servicios de TI, incluyendo servidores, dispositivos de red, aplicaciones, bases de datos, configuraciones de software, licencias, configuraciones de red, documentación y   relaciones entre estos elementos.
 
-<div id='id24'/>
 
-**Estructura de la CMDB**
+### **Estructura de la CMDB**
 
 - La estructura de información en iTop está diseñada para proporcionar a las organizaciones una plataforma integral para administrar servicios, activos y operaciones de TI de una manera estructurada y eficiente.
 
@@ -435,10 +434,10 @@ El alcance de una CMDB puede variar según las necesidades y la complejidad de l
 
 **Lista de los elementos de configuración agregados por cada miembro del grupo**
 
-![Ruta erronea o archivo inexistente](/docs/static/Functional%20CI-1.png)
-![Ruta erronea o archivo inexistente](/docs/static/Functional%20CI-2.png)
+![Tabla de iTop (1)](/docs/static/Functional%20CI-1.png)
+![Tabla de iTop (2)](/docs/static/Functional%20CI-2.png)
 
 
 **Diagrama UML con las relaciones entre los diferentes configuration items**
 
-![Ruta erronea o archivo inexistente](/docs/static/UML%20Relaciones.jpeg)
+![Diagrama UML](/docs/static/UML%20Relaciones.jpeg)
