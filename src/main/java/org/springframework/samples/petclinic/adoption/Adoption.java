@@ -5,6 +5,7 @@ import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.pet.Pet;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,19 +15,19 @@ import lombok.Setter;
 @Setter
 public class Adoption extends BaseEntity{
 
-    @OneToMany
+    @ManyToOne
     private Owner originalOwner;
 
-    @OneToMany
+    @ManyToOne
     private Owner newOwner;
 
-    @OneToMany
+    @ManyToOne
     private Pet petToAdopt;
 
     // Indicará si la adopción ha sido aceptada por originalOwner y está por tanto Activa
     private Boolean active;
 
-    // Descripción que añadirá newOwner para que originalOwner le acepte la adopción
+    // Descripción que añadirá newOwner a la solicitud, para que originalOwner le acepte la adopción
     private String description;
     
 }
