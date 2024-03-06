@@ -22,5 +22,11 @@ public class Adoption extends BaseEntity{
 
     @OneToMany
     private Pet petToAdopt;
+
+    // Indicará si la adopción ha sido aceptada por originalOwner y está por tanto Activa
+    private Boolean active;
+
+    // Descripción que añadirá newOwner para que originalOwner le acepte la adopción
+    private String description;
     
 }
