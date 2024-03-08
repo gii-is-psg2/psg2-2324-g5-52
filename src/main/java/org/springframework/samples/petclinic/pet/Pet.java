@@ -23,6 +23,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -60,6 +61,7 @@ public class Pet extends NamedEntity {
 	protected Owner owner;
 
 	@Column(name = "on_adoption")
-	private Boolean onAdoption;
+	@NotNull
+	private Boolean onAdoption = false;
 
 }
