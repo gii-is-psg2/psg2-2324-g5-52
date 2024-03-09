@@ -60,6 +60,7 @@ public class Pet extends NamedEntity {
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Owner owner;
 
+	// Atributo que indicará si la mascota ha sido puesta en adopción por su propietario
 	@Column(name = "on_adoption")
 	@NotNull
 	private Boolean onAdoption = false;

@@ -15,36 +15,45 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "adoptions")
+@Table(name = "adoption_requests")
 @Getter
 @Setter
-public class Adoption extends BaseEntity{
+public class AdoptionRequests extends BaseEntity{
 
-    @Column(name = "original_owner")
+    @Column(name = "original_owner_id")
     @ManyToOne(optional = false)
     @JoinColumn(name = "owner_id")
     @NotNull
     private Owner originalOwner;
 
-    @Column(name = "new_owner")
+    @Column(name = "new_owner_id")
     @ManyToOne(optional = false)
     @JoinColumn(name = "owner_id")
     @NotNull
     private Owner newOwner;
 
-    @Column(name = "pet_to_adopt")
+    @Column(name = "pet_to_adopt_id")
     @ManyToOne(optional = false)
     @JoinColumn(name = "pet_id")
     @NotNull
     private Pet petToAdopt;
 
-    // Indicará si la adopción ha sido aceptada por originalOwner y está por tanto Activa
+    // Indicará las solicitudes actualmente activas sobre esta mascota, por si en un 
+    // futuro vuelve a ser objeto de otra adopción no aparezcan de nuevo estas solicitudes
+    // ya marcadas a false terminado el actual proceso de adopción
     @Column(name = "active")
     @NotNull
     private Boolean active = true;
 
+    // Indicará si esta solicitud de adopción ha sido aceptada o admitida por originalOwner 
+    // de entre las distintas solicitudes de adopción sobre su mascota. Por defecto, ninguna 
+    // solicitud de adopción nueva que se cree estará admitida.
+    @Column(name = "admitted")
+    @NotNull
+    private Boolean admitted = false;
+
     // Descripción que añadirá newOwner a la solicitud, para que originalOwner le acepte la adopción
-    @Column(name = "description", length = 100)
+    @Column(name = "description", length = 255)
     @NotEmpty
     private String description;
     
