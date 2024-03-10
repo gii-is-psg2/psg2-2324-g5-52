@@ -49,6 +49,12 @@ export default function PetHotelRoomList() {
             Add a Pet Hotel Room
           </Button>
         </div>
+        <span>&nbsp;&nbsp;</span>
+        <div className="float-right">
+          <Button color="success" tag={Link} to="/petHotelRooms/booking">
+            Add a Booking
+          </Button>
+        </div>
         <div>
           <Table aria-label="clinics" className="mt-4">
             <thead>
