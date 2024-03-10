@@ -9,7 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -54,7 +54,7 @@ public class AdoptionRequests extends BaseEntity{
 
     // Descripción que añadirá newOwner a la solicitud, para que originalOwner le acepte la adopción
     @Column(name = "description", length = 255)
-    @NotEmpty
+    @NotBlank
     private String description;
     
 }
