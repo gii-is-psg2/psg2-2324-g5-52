@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.booking;
+package org.springframework.samples.petclinic.petHotelRoom.booking;
 
 import java.util.List;
 
