@@ -18,7 +18,7 @@ import lombok.Setter;
 @Table(name = "adoption_requests")
 @Getter
 @Setter
-public class AdoptionRequests extends BaseEntity{
+public class AdoptionRequest extends BaseEntity{
 
     @Column(name = "original_owner_id")
     @ManyToOne(optional = false)
