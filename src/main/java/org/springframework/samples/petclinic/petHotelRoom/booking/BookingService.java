@@ -2,12 +2,13 @@ package org.springframework.samples.petclinic.petHotelRoom.booking;
 
 import java.util.List;
 
+import javax.naming.directory.InvalidAttributeValueException;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.dao.DataAccessException;
-import org.springframework.dao.DuplicateKeyException;
 
 
 @Service
@@ -46,19 +47,23 @@ public class BookingService {
     }
 
     @Transactional
-    public Booking save(Booking booking) throws DuplicateKeyException {
+    public Booking save(Booking booking) throws InvalidAttributeValueException {
         List<Booking> bookingsConcurrentes = bookingRepository
             .findConcurrentBooking(booking.getPet(), booking.getPetHotelRoom().getId(), booking.getStartDate(), booking.getEndDate());
         if (bookingsConcurrentes.size() >= 1) {
-            throw new DuplicateKeyException("Concurrent booking found in the same room and date range.");
-        } else {
+            throw new InvalidAttributeValueException("Concurrent booking found in the same room and date range.");
+
+        } if(booking.getStartDate().isAfter(booking.getEndDate())){
+			throw new InvalidAttributeValueException("The start date must be before the end date");
+		}	
+		else {
             bookingRepository.save(booking);
             return booking;
         }
     }
 
     @Transactional
-	public Booking update(Booking booking, int id) throws DataAccessException {
+	public Booking update(Booking booking, int id) throws InvalidAttributeValueException{
 		Booking toUpdate = findById(id);
 		BeanUtils.copyProperties(booking, toUpdate, "id");
 		return save(toUpdate);
