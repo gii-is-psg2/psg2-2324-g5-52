@@ -20,21 +20,18 @@ import lombok.Setter;
 @Setter
 public class AdoptionRequest extends BaseEntity{
 
-    @Column(name = "original_owner_id")
     @ManyToOne(optional = false)
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "original_owner_id")
     @NotNull
     private Owner originalOwner;
 
-    @Column(name = "new_owner_id")
     @ManyToOne(optional = false)
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "new_owner_id")
     @NotNull
     private Owner newOwner;
 
-    @Column(name = "pet_to_adopt_id")
     @ManyToOne(optional = false)
-    @JoinColumn(name = "pet_id")
+    @JoinColumn(name = "pet_to_adopt_id")
     @NotNull
     private Pet petToAdopt;
 
