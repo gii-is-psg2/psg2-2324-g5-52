@@ -8,7 +8,6 @@ import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.samples.petclinic.pet.PetType;
 import org.springframework.stereotype.Service;
 
-import jakarta.validation.constraints.NotNull;
 
 @Service
 public class PetHotelRoomService {
@@ -22,10 +21,13 @@ public class PetHotelRoomService {
         this.petService = petService;
         this.clinicService = clinicService;
     }
+
+
     public PetHotelRoom savePetHotelRoom(PetHotelRoomCreationRequest petHotelRoomRequest) {
         PetHotelRoom newPetHotelRoom = new PetHotelRoom();
 		newPetHotelRoom.setName(petHotelRoomRequest.getName());
 		newPetHotelRoom.setSize(petHotelRoomRequest.getSize());
+        newPetHotelRoom.setRoomNumber(findAll().size() + 1);
 
         PetType petType = petService.findPetTypeByName(petHotelRoomRequest.getPetType());
         newPetHotelRoom.setPetType(petType);
