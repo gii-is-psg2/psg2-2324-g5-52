@@ -12,4 +12,7 @@ public interface AdoptionRepository extends CrudRepository<AdoptionRequest, Inte
 	@Query("SELECT p FROM Pet p WHERE p.onAdoption = TRUE")
 	public List<Pet> findPetsOnAdoption();
 
+	@Query("SELECT ar FROM AdoptionRequest ar WHERE ar.originalOwner.id = ?1 AND ar.active = TRUE")
+	public List<AdoptionRequest> findAllByOriginalOwner(Integer id);
+
 }
