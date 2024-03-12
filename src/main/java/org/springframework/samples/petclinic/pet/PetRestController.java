@@ -34,6 +34,8 @@ import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameExc
 import org.springframework.samples.petclinic.user.User;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.samples.petclinic.util.RestPreconditions;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -85,6 +87,24 @@ public class PetRestController {
 				return new ResponseEntity<>((List<Pet>) this.petService.findAll(), HttpStatus.OK);
 		}
 		throw new AccessDeniedException();
+	}
+
+	@GetMapping("onAdoption")
+	public ResponseEntity<List<Pet>> findAllOnAdoption() {
+		return new ResponseEntity<>(petService.findAllPetsOnAdoption(), HttpStatus.OK);
+	}
+
+	@PutMapping("onAdoption/{petId}")
+	public ResponseEntity<?> changeOnAdoption(@PathVariable("petId") int petId) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUser(auth.getName());
+		try{
+			Pet pet = petService.changeOnAdoption(petId, user.getId());
+			return new ResponseEntity<>(pet, HttpStatus.OK);
+		}
+		catch(Exception e){
+			return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+		}
 	}
 
 	@GetMapping("types")

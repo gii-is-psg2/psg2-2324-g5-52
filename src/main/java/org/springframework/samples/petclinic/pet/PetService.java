@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,10 +40,12 @@ public class PetService {
 	private final Integer PLATINUM_LIMIT = 7;
 
 	private PetRepository petRepository;
+	private OwnerService ownerService;
 
 	@Autowired
-	public PetService(PetRepository petRepository) {
+	public PetService(PetRepository petRepository, OwnerService ownerService) {
 		this.petRepository = petRepository;
+		this.ownerService = ownerService;
 	}
 
 	@Transactional(readOnly = true)
@@ -63,6 +67,11 @@ public class PetService {
 	@Transactional(readOnly = true)
 	public Pet findPetById(int id) throws DataAccessException {
 		return petRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Pet", "ID", id));
+	}
+
+	@Transactional(readOnly = true)
+	public List<Pet> findAllPetsOnAdoption() throws DataAccessException {
+		return petRepository.findAllPetsOnAdoption();
 	}
 
 	@Transactional(readOnly = true)
@@ -101,6 +110,20 @@ public class PetService {
 	public Pet updatePet(Pet pet, int id) {
 		Pet toUpdate = findPetById(id);
 		BeanUtils.copyProperties(pet, toUpdate, "id");
+		return savePet(toUpdate);
+	}
+
+	@Transactional
+	public Pet changeOnAdoption(int petId, int userId) throws DataAccessException{
+		Optional<Owner> owner = ownerService.optFindOwnerByUser(userId);
+		if(!owner.isPresent()){
+			throw new ResourceNotFoundException("The user is not an owner");
+		}
+		Pet toUpdate = findPetById(petId);
+		if(!toUpdate.getOwner().getId().equals(owner.get().getId())){
+			throw new DataAccessException("Pet not owned by user"){};
+		}
+		toUpdate.setOnAdoption(!toUpdate.getOnAdoption());
 		return savePet(toUpdate);
 	}
 
