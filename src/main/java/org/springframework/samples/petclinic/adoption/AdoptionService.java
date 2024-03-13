@@ -44,7 +44,7 @@ public class AdoptionService {
     }
 
     @Transactional
-	public AdoptionRequest save(AdoptionRequestForm adoptionRequestForm, User userNewOwner) throws DataAccessException {
+	public AdoptionRequest save(AdoptionRequestForm adoptionRequestForm, User userNewOwner) throws DataAccessException, Exception {
         Optional<Owner> newOwner = ownerService.optFindOwnerByUser(userNewOwner.getId());
         if(!newOwner.isPresent()){
             throw new DataAccessException("The user is not an owner"){};

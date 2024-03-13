@@ -94,7 +94,7 @@ public class PetRestController {
 		return new ResponseEntity<>(petService.findAllPetsOnAdoption(), HttpStatus.OK);
 	}
 
-	@PutMapping("onAdoption/{petId}")
+	@PutMapping("/onAdoption/{petId}")
 	public ResponseEntity<?> changeOnAdoption(@PathVariable("petId") int petId) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUser(auth.getName());

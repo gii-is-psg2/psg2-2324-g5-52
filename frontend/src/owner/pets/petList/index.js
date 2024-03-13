@@ -39,7 +39,7 @@ export default function OwnerPetList() {
 
   function changeAdoptStatus(id) {
     fetch(`/api/v1/pets/onAdoption/${id}`, {
-      method: "POST",
+      method: "PUT",
       headers: {
         Authorization: `Bearer ${jwt}`,
         Accept: "application/json",
@@ -47,8 +47,8 @@ export default function OwnerPetList() {
       },
     })
       .then((response) => {
-        if (response.status === 200) return response.json();
-      }).then(setUp());
+        if (response.ok) setUp();
+      });
   }
 
   async function removeVisit(petId, visitId) {
