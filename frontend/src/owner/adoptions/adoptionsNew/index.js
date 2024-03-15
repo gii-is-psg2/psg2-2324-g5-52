@@ -27,6 +27,7 @@ export default function NewAdoption() {
   const adoptionNewInputsRef = useRef(null);
 
   function handleSubmit({ values }) {
+    values.petId = petId;
     fetch(`/api/v1/adoptions`, {
       method: "POST",
       headers: {
@@ -71,14 +72,6 @@ export default function NewAdoption() {
               type: "text",
               defaultValue: "",
               isRequired: true,
-            },
-            {
-              tag: "Pet Id",
-              name: "petId",
-              type: "text",
-              defaultValue: petId,
-              isRequired: true,
-              disabled: true
             }
           ]}
           initialValues={adoption}

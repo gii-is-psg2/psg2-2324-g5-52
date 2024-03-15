@@ -27,7 +27,7 @@ public class AdoptionRequest extends BaseEntity{
     private Owner originalOwner;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "new_owner_id", unique = true)
+    @JoinColumn(name = "new_owner_id")
     @NotNull
     private Owner newOwner;
 

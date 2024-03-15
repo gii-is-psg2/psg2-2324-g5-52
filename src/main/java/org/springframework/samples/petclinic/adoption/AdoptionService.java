@@ -92,9 +92,18 @@ public class AdoptionService {
         petService.savePet(pet);
 
         adoptionRequestToAccept.setAdmitted(true);
-        adoptionRequestToAccept.setActive(false);
-
+        desactiveAdoptionRequest(adoptionRequestToAccept.getPetToAdopt().getId());
         return adoptionRepository.save(adoptionRequestToAccept);
+    }
+
+    @Transactional
+    public void desactiveAdoptionRequest(Integer petId) throws DataAccessException {
+        List<AdoptionRequest> adoptionRequests = adoptionRepository.findAllByPetToAdopt(petId);
+
+        for(AdoptionRequest adoptionRequest : adoptionRequests){
+            adoptionRequest.setActive(false);
+            adoptionRepository.save(adoptionRequest);
+        }
     }
 
 }
