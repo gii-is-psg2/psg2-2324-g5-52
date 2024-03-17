@@ -51,16 +51,16 @@ A continuación se representa el gráfico Burn Down de tareas realizadas corresp
 
 Se incluyen en el gráfico las Pull Requests generadas durante el sprint.
 
-Si en Pipelines incluimos TODOS los pipelines de ZenHub, inlcuido `Epics`, la línea de puntos de historia completados finaliza el martes 5 de Marzo, con los 77 puntos de historia `Completados` y 0 `Pendientes`, pero con 22 tareas `Completadas` y 1 `Pendientes` de 23 tareas definidas. 
+Si en Pipelines incluimos TODOS los pipelines de ZenHub, incluido `Epics`, la línea de puntos de historia completados finaliza el martes 5 de Marzo, con los 77 puntos de historia `Completados` y 0 `Pendientes`, pero con 22 tareas `Completadas` y 1 `Pendientes` de 23 tareas definidas. 
 
 En cambio, si en Pipelines incluimos **sólo** `ToDo`, como dice el profesor, la línea de puntos de historia completados no finaliza en 0 para ese día, y el gráfico indica que para ese día están `Completados` 56 Puntos de Historia y `Pendientes` 21, de los 77 definidos, y 19 tareas `Completadas` y 4 `Pendientes` de 23 definidas.
 
-Gráfico con TODOS los pipelines (Epic, ToDo, InProgress, InReview, Done y Closed) en opicón Pipelines e incluyendo Pull Requests del sprint.
+Gráfico con todos los pipelines (Epic, ToDo, InProgress, InReview, Done y Closed) en opción `Pipelines` e incluyendo Pull Requests del sprint.
 
 ![Gráfico Burn Down de Sprint 1 del proyecto TODOS Pipelines](/docs/static/Sprint1_Burn_Down_Chart_6Feb_7Mar.png)
 
 
-Gráfico con pipeline `ToDo` en opicón Pipelines a mostrar e incluyendo Pull Requests del sprint.
+Gráfico con pipeline `ToDo` en opción `Pipelines` e incluyendo Pull Requests del sprint.
 
 ![Gráfico Burn Down de Sprint 1 del proyecto Pipeline ToDo](/docs/static/Sprint1_Burn_Down_Chart_6Feb_7Mar_Pipeline_Final_Done.png)
 
@@ -78,12 +78,50 @@ Este enlace siguiente parace no funcionar bien, no lleva al gráfico modificado 
 
 ### **Gráfico de Control mostrando el Lead Time**
 
-*ToDo*
+El "Lead Time" es una métrica que se usa en la gestión de proyectos para medir el tiempo que conlleva completar una tarea o un conjunto de tareas. En concreto, es la cantidad de tiempo total transcurrido desde que se **crea** una tarea hasta que se **completa** su entrega. 
+
+En nuestro caso particular, será el tiempo transcurrido desde que creamos la tarea en el pipeline `ToDo` del tablero de ZenHub, hasta que llevamos dicha tarea al pipeline `Done`, o a `Close` una vez aprobado el cierre por el Product Owner en la Sprint Review.
+
+Tanto este gráfico como el de "Cycle Time" pueden ayudar a predecir cuánto tiempo tomará completar/cerrar próximas tareas, identificando además posibles cuellos de botella o ineficiencias en las distintas etapas del proceso.
+
+Cada punto en el gráfico representa una (o más) tareas completadas (`Done`). Los puntos sólidos representan grupos de tareas completadas en un mismo día. El eje de las X muestra la fecha en la que la tarea fue completada, mientras que en el eje de las Y se representa el número de días que tomó completar dicha tarea.
+
+La línea azul muestra el número promedio de días que se tarda en completar/cerrar una tarea durante todo el período de tiempo seleccionado. La línea verde muestra un promedio móvil del número de días que tarda en completar/cerrar las tareas más recientes, lo que ayuda a identificar tendencias o cambios recientes en el proceso.
+
+El área sombreada en gris muestra la desviación estándar y ayuda a diferenciar entre variaciones normales y los valores atípicos (outliers): las tareas dentro de este área sombreada en gris están dentro de la variación normal y predecible, incluso si están por encima o por debajo del promedio. En cambio las tareas fuera del área gris han tardado un tiempo demasiado corto o largo en completarse, y deben examinarse más a fondo para comprender qué ocurrió con ellas, y tomar alguna acción o medida en su caso.
+
+Gráfico de Control "Lead Time" de Sprint 1
+![Gráfico de Control "Lead Time" de Sprint 1 del proyecto](/docs/static/Sprint1_Lead_Time_Control_Chart_6Feb_7Mar.png)
+Métricas y estadísticas del gráfico de Control "Lead Time" de Sprint 1
+![Estadísticas de Gráfico de Control "Lead Time" de Sprint 1 del proyecto](/docs/static/Sprint1_Lead_Time_Control_Chart_Statistics.png)
+
+#### Análisis e intrepretación del gráfico
+
+Como podemos observar, el periodo seleccionado para la emisión del gráfico ha sido desde el martes 6 de febrero de 2024, día comienzo del Sprint 1, hasta el jueves 7 de marzo, día de la entrega, pues hasta un día antes se estuvieron realizando tanto la Sprint Restrospective como tareas relacionadas con la entrega final. Se ha seleccionado que se muestren las Pull Requests generadas durante el Sprint. 
+
+Y como observamos en las métricas y estadísticas, el número de tareas finalizadas, o movidas desde `ToDo` a `Done`, fue de **21** ( equivaliendo a un total de 74 puntos de historia). El tiempo máximo y mínimo de duración de una tarea fue de 14 días y 0 días, respectivamente, siendo ambos valores considerados atípicos (outliers), ya que la media de días de finalización de tareas para el periodo fue de 2.9 días, la media movil (o en tiempo real en cada momento) fue de 5.7 días y la mediana fue de 2 días para este periodo.
+
+Pero la tarea que ha tardado 14 días en completarse ha sido la #24 "1.7 Prepare a release of the PetClinic project", con lo cual, lo que deberíamos de cambiar es la estrategia de creación de tareas, y no crearlas todas al principio del Sprint, sino cuando se vaya acercando su fecha estimada o cercana de comienzo, pues esta tarea por ejemplo, de creación de una versión release del proyecto, no se puede comenzar hasta tener todos los desarrollos terminados y movidos a la rama main de GitHub, con lo cual, tampoco tiene sentido tener la tarea creada desde el principio, y posicionada en `ToDo`, cuando probablemente no se comience con ella hasta los días finales del Sprint, y así eliminaríamos estos valores atípicos del gráfico. 
+
+Una posibilidad para evitar esto sería, aún creando todas las tareas al comienzo del Sprint, utilizar el pipeline `IceBox`, donde se colocarían todas las tareas creadas pero que aún no deberían pasar a `ToDo`, y así evitaríamos que el tiempo transcurriera para ellas en el cálculo del "Lead Time", y podríamos eliminar valores atípicos, o outliers, generados por este motivo.
   
 
 ### **Gráfico de Control mostrando el Cycle Time**  
 
-*ToDo*
+El "Cycle Time" es otra métrica usada en la gestión de proyectos y desarrollos software también para medir el tiempo que conlleva completar una o varias tareas. Pero en este caso no desde la creación propiamente dicha de la tarea, sino desde que se comenzó a trabajar sobre ella realmente.
+
+Para el caso de nuestro proyecto será el tiempo transcurrido desde que colocamos la issue en el pipeline `InProgress` hasta que la colocamos en `Done`, o `Close`  tras la indicación del Product Owner.
+
+Gráfico de Control "Cycle Time" de Sprint 1
+![Gráfico de Control "Cycle Time" de Sprint 1 del proyecto](/docs/static/Sprint1_Cycle_Time_Control_Chart_6Feb_7Mar.png)
+Métricas y estadísticas de Gráfico de Control "Cycle Time" de Sprint 1
+![Estadísticas de Gráfico de Control "Cycle Time" de Sprint 1 del proyecto](/docs/static/Sprint1_Cycle_Time_Control_Chart_Statistics.png)
+
+#### Análisis e intrepretación del gráfico
+
+El periodo de tiempo seleccionado es el mismo que para el gráfico anterior, y también se solicita que se muestren las Pull Request generadas.
+
+Pero para el "Cycle Time", de `InProgress` a `Done` o tiempo efectivo de desarrollo de la tarea, el número de tareas movidas ha sido de 17 (correspondiendo con 52 puntos de historia), en lugar de las 21 del "Lead Time", aunque con los mismos tiempos de máximo y mínimo número de días de desarrollo, 14 y 0 días respectivamente. Además, la media y medía móvil han subido hasta 3.1 días (desde 2.9 en "Lead Time") y 6.2 días (desde 5.7), aunque la mediana sí ha bajado una décima hasta los 1.9 días.
   
 
 ### **Total de puntos de historia entregados**
