@@ -44,7 +44,7 @@ public class AdoptionService {
     }
 
     @Transactional
-	public AdoptionRequest save(AdoptionRequestForm adoptionRequestForm, User userNewOwner) throws DataAccessException {
+	public AdoptionRequest save(AdoptionRequestForm adoptionRequestForm, User userNewOwner) throws DataAccessException, Exception {
         Optional<Owner> newOwner = ownerService.optFindOwnerByUser(userNewOwner.getId());
         if(!newOwner.isPresent()){
             throw new DataAccessException("The user is not an owner"){};
@@ -92,9 +92,18 @@ public class AdoptionService {
         petService.savePet(pet);
 
         adoptionRequestToAccept.setAdmitted(true);
-        adoptionRequestToAccept.setActive(false);
-
+        desactiveAdoptionRequest(adoptionRequestToAccept.getPetToAdopt().getId());
         return adoptionRepository.save(adoptionRequestToAccept);
+    }
+
+    @Transactional
+    public void desactiveAdoptionRequest(Integer petId) throws DataAccessException {
+        List<AdoptionRequest> adoptionRequests = adoptionRepository.findAllByPetToAdopt(petId);
+
+        for(AdoptionRequest adoptionRequest : adoptionRequests){
+            adoptionRequest.setActive(false);
+            adoptionRepository.save(adoptionRequest);
+        }
     }
 
 }

@@ -1,5 +1,4 @@
-import { useState } from "react";
-import useFetchState from "../../../util/useFetchState";
+import { useState, useEffect } from "react";
 import tokenService from "../../../services/token.service";
 import getErrorModal from "../../../util/getErrorModal";
 import { Button, Table } from "reactstrap";
@@ -12,21 +11,34 @@ const jwt = tokenService.getLocalAccessToken();
 export default function OwnerAdoptionsList() {
     const [message, setMessage] = useState(null);
     const [visible, setVisible] = useState(false);
-    const [petsOnAdoption, setPetsOnAdoption] = useFetchState(
-        [],
-        `/api/v1/pets/onAdoption`,
-        jwt,
-        setMessage,
-        setVisible
-    );
+    const [petsOnAdoption, setPetsOnAdoption] = useState([]);
+    const [myPetsAdoptions, setMyPetsAdoptions] = useState([]);
 
-    const [myPetsAdoptions, setMyPetsAdoptions] = useFetchState(
-        [],
-        `/api/v1/adoptions`,
-        jwt,
-        setMessage,
-        setVisible
-    )
+    async function setUp() {
+        let petsOnAdoption = await (
+            await fetch(`/api/v1/pets/onAdoption`, {
+                headers: {
+                    Authorization: `Bearer ${jwt}`,
+                    "Content-Type": "application/json",
+                },
+            })
+        ).json();
+        setPetsOnAdoption(petsOnAdoption);
+        let myPetsAdoptions = await (
+            await fetch(`/api/v1/adoptions`, {
+                headers: {
+                    Authorization: `Bearer ${jwt}`,
+                    "Content-Type": "application/json",
+                },
+            })
+        ).json();
+        setMyPetsAdoptions(myPetsAdoptions);
+
+    }
+
+    useEffect(() => {
+        setUp();
+    }, []);
 
     const [alerts, setAlerts] = useState([]);
 
@@ -42,6 +54,7 @@ export default function OwnerAdoptionsList() {
             .then((response) => {
                 if (response.status === 200) {
                     alert("Adoption accepted");
+                    setUp();
                 }
             })
     }
@@ -55,7 +68,7 @@ export default function OwnerAdoptionsList() {
                     <td className="text-center">{pet.type.name}</td>
                     <td className="text-center">{pet.owner.user.username}</td>
                     <td className="text-center">
-                        <Button outline color="success" tag={Link} to={`/adoptions/new?petName=${pet.name}`}>
+                        <Button outline color="success" tag={Link} to={`/adoptions/new?petId=${pet.id}`}>
                             Request adoption
                         </Button>
                     </td>
@@ -67,8 +80,8 @@ export default function OwnerAdoptionsList() {
         myPetsAdoptions.map((adoption) => {
             return (
                 <tr key={adoption.id}>
-                    <td className="text-center">{adoption.petToAdopt}</td>
-                    <td className="text-center">{adoption.newOwner}</td>
+                    <td className="text-center">{adoption.petToAdopt.name}</td>
+                    <td className="text-center">{adoption.newOwner.user.username}</td>
                     <td className="text-center">{adoption.description}</td>
                     <td className="text-center">
                         <Button outline color="success" onClick={() => acceptAdoption(adoption.id)}>
@@ -101,7 +114,7 @@ export default function OwnerAdoptionsList() {
                 </div>
             </div>
             <div className="myAdoptions-list-container">
-                <h1 className="text-center">My pets adoptions</h1>
+                <h1 className="text-center">My pets adoptions requests</h1>
                 {alerts.map((a) => a.alert)}
                 {modal}
                 <div>

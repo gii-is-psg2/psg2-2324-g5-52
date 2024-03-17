@@ -3,7 +3,6 @@ import "../../../static/css/auth/authPage.css";
 import tokenService from "../../../services/token.service";
 import getErrorModal from "../../../util/getErrorModal";
 import FormGenerator from "../../../components/formGenerator/formGenerator";
-import { formValidators } from "../../../validators/formValidators";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -14,11 +13,11 @@ export default function NewAdoption() {
   const navigator = useNavigate();
 
   const urlParams = new URLSearchParams(window.location.search);
-  const petName = urlParams.get('petName');
+  const petId = urlParams.get('petId');
 
   const defaultAdoption = {
-    petNameId: petName.id,
     description: "",
+    petId: petId
   };
 
   const [message, setMessage] = useState(null);
@@ -28,7 +27,7 @@ export default function NewAdoption() {
   const adoptionNewInputsRef = useRef(null);
 
   function handleSubmit({ values }) {
-
+    values.petId = petId;
     fetch(`/api/v1/adoptions`, {
       method: "POST",
       headers: {
@@ -38,12 +37,21 @@ export default function NewAdoption() {
       body: JSON.stringify(values),
     })
       .then((res) => {
-        if (res.status === 201) {
+        if (res.ok) {
           navigator("/adoptions");
+        } else {
+          const contentType = res.headers.get("Content-Type");
+          if (contentType && contentType.includes("application/json")) {
+            return res.json().then((errorData) => {
+              let errorMessage = errorData.message;
+              alert(errorMessage);
+            });
+          } else {
+            return res.text().then((errorMessage) => {
+              alert("Ya has solicitado la adopción");
+            });
+          }
         }
-      })
-      .catch((err) => {
-        setMessage(err.message);
       });
 
   }
@@ -64,7 +72,6 @@ export default function NewAdoption() {
               type: "text",
               defaultValue: "",
               isRequired: true,
-              validators: [formValidators.notEmptyValidator],
             }
           ]}
           initialValues={adoption}

@@ -15,4 +15,8 @@ public interface AdoptionRepository extends CrudRepository<AdoptionRequest, Inte
 	@Query("SELECT ar FROM AdoptionRequest ar WHERE ar.originalOwner.id = ?1 AND ar.active = TRUE")
 	public List<AdoptionRequest> findAllByOriginalOwner(Integer id);
 
+	// Consulta que devolverá la lista de todas las solicitudes de una misma mascota que estén activas
+	@Query("SELECT ar FROM AdoptionRequest ar WHERE ar.petToAdopt.id = ?1 AND ar.active = TRUE")
+	public List<AdoptionRequest> findAllByPetToAdopt(Integer petId);
+
 }

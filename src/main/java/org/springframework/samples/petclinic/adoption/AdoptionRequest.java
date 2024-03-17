@@ -1,5 +1,6 @@
 package org.springframework.samples.petclinic.adoption;
 
+import org.hibernate.validator.constraints.Length;
 import org.springframework.samples.petclinic.model.BaseEntity;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.pet.Pet;
@@ -50,7 +51,8 @@ public class AdoptionRequest extends BaseEntity{
     private Boolean admitted = false;
 
     // Descripción que añadirá newOwner a la solicitud, para que originalOwner le acepte la adopción
-    @Column(name = "description", length = 255)
+    @Column(name = "description")
+    @Length(max = 255)
     @NotBlank
     private String description;
     
