@@ -107,7 +107,7 @@ Pero la tarea que ha tardado 14 días en completarse ha sido la #24 "1.7 Prepare
 
 Otra alternativa para evitar esto sería, aún creando todas las tareas al comienzo del Sprint, crear y utilizar el pipeline `IceBox`, donde se colocarían todas las tareas creadas pero que aún no deberían pasar a `ToDo`, quedando así "congeladas" hasta el momento de colocarlas en `ToDo` y de esta forma evitaríamos que el tiempo transcurriera para ellas en el cálculo del "Lead Time", y podríamos eliminar valores atípicos, o outliers, generados por este motivo.
 
-En cualquier caso, podemos observar que no existen muchos puntos con valores atípicos o outliers, fuera del área sombreada, con respecto al número total de tareas generadas, con lo cual, podemos concluir que se trata de una buena gráfica y que el progreso y la estrategia de trabajo seguidos a funcionado razonablemente bien para este primer Spint.
+En cualquier caso, podemos observar que no existen muchos puntos con valores atípicos o outliers, fuera del área sombreada, con respecto al número total de tareas generadas, con lo cual, podemos concluir que se trata de una buena gráfica y que el progreso y la estrategia de trabajo seguidos ha funcionado razonablemente bien para este primer Sprint.
   
 
 ### **Gráfico de Control mostrando el Cycle Time**  
