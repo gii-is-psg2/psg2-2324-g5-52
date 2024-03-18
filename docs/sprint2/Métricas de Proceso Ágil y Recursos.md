@@ -49,9 +49,9 @@ En este informe técnico se describen las distintas métricas de proceso ágil y
 
 A continuación se representa el gráfico Burn Down de tareas realizadas correspondiente al Sprint 1 del proyecto, entre las fechas 6/Feb/2024 al 7/Mar/2024, día final de la entrega, porque hasta ese día se estuvieron realizando tareas de última hora.
 
-Se incluyen en el gráfico las Pull Requests generadas durante el sprint.
+Se incluyen en el gráfico las `Pull Requests` generadas durante el sprint.
 
-Si en Pipelines incluimos TODOS los pipelines de ZenHub, incluido `Epics`, la línea de puntos de historia completados finaliza el martes 5 de Marzo, con los 77 puntos de historia `Completados` y 0 `Pendientes`, pero con 22 tareas `Completadas` y 1 `Pendientes` de 23 tareas definidas. 
+Si en `Burns Pipelines` incluimos TODOS los pipelines de ZenHub, incluido `Epics`, la línea de puntos de historia completados finaliza el martes 5 de Marzo, con los 78 puntos de historia `Completados` y 0 `Pendientes`, y con 24 tareas y Pull Requests `Completadas` y 0 `Pendientes` de 24 tareas y Pull Request definidas. 
 
 En cambio, si en Pipelines incluimos **sólo** `ToDo`, como dice el profesor, la línea de puntos de historia completados no finaliza en 0 para ese día, y el gráfico indica que para ese día están `Completados` 56 Puntos de Historia y `Pendientes` 21, de los 77 definidos, y 19 tareas `Completadas` y 4 `Pendientes` de 23 definidas.
 
@@ -67,7 +67,7 @@ Gráfico con pipeline `ToDo` en opción `Pipelines` e incluyendo Pull Requests d
 **Observación a eliminar:**  
 Tendríamos que analizar cuál es más real, o quiere el profesor que pongamos en PIPELINES, y con cuál nos quedamos para el documento. En uno a mitad del Sprint comenzamos a ir por debajo de la línea ideal de finalización de puntos de historía, pero en el segundo vamos siempre por encima y no acabamos todos los puntos en la fecha final del Sprint.
 
-Hay un element en ZenHuv, una Epic, que no consigo ponerle la Estimación, y no sé si eso tiene algo que ver.
+Hay un elemento en ZenHuv, una Epic, que no consigo ponerle la Estimación, y no sé si eso tiene algo que ver.
 
 
 Este enlace siguiente parace no funcionar bien, no lleva al gráfico modificado con la fechas modificadas del sprint y los pipelines, si no al gráfico por defecto al entar en la opción desde ZenHub
@@ -78,17 +78,19 @@ Este enlace siguiente parace no funcionar bien, no lleva al gráfico modificado 
 
 ### **Gráfico de Control mostrando el Lead Time**
 
-El "Lead Time" es una métrica que se usa en la gestión de proyectos para medir el tiempo que conlleva completar una tarea o un conjunto de tareas. En concreto, es la cantidad de tiempo total transcurrido desde que se **crea** una tarea hasta que se **completa** su entrega. 
+El "Lead Time" es una métrica que se usa en la gestión de proyectos para medir el tiempo que conlleva completar una tarea o un conjunto de tareas. En concreto, es la cantidad de tiempo total transcurrido desde que se **CREA** una tarea hasta que se **COMPLETA** su entrega. 
 
-En nuestro caso particular, será el tiempo transcurrido desde que creamos la tarea en el pipeline `ToDo` del tablero de ZenHub, hasta que llevamos dicha tarea al pipeline `Done`, o a `Close` una vez aprobado el cierre por el Product Owner en la Sprint Review.
+En nuestro caso particular, será el tiempo transcurrido desde que creamos la tarea en el pipeline o columna `ToDo` del tablero de ZenHub, hasta que llevamos dicha tarea al pipeline `Done`, o a `Close` una vez aprobado el cierre por el Product Owner en la Sprint Review.
 
-Tanto este gráfico como el de "Cycle Time" pueden ayudar a predecir cuánto tiempo tomará completar/cerrar próximas tareas, identificando además posibles cuellos de botella o ineficiencias en las distintas etapas del proceso.
+Tanto este gráfico como el siguiente con el "Cycle Time" pueden ayudar a predecir cuánto tiempo tomará completar/cerrar próximas tareas, identificando además posibles cuellos de botella o ineficiencias en las distintas etapas del proceso.
 
-Cada punto en el gráfico representa una (o más) tareas completadas (`Done`). Los puntos sólidos representan grupos de tareas completadas en un mismo día. El eje de las X muestra la fecha en la que la tarea fue completada, mientras que en el eje de las Y se representa el número de días que tomó completar dicha tarea.
+La explicación que viene a continuación es válida tanto para este gráfico de control con el "Lead Time" como para el siguiente con el "Cycle Time":
 
-La línea azul muestra el número promedio de días que se tarda en completar/cerrar una tarea durante todo el período de tiempo seleccionado. La línea verde muestra un promedio móvil del número de días que tarda en completar/cerrar las tareas más recientes, lo que ayuda a identificar tendencias o cambios recientes en el proceso.
+- Cada punto en el gráfico representa una (o más) tarea/s completada/s (`Done`). Los puntos sólidos representan grupos de tareas completadas en un mismo día. El eje de las X muestra la fecha en la que la tarea fue completada, mientras que en el eje Y se representa el número de días que tomó completar dicha tarea.
 
-El área sombreada en gris muestra la desviación estándar y ayuda a diferenciar entre variaciones normales y los valores atípicos (outliers): las tareas dentro de este área sombreada en gris están dentro de la variación normal y predecible, incluso si están por encima o por debajo del promedio. En cambio las tareas fuera del área gris han tardado un tiempo demasiado corto o largo en completarse, y deben examinarse más a fondo para comprender qué ocurrió con ellas, y tomar alguna acción o medida en su caso.
+- La línea azul muestra el número promedio de días que se tarda en completar/cerrar una tarea durante todo el período de tiempo seleccionado. La línea verde muestra un promedio móvil del número de días que se tarda en completar/cerrar las tareas más recientes con respecto a ese día, lo que ayuda a identificar tendencias o cambios recientes en el proceso.
+
+- El área sombreada en gris muestra la desviación estándar y ayuda a diferenciar entre variaciones normales y los valores atípicos (outliers): las tareas dentro de este área sombreada en gris están dentro de la variación normal y predecible, incluso si están por encima o por debajo del promedio. En cambio las tareas fuera del área gris han tardado un tiempo demasiado corto o largo en completarse, y deben examinarse más a fondo para comprender qué ocurrió con ellas, y tomar alguna acción o medida en su caso.
 
 Gráfico de Control "Lead Time" de Sprint 1
 ![Gráfico de Control "Lead Time" de Sprint 1 del proyecto](/docs/static/Sprint1_Lead_Time_Control_Chart_6Feb_7Mar.png)
@@ -97,13 +99,15 @@ Métricas y estadísticas del gráfico de Control "Lead Time" de Sprint 1
 
 #### Análisis e intrepretación del gráfico
 
-Como podemos observar, el periodo seleccionado para la emisión del gráfico ha sido desde el martes 6 de febrero de 2024, día comienzo del Sprint 1, hasta el jueves 7 de marzo, día de la entrega, pues hasta un día antes se estuvieron realizando tanto la Sprint Restrospective como tareas relacionadas con la entrega final. Se ha seleccionado que se muestren las Pull Requests generadas durante el Sprint. 
+Como podemos observar, el periodo seleccionado para la emisión del gráfico ha sido desde el martes 6 de febrero de 2024, día de comienzo del Sprint 1, hasta el jueves 7 de marzo, día de la entrega, pues hasta un día antes se estuvieron realizando tanto la Sprint Restrospective como tareas relacionadas con la entrega final. Se ha seleccionado que se muestren las `Pull Requests` generadas durante el Sprint. 
 
 Y como observamos en las métricas y estadísticas, el número de tareas finalizadas, o movidas desde `ToDo` a `Done`, fue de **21** ( equivaliendo a un total de 74 puntos de historia). El tiempo máximo y mínimo de duración de una tarea fue de 14 días y 0 días, respectivamente, siendo ambos valores considerados atípicos (outliers), ya que la media de días de finalización de tareas para el periodo fue de 2.9 días, la media movil (o en tiempo real en cada momento) fue de 5.7 días y la mediana fue de 2 días para este periodo.
 
 Pero la tarea que ha tardado 14 días en completarse ha sido la #24 "1.7 Prepare a release of the PetClinic project", con lo cual, lo que deberíamos de cambiar es la estrategia de creación de tareas, y no crearlas todas al principio del Sprint, sino cuando se vaya acercando su fecha estimada o cercana de comienzo, pues esta tarea por ejemplo, de creación de una versión release del proyecto, no se puede comenzar hasta tener todos los desarrollos terminados y movidos a la rama main de GitHub, con lo cual, tampoco tiene sentido tener la tarea creada desde el principio, y posicionada en `ToDo`, cuando probablemente no se comience con ella hasta los días finales del Sprint, y así eliminaríamos estos valores atípicos del gráfico. 
 
-Una posibilidad para evitar esto sería, aún creando todas las tareas al comienzo del Sprint, utilizar el pipeline `IceBox`, donde se colocarían todas las tareas creadas pero que aún no deberían pasar a `ToDo`, y así evitaríamos que el tiempo transcurriera para ellas en el cálculo del "Lead Time", y podríamos eliminar valores atípicos, o outliers, generados por este motivo.
+Otra alternativa para evitar esto sería, aún creando todas las tareas al comienzo del Sprint, crear y utilizar el pipeline `IceBox`, donde se colocarían todas las tareas creadas pero que aún no deberían pasar a `ToDo`, quedando así "congeladas" hasta el momento de colocarlas en `ToDo` y de esta forma evitaríamos que el tiempo transcurriera para ellas en el cálculo del "Lead Time", y podríamos eliminar valores atípicos, o outliers, generados por este motivo.
+
+En cualquier caso, podemos observar que no existen muchos puntos con valores atípicos o outliers, fuera del área sombreada, con respecto al número total de tareas generadas, con lo cual, podemos concluir que se trata de una buena gráfica y que el progreso y la estrategia de trabajo seguidos a funcionado razonablemente bien para este primer Spint.
   
 
 ### **Gráfico de Control mostrando el Cycle Time**  
@@ -119,21 +123,25 @@ Métricas y estadísticas de Gráfico de Control "Cycle Time" de Sprint 1
 
 #### Análisis e intrepretación del gráfico
 
-El periodo de tiempo seleccionado es el mismo que para el gráfico anterior, y también se solicita que se muestren las Pull Request generadas.
+El periodo de tiempo seleccionado es el mismo que para el gráfico anterior, y también se solicita que se muestren las `Pull Request` generadas.
 
 Pero para el "Cycle Time", de `InProgress` a `Done` o tiempo efectivo de desarrollo de la tarea, el número de tareas movidas ha sido de 17 (correspondiendo con 52 puntos de historia), en lugar de las 21 del "Lead Time", aunque con los mismos tiempos de máximo y mínimo número de días de desarrollo, 14 y 0 días respectivamente. Además, la media y medía móvil han subido hasta 3.1 días (desde 2.9 en "Lead Time") y 6.2 días (desde 5.7), aunque la mediana sí ha bajado una décima hasta los 1.9 días.
   
+Una vez más, se observan 4 puntos con valores atípicos o outliers, fuera del área sombreada, que deberían revisarse detenidamente para comprobar el motivo. Aunque en esta ocasión 3 de ellos, los que han tardado 0 y 1 días en completarse, se tratan de tareas de redacción de secciones determinadas sobre el "Informe Técnico de Gestión de la Configuración", y la cuarta tarea sí ha sido una tarea de desarrollo, la "#14.b Change the colors of cards" en la que se han empleado 8 días en su finalización, o no se ha movido a `Done` en el día de su finalización.
+
+En general, se pude decir que es un buen gráfico de "Cycle Time", sin muchos valores atípicos por finalización de tareas y con una medía de 3.1 días de finalización para un Sprint de 30 días. Aunque para futuros Sprints se podría reseñar como mejoras que se deben estimar todas las tareas creadas, intentar afinar esta estimación según la experiencia de este primer Sprint, y pasarlas adecuadamente a su correspondiente pipeline, en el momento correcto, según su progreso real en el proceso.
+
 
 ### **Total de puntos de historia entregados**
 
-El total de puntos de historia entregados/completados en este Sprint 1 puede verse en las dos siguientes capturas de pantalla de ZenHub, respectivamente, en las que se muestran la relación detallada de tareas/issues generadas y completadas para el sprint, y el resumen de puntos completados.
+El total de puntos de historia entregados/completados, en `Done`, en este Sprint 1 puede verse en las dos siguientes capturas de pantalla de ZenHub, respectivamente, en las que se muestran la relación detallada de tareas/issues y `Pull Requests` generadas y completadas para el sprint, y el resumen de puntos de historia completados y pendientes, sobre el total de generados.
 
 ![Total de puntos de historia entregados](/docs/static/Tareas_completadas_y_Pull_Request_Sp1.png)
   
 
 ### **Porcentaje de puntos de historia entregados**
 
-El porcentaje de puntos de historia, Tareas/Issues y Pull Request entregados para este primer Sprint del proyecto se muestra en la siguiente captura de pantalla, y ha sido de un 73% de puntos de historia entregados y del 83% de tareas y Pull Requests.
+El porcentaje de puntos de historia, Tareas/Issues y `Pull Request` entregados para este primer Sprint del proyecto se muestra en la siguiente captura de pantalla, y ha sido de un 73% de puntos de historia entregados y del 83% de tareas y Pull Requests.
 
 ![Captura con porcentajes](/docs/static/Porcentaje_puntos_historia_tareas_y_pull_req_completados_sp1.png)
 
