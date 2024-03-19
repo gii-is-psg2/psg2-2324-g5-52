@@ -77,12 +77,15 @@ public class PetRestController {
 	}
 
 	@GetMapping
-	public ResponseEntity<List<Pet>> findAll(@RequestParam(required = false) Integer userId) {
+	public ResponseEntity<List<Pet>> findAll(@RequestParam(required = false) Integer userId, @RequestParam(required = false) Integer ownerId){
 		User user = userService.findCurrentUser();
 		if (userId != null) {
 			if (user.getId().equals(userId) || user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, CLINIC_OWNER_AUTH).equals(true))
 				return new ResponseEntity<>(petService.findAllPetsByUserId(userId), HttpStatus.OK);
-		} else {
+		} if(ownerId != null){
+			return new ResponseEntity<>(petService.findAllPetsByOwnerId(ownerId), HttpStatus.OK);
+		}
+		else {
 			if (user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, CLINIC_OWNER_AUTH).equals(true))
 				return new ResponseEntity<>((List<Pet>) this.petService.findAll(), HttpStatus.OK);
 		}

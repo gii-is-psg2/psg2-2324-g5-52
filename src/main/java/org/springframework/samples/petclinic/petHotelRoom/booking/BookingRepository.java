@@ -10,7 +10,7 @@ import org.springframework.samples.petclinic.pet.Pet;
 public interface BookingRepository extends CrudRepository<Booking,Integer> {
 
     @Query("SELECT b FROM Booking b WHERE (b.petHotelRoom.id = :roomId OR b.pet.id = :petId) AND ((b.endDate > :startDate AND  b.startDate < :startDate) OR (b.startDate < :endDate AND b.endDate > :endDate) OR (b.startDate >= :startDate AND b.endDate <= :endDate) OR (b.startDate < :startDate AND b.endDate > :endDate))")
-    List<Booking> findConcurrentBooking(Pet petId, Integer roomId, LocalDate startDate, LocalDate endDate);
+    List<Booking> findConcurrentBooking(Integer petId, Integer roomId, LocalDate startDate, LocalDate endDate);
 
     @Query("SELECT b FROM Booking b WHERE b.pet.id = :petId")
     List<Booking> findByPetId(int petId);

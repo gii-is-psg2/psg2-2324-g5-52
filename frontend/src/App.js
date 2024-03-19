@@ -49,6 +49,7 @@ import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import PetHotelRoomList from "./clinicOwner/petHotelRoomList";
 import PetHotelRoomNew from "./clinicOwner/petHotelRoomNew";
+import PetHotelBooking from "./clinicOwner/petHotelBooking"
 import OwnerAdoptionsList from "./owner/adoptions/adoptionsList";
 import NewAdoption from "./owner/adoptions/adoptionsNew";
 
@@ -141,6 +142,7 @@ function App() {
           <Route path="/vets/:id" exact={true} element={<PrivateRoute><VetEditClinicOwner /></PrivateRoute>} />
           <Route path="/petHotelRooms" exact={true} element={<PrivateRoute><PetHotelRoomList/></PrivateRoute>} />
           <Route path="/petHotelRooms/new" exact={true} element={<PrivateRoute><PetHotelRoomNew/></PrivateRoute>} />
+          <Route path="/petHotelRooms/booking" exact={true} element={<PrivateRoute><PetHotelBooking/></PrivateRoute>} />
         </>)
     }
   })
