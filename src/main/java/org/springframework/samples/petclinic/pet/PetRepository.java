@@ -49,6 +49,9 @@ public interface PetRepository extends CrudRepository<Pet, Integer> {
 	@Query(("SELECT p FROM Pet p WHERE p.onAdoption = true"))
 	List<Pet> findAllPetsOnAdoption();
 
+	@Query(("SELECT p FROM Pet p WHERE p.name = :name"))
+	Optional<Pet> findByName(String name);
+
 	// STATS
 	// ADMIN
 	@Query("SELECT COUNT(p) FROM Pet p")

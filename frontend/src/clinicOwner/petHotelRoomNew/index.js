@@ -12,6 +12,7 @@ const jwt = tokenService.getLocalAccessToken();
 export default function EditpetHotelRoom() {
   const navigator = useNavigate();
 
+
   const emptyItem = {
     name: "",
     pettype: "",
@@ -21,7 +22,7 @@ export default function EditpetHotelRoom() {
 
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
-  const [petHotelRoom, setPetHotelRoom] = useState(emptyItem);
+  const [petHotelRoom, setPetHotelRoom] = useState(emptyItem);  
 
   const editpetHotelRoomFormRef = useRef(null);
 

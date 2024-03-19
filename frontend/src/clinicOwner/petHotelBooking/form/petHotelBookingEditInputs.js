@@ -1,11 +1,11 @@
 import { formValidators } from "../../../validators/formValidators";
 import tokenService from "../../../services/token.service";
 
+const user = tokenService.getUser();
 const jwt = tokenService.getLocalAccessToken();
-console.log(jwt);
 
-const fetchPetTypes = async () => {
-    const response = await fetch(`/api/v1/pets/types`, {
+const fetchUserPets = async () => {
+    const response = await fetch(`/api/v1/pets?ownerId=${user.id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${jwt}`,
@@ -14,47 +14,24 @@ const fetchPetTypes = async () => {
         }
       });
     const data = await response.json();
-    console.log(data)
+    console.log(data);
+
 
     if(data.message) {
         return [];
     }
     else{
-        const petTypes = data.map((petType) => {
-            return petType.name;
+        const userPets = data.map((pets) => {
+            return pets.name;
         })
-        return petTypes;
+        return userPets;
     }
+    
 
 };
 
-const petTypes = await fetchPetTypes();
+const userPets = await fetchUserPets();
 
-const fetchClinics = async () => {
-    const response = await fetch(`/api/v1/clinics`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        }
-      });
-    const data = await response.json();
-    console.log(data)
-
-    if(data.message) {
-        return [];
-    }
-    else{
-        const clinics = data.map((c) => {
-            return c.name;
-        })
-        return clinics;
-    }
-
-};
-
-const clinics = await fetchClinics();
 
 export const petHotelBookingEditInputs = [
     {
@@ -74,20 +51,13 @@ export const petHotelBookingEditInputs = [
         validators: [formValidators.notEmptyValidator],
     },
     {
-        tag: "PetType",
-        name: "petType",
+        tag: "Pet",
+        name: "pet",
         type: "select",
-        values: ["None", ...petTypes],
+        values: ["None", ...userPets],
         defaultValue: "None",
         isRequired: true,
         validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
-    },
-    {
-        tag: "Room",
-        name: "room",
-        type: "number",
-        defaultValue: 0,
-        isRequired: true,
-        validators: [formValidators.notEmptyValidator],
+        
     }
 ];

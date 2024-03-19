@@ -5,36 +5,44 @@ import getErrorModal from "../../util/getErrorModal";
 import {petHotelBookingEditInputs} from "./form/petHotelBookingEditInputs";
 import FormGenerator from "../../components/formGenerator/formGenerator";
 import { useState, useEffect, useRef } from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const jwt = tokenService.getLocalAccessToken();
 
 export default function EditpetHotelBooking() {
   const navigator = useNavigate();
+  const location = useLocation();
 
   const emptyItem = {
     startDate: "",
     endDate: "",
     pet: "",
-    room: 0,
   };
 
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
   const [petHotelBooking, setPetHotelBooking] = useState(emptyItem);
+  const petHotelRoom = location.state?.room
+
 
   const editpetHotelBookingFormRef = useRef(null);
 
   function handleSubmit({ values }) {
     if (!editpetHotelBookingFormRef.current.validate()) return;
+    const booking = {
+      startDate : values.startDate,
+      endDate : values.endDate,
+      pet : values.pet,
+      petHotelRoom : petHotelRoom
+    }
 
-    fetch(`/api/v1/clinicOwners/petHotelRooms`, {
+    fetch(`/api/v1/clinicOwners/bookings`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${jwt}`,
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(booking),
       })
       .then((res) => {
         if (res.status === 201) {

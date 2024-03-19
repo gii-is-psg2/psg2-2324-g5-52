@@ -54,6 +54,12 @@ public class PetService {
 	}
 
 	@Transactional(readOnly = true)
+	public Pet findPetByName(String name) throws DataAccessException {
+		return petRepository.findByName(name)
+				.orElseThrow(() -> new ResourceNotFoundException("Pet", "name", name));
+	}
+
+	@Transactional(readOnly = true)
 	public PetType findPetTypeByName(String name) throws DataAccessException {
 		return petRepository.findPetTypeByName(name)
 				.orElseThrow(() -> new ResourceNotFoundException("PetType", "name", name));
