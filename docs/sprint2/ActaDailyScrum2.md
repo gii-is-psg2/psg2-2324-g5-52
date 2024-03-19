@@ -42,10 +42,9 @@ En este documento vamos a registrar los asistentes y sus roles, también se regi
 
 | Actividad                       | Descripción                                                                                                                                                                         |
 |--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **1. Sprint Planning**         | |
-| **2. Tareas realizadas**          | Rafa: documento 2.4.a. En las graficas de BurnDown la interpretación. Benji: no ha podido realizar los documentos que el corresponden. Miguel: sonarqube (mitad de implementación debido a una duda). David: tarea 2.2. Fallos al unir backend y frontend.Cambio en la decisión de diseño. Ramón: tarea 2.2. Fallos al unir backend y frontend|
-| **3. División de tareas esta semana** | Finalizar las tareaas restantes de cara a la finalización del Sprint. |
-| **4. Dudas** | |
+| **1. Tareas realizadas**          | Rafa: documento 2.4.a. En las graficas de BurnDown la interpretación. Benji: no ha podido realizar los documentos que el corresponden. Miguel: sonarqube (mitad de implementación debido a una duda). David: tarea 2.2. Fallos al unir backend y frontend.Cambio en la decisión de diseño. Ramón: tarea 2.2. Fallos al unir backend y frontend|
+| **2. División de tareas esta semana** | Finalizar las tareaas restantes de cara a la finalización del Sprint. |
+| **3. Dudas** | No se han tenido dudas respecto a los puntos anteriores|
 
 ## Conclusión
 Tras la reunión acontecida, se ha dejado reflejado lo que ha realizado cada miembro del grupo en esta segunda semana de trabajo del Sprint 2 y los problemas que se han encontrado. También, se han dejado claro la obligación de realizar las tareas restantes de cada miembro de cara a la finalización de este Sprint.
