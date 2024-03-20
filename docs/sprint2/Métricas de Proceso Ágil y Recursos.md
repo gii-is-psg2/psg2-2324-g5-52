@@ -51,26 +51,27 @@ A continuación se representa el gráfico Burn Down de tareas realizadas corresp
 
 Se incluyen en el gráfico las `Pull Requests` generadas durante el sprint.
 
-Si en `Burns Pipelines` incluimos TODOS los pipelines de ZenHub, incluido `Epics`, la línea de puntos de historia completados finaliza el martes 5 de Marzo, con los 78 puntos de historia `Completados` y 0 `Pendientes`, y con 24 tareas y Pull Requests `Completadas` y 0 `Pendientes` de 24 tareas y Pull Request definidas. 
+En teoría en la opción "Burns Pipelines" del informe habría que seleccionar únicamente el pipeline `Done`, donde deberían haber acabado todas las tareas, Pull Request y Épicas definidas durante el sprint, antes de pasar a `Closed` al finalizar la Sprint Review y trás la aceptación del Product Owner. 
 
-En cambio, si en Pipelines incluimos **sólo** `ToDo`, como dice el profesor, la línea de puntos de historia completados no finaliza en 0 para ese día, y el gráfico indica que para ese día están `Completados` 56 Puntos de Historia y `Pendientes` 21, de los 77 definidos, y 19 tareas `Completadas` y 4 `Pendientes` de 23 definidas.
+Pero debido a algunos errores cometidos con el movimiento de tareas y Èpìcas a lo largo del tablero de ZenHun, al menos 3 tareas, la #3 (1 punto de historia), la #13 (10 puntos de historia) y la #30 (10 puntos de historia), en total 21 puntos de historia, parecen no haberse movido nunca a `Done`, por lo que hay que seleccionar en "Burns Pipelines" el pipeline `ToDo`, y lo mismo parece ocurrir con una Épica, que no ha se ha movido a `Done` y por ello hay que incluir el pipeline `Epics`, para que aparezcan todas las tareas y puntos de historia correspondientes, a la fecha de finalización del sprint, y se contemplen como `Completados` en el gráfico.
 
-Gráfico con todos los pipelines (Epic, ToDo, InProgress, InReview, Done y Closed) en opción `Pipelines` e incluyendo Pull Requests del sprint.
+De esta forma, y tras hablarlo con el Product Owner, hemos decidido incluir todos los pipelines de ZenHub en "Burns Pipelines", incluido `Epics`, con el fin de que la línea de puntos de historia completados finalice el martes 5 de Marzo con los 78 puntos de historia `Completados` y 0 `Pendientes`, y con 24 tareas y Pull Requests `Completadas` y 0 `Pendientes`, como ha ocurrido en realidad aunque las tareas no se hayan movido correctamente por el tablero de ZenHub.
 
-![Gráfico Burn Down de Sprint 1 del proyecto TODOS Pipelines](/docs/static/Sprint1_Burn_Down_Chart_6Feb_7Mar.png)
+Gráfico con TODOS los pipelines e incluyendo Pull Requests del Sprint 1.
+![Gráfico Burn Down de Sprint 1 del proyecto Pipeline ToDo](/docs/static/Sprint1_Burn_Down_Chart_6Feb_7Mar_Todos_Pipelines.png)
+![Captura con porcentajes](/docs/static/Porcentaje_puntos_historia_tareas_y_pull_req_completados_sp1_Epics_ToDo.png)
 
+#### Análisis e intrepretación del gráfico
 
-Gráfico con pipeline `ToDo` en opción `Pipelines` e incluyendo Pull Requests del sprint.
+Se observa cómo las primeras tareas completadas, al principio del sprint durante la primera semana, tuvieron una estimación pequeña, al tratarse de modificaciones sobre archivos de configuración del proyecto o bien modificaciones sobre iconos o colores de fondo en elementos de la aplicación, con lo cual, el progreso real estuvo por encima de la línea ideal estimada por GitHub.
 
-![Gráfico Burn Down de Sprint 1 del proyecto Pipeline ToDo](/docs/static/Sprint1_Burn_Down_Chart_6Feb_7Mar_Pipeline_Final_Done.png)
+En cambio durante la segunda semana se acometieron las tareas de desarrollo correspondientes a la funcionalidad Pet Hotel Rooms, junto a otras pequeñas, que sí provocó que la línea de progreso real y tareas completadas bajara por debajo de la línea ideal, para el día 19 de febrero, comienzo de la tercera semana del sprint. 
 
-**Observación a eliminar:**  
-Tendríamos que analizar cuál es más real, o quiere el profesor que pongamos en PIPELINES, y con cuál nos quedamos para el documento. En uno a mitad del Sprint comenzamos a ir por debajo de la línea ideal de finalización de puntos de historía, pero en el segundo vamos siempre por encima y no acabamos todos los puntos en la fecha final del Sprint.
+A partir de ese día se realizan una serie de pequeñas tareas de desarrollo y redacción del informe técnico de gestión de la configuración donde el progreso vuelve a descender lentamente, aunque se mantiene ya en todo momento por debajo de la línea ideal y con perspectiva de finalizar todas las tareas para el fin del sprint.
 
-Hay un elemento en ZenHuv, una Epic, que no consigo ponerle la Estimación, y no sé si eso tiene algo que ver.
+Finalmente para la última semana del sprint, sobre el día 27 de febreo, se finalizan las tareas de registrar los elementos de configuración en la CMDB, término de redacción del informe técnico con informaicón de la CMDB, y la tarea, y Pull Request asociada, de generación de la Release del proyecto, con una estimación de 5 y 10 puntos de historia, respectivamente, y que provoca una bajada considerable en la línea de progreso hasta completar los 78 puntos de historia estimados y las 24 tareas y Pull Request generados.
 
-
-Este enlace siguiente parace no funcionar bien, no lleva al gráfico modificado con la fechas modificadas del sprint y los pipelines, si no al gráfico por defecto al entar en la opción desde ZenHub
+El enlace siguiente nos lleva a la opción Milestone Report de ZenHub, aunqeu no al gráfico modificado con la fechas seleccionadas para el sprint y los pipelines establecidos, si no al gráfico por defecto al entar en la opción desde ZenHub.
 
 [Enlace al gráfico Burn Down de Sprint 1 en GitHub/ZenHub](https://app.zenhub.com/workspaces/g5-52-65c254bdc83597073f66529e/reports/milestones?milestoneId=10538695&invite=true)
 
@@ -144,6 +145,8 @@ El total de puntos de historia entregados/completados, en `Done`, en este Sprint
 El porcentaje de puntos de historia, Tareas/Issues y `Pull Request` entregados para este primer Sprint del proyecto se muestra en la siguiente captura de pantalla, y ha sido de un 73% de puntos de historia entregados y del 83% de tareas y Pull Requests.
 
 ![Captura con porcentajes](/docs/static/Porcentaje_puntos_historia_tareas_y_pull_req_completados_sp1.png)
+
+![Captura con porcentajes](/docs/static/Porcentaje_puntos_historia_tareas_y_pull_req_completados_sp1_Epics_ToDo.png)
 
 
 
