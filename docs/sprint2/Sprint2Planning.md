@@ -97,27 +97,35 @@ Tarea A2.2.a.frontend
 
 Tarea A2.2.b
   ![Estimacion Poker A2.2.b](/docs/static/sprint2/A2_2_b.png)
+  
 
 Tarea A2.2.b.modelo
   ![Estimacion Poker A2.2.b_modelo](/docs/static/sprint2/A2_2_b_modelo.png)
 
+
 Tarea A2.2.b_backend
   ![Estimacion Poker A2.2.b_backend](/docs/static/sprint2/A2_2_b_backend.png)
+
 
 Tarea A2.2.b_frontend
   ![Estimacion Poker A2.2.b_frontend](/docs/static/sprint2/A2_2_b_frontend.png)
 
+
 Tarea A2.2.c
   ![Estimacion Poker A2.2.c](/docs/static/sprint2/A2_2_c.png)
+
 
 Tarea A2.3
   ![Estimacion Poker A2.3](/docs/static/sprint2/A2_3.png)
 
+
 Tarea A2.4
   ![Estimacion Poker A2.4](/docs/static/sprint2/A2_4.png)
 
+
 Tarea A2.5
   ![Estimacion Poker A2.5](/docs/static/sprint2/A2_5.png)
+
 
 Tarea A2.6
   ![Estimacion Poker A2.6](/docs/static/sprint2/A2_6.png)
