@@ -1,5 +1,28 @@
 # Sprint Planning - Sprint 1
 
+# Universidad de Sevilla   
+
+## Escuela Técnica Superior de Ingeniería Informática
+
+### **Grupo de Prácticas G5-52**
+  
+  ![Logo US](/docs/static/Logo_US.png)
+
+### Grado en Ingeniería Informática – Ingeniería del Software 
+
+### Proceso Software y Gestión II
+### Product Owner: Carlos Guillermo Müller Cejas
+### Curso 2023 – 2024
+
+### Miembros del equipo
+- Benjamín Ignacio Maureira Flores
+- David Godoy Fernández
+- Miguel Hernández Sánchez
+- Rafael David Caro Medina
+- Ramón José Guerrero Romero
+
+
+
 ## Introducción
 La idea principal de este documento es dejar un acta de las tareas que se van a realizar en este primer Sprint. Para ello, el grupo se ha reunido para realizar este documento, en el cual se van a repartir todas las tareas, se les va a estimar un tiempo en función de su complejidad (a simple vista y por concenso del grupo) y se va definir un criterio de aceptación para dichas tareas.
 

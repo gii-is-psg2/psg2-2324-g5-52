@@ -26,16 +26,25 @@ export default function PetHotelRoomList() {
 
   const petHotelList =
     petHotelRooms.map((room) => {
-        return (
-          <tr key={room.id}>
-            <td className="text-center">{room.name}</td>
-            <td className="text-center">{room.petType.name}</td>
-            <td className="text-center">{room.clinic.name}</td>
-            <td className="text-center">{room.size}</td>
-          </tr>
-        );
-      });
-      
+      return (
+        <tr key={room.id}>
+          <td className="text-center">{room.name}</td>
+          <td className="text-center">{room.petType.name}</td>
+          <td className="text-center">{room.clinic.name}</td>
+          <td className="text-center">{room.size}</td>
+          <td className="text-center"></td>
+          <td>
+            <Button
+              color="success"
+              onClick={() => navigator("/petHotelRooms/booking", { state: { room } })}
+            >
+              Add a Booking
+            </Button>
+          </td>
+        </tr>
+      );
+    });
+
   const modal = getErrorModal(setVisible, visible, message);
 
   return (
@@ -49,6 +58,7 @@ export default function PetHotelRoomList() {
             Add a Pet Hotel Room
           </Button>
         </div>
+        <span>&nbsp;&nbsp;</span>
         <div>
           <Table aria-label="clinics" className="mt-4">
             <thead>
