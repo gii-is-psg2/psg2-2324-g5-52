@@ -2,7 +2,6 @@ import { formValidators } from "../../../validators/formValidators";
 import tokenService from "../../../services/token.service";
 
 const jwt = tokenService.getLocalAccessToken();
-console.log(jwt);
 
 const fetchPetTypes = async () => {
     const response = await fetch(`/api/v1/pets/types`, {
@@ -14,7 +13,6 @@ const fetchPetTypes = async () => {
         }
       });
     const data = await response.json();
-    console.log(data)
 
     if(data.message) {
         return [];
@@ -40,7 +38,6 @@ const fetchClinics = async () => {
         }
       });
     const data = await response.json();
-    console.log(data)
 
     if(data.message) {
         return [];

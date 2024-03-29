@@ -2,40 +2,47 @@ import "../../static/css/auth/authButton.css";
 import "../../static/css/auth/authPage.css";
 import tokenService from "../../services/token.service";
 import getErrorModal from "../../util/getErrorModal";
-import { petHotelRoomEditInputs } from "./form/petHotelRoomEditInputs";
+import {petHotelBookingEditInputs} from "./form/petHotelBookingEditInputs";
 import FormGenerator from "../../components/formGenerator/formGenerator";
 import { useState, useEffect, useRef } from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const jwt = tokenService.getLocalAccessToken();
 
-export default function EditpetHotelRoom() {
+export default function EditpetHotelBooking() {
   const navigator = useNavigate();
-
+  const location = useLocation();
 
   const emptyItem = {
-    name: "",
-    pettype: "",
-    clinic: "",
-    size: 0,
+    startDate: "",
+    endDate: "",
+    pet: "",
   };
 
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
-  const [petHotelRoom, setPetHotelRoom] = useState(emptyItem);  
+  const [petHotelBooking, setPetHotelBooking] = useState(emptyItem);
+  const petHotelRoom = location.state?.room
 
-  const editpetHotelRoomFormRef = useRef(null);
+
+  const editpetHotelBookingFormRef = useRef(null);
 
   function handleSubmit({ values }) {
-    if (!editpetHotelRoomFormRef.current.validate()) return;
+    if (!editpetHotelBookingFormRef.current.validate()) return;
+    const booking = {
+      startDate : values.startDate,
+      endDate : values.endDate,
+      pet : values.pet,
+      petHotelRoom : petHotelRoom
+    }
 
-    fetch(`/api/v1/clinicOwners/petHotelRooms`, {
+    fetch(`/api/v1/clinicOwners/bookings`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${jwt}`,
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(booking),
       })
       .then((res) => {
         if (res.status === 201) {
@@ -49,21 +56,21 @@ export default function EditpetHotelRoom() {
   }
 
   useEffect(() => {
-      petHotelRoomEditInputs.forEach((input) => {
+      petHotelBookingEditInputs.forEach((input) => {
         input.defaultValue = "";
       });
-  }, [petHotelRoom]);
+  }, [petHotelBooking]);
 
   const modal = getErrorModal(setVisible, visible, message);
 
   return (
     <div className="auth-page-container">
-      {<h2>{"Add a Pet Hotel Room"}</h2>}
+      {<h2>{"Add a Booking"}</h2>}
       {modal}
       <div className="auth-form-container">
           <FormGenerator
-            ref={editpetHotelRoomFormRef}
-            inputs={petHotelRoomEditInputs}
+            ref={editpetHotelBookingFormRef}
+            inputs={petHotelBookingEditInputs}
             onSubmit={handleSubmit}
             buttonText="Add"
             buttonClassName="auth-button"

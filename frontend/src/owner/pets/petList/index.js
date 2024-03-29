@@ -37,6 +37,20 @@ export default function OwnerPetList() {
       });
   }
 
+  function changeAdoptStatus(id) {
+    fetch(`/api/v1/pets/onAdoption/${id}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) setUp();
+      });
+  }
+
   async function removeVisit(petId, visitId) {
     let status = "";
     await fetch(`/api/v1/pets/${petId}/visits/${visitId}`, {
@@ -131,6 +145,10 @@ export default function OwnerPetList() {
                   <span>
                     <strong>Type:</strong> {pet.type.name}
                   </span>
+                  {pet.onAdoption &&
+                    <span>
+                      <strong>On adoption</strong>
+                    </span>}
                 </div>
                 <div className="pet-options">
                   <Link
@@ -146,6 +164,13 @@ export default function OwnerPetList() {
                     style={{ background: "#573A34", color: "white" }}
                   >
                     Delete
+                  </button>
+                  <button
+                    onClick={() => changeAdoptStatus(pet.id)}
+                    className="auth-button brown"
+                    style={{ background: "#573A34", color: "white" }}
+                  >
+                    {pet.onAdoption ? "Change adoption status" : "Put on adoption"}
                   </button>
                 </div>
                 <div className="pet-visits">
@@ -179,7 +204,7 @@ export default function OwnerPetList() {
                               <Link
                                 to={`/myPets/${pet.id}/visits/${visit.id}`}
                                 className="edit-visit-button"
-                                style={{ textDecoration: "none", color: "white", background: "#31110B"}}
+                                style={{ textDecoration: "none", color: "white", background: "#31110B" }}
                               >
                                 Edit
                               </Link>
@@ -194,7 +219,7 @@ export default function OwnerPetList() {
                   <Link
                     to={`/myPets/${pet.id}/visits/new`}
                     className="auth-button"
-                    style={{ textDecoration: "none", marginTop: "20px", background: "#691708", color: "white"}}
+                    style={{ textDecoration: "none", marginTop: "20px", background: "#691708", color: "white" }}
                   >
                     Add Visit
                   </Link>
