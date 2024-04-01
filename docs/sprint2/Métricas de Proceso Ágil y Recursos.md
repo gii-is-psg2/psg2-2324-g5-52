@@ -278,32 +278,32 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 
 | Día          |Benjamín Maureira| David Godoy     | Miguel Hernández | Rafael Caro   | Ramón Guerrero |
 | :----------- | :-------------: | :-------------: | :-------------:  |:-------------:| :-------------:|
-| Día 1 mar 5  | -               | -               | -                | :smile:       | -              |
+| Día 1 mar 5  | -               | -               | -                | :smile:       | :smile:        |
 | Día 2        | -               | -               | -                | :smile:       | -              |
 | Día 3        | -               | -               | -                | -             | -              |
 | Día 4        | -               | -               | -                | :smile:       | -              |
 | Día 5        | -               | -               | -                | -             | -              |
-| Día 6        | -               | -               | -                | :smile:       | -              |
+| Día 6        | -               | -               | -                | :smile:       | :smile:        |
 | Día 7        | -               | -               | -                | -             | -              |
-| Día 8 mar 12 | -               | -               | -                | :smile:       | -              |
+| Día 8 mar 12 | -               | -               | -                | :smile:       | :smile:        |
 | Día 9        | -               | -               | -                | :smile:       | -              |
 | Día 10       | -               | -               | -                | :smile:       | -              |
 | Día 11       | -               | -               | -                | -             | -              |
-| Día 12       | -               | -               | -                | :smile:       | -              |
+| Día 12       | -               | -               | -                | :smile:       | :neutral_face: |
 | Día 13       | -               | -               | -                | :smile:       | -              |
-| Día 14       | -               | -               | -                | -             | -              |
-| Día 15 mar 19| -               | -               | -                | :smile:       | -              |
+| Día 14       | -               | -               | -                | -             | :neutral_face: |
+| Día 15 mar 19| -               | -               | -                | :smile:       | :smile:        |
 | Día 16       | -               | -               | -                | -             | -              |
 | Día 17       | -               | -               | -                | -             | -              |
 | Día 18       | -               | -               | -                | -             | -              |
-| Día 19       | -               | -               | -                | :neutral_face:| -              |
-| Día 20       | -               | -               | -                | :neutral_face:| -              |
+| Día 19       | -               | -               | -                | :neutral_face:| :neutral_face: |
+| Día 20       | -               | -               | -                | :neutral_face:| :fearful:      |
 | Día 21       | -               | -               | -                | -             | -              |
-| Día 22 mar 26| -               | -               | -                | -             | -              |
+| Día 22 mar 26| -               | -               | -                | -             | :fearful:      |
 | Día 23       | -               | -               | -                | -             | -              |
 | Día 24       | -               | -               | -                | -             | -              |
 | Día 25       | -               | -               | -                | -             | -              |
-| Día 26       | -               | -               | -                | :worried:     | -              |
+| Día 26       | -               | -               | -                | :worried:     | :fearful:      |
 | Día 27       | -               | -               | -                | :worried:     | -              |
 | Día 28       | -               | -               | -                | -             | -              |
 | Día 29 mar 2 | -               | -               | -                | -             | -              |
