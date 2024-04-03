@@ -297,21 +297,21 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 
 | Día          |Benjamín Maureira| David Godoy     | Miguel Hernández | Rafael Caro   | Ramón Guerrero |
 | :----------- | :-------------: | :-------------: | :-------------:  |:-------------:| :-------------:|
-| Día 1 mar 5  | -               | :smile:         | -                | :smile:       | :smile:        |
+| Día 1 mar 5  | :smile:         | :smile:         | -                | :smile:       | :smile:        |
 | Día 2        | -               | -               | -                | :smile:       | -              |
-| Día 3        | -               | -               | -                | -             | -              |
-| Día 4        | -               | -               | -                | :smile:       | -              |
-| Día 5        | -               | :smile:         | :smile:          | -             | -              |
-| Día 6        | -               | :smile:         | -                | :smile:       | :smile:        |
-| Día 7        | -               | -               | -                | -             | -              |
-| Día 8 mar 12 | -               | -               | -                | :smile:       | :smile:        |
-| Día 9        | -               | -               | -                | :smile:       | -              |
+| Día 3        | :neutral_face:  | -               | -                | -             | -              |
+| Día 4        | :neutral_face:  | -               | -                | :smile:       | -              |
+| Día 5        | :smile:         | :smile:         | :smile:          | -             | -              |
+| Día 6        | :smile:         | :smile:         | -                | :smile:       | :smile:        |
+| Día 7        | :worried:       | -               | -                | -             | -              |
+| Día 8 mar 12 | :smile:         | -               | -                | :smile:       | :smile:        |
+| Día 9        | :fearful:       | -               | -                | :smile:       | -              |
 | Día 10       | -               | -               | -                | :smile:       | -              |
 | Día 11       | -               | -               | :smile:          | -             | -              |
 | Día 12       | -               | :smile:         | :smile:          | :smile:       | :neutral_face: |
 | Día 13       | -               | :neutral_face:  | -                | :smile:       | -              |
 | Día 14       | -               | :neutral_face:  | -                | -             | :neutral_face: |
-| Día 15 mar 19| -               | -               | -                | :smile:       | :smile:        |
+| Día 15 mar 19| :smile:         | -               | -                | :smile:       | :smile:        |
 | Día 16       | -               | :smile:         | -                | -             | -              |
 | Día 17       | -               | -               | -                | -             | -              |
 | Día 18       | -               | -               | -                | -             | -              |
@@ -320,12 +320,12 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 | Día 21       | -               | -               | -                | -             | -              |
 | Día 22 mar 26| -               | -               | -                | -             | :fearful:      |
 | Día 23       | -               | -               | -                | -             | -              |
-| Día 24       | -               | -               | -                | -             | -              |
+| Día 24       | :fearful:       | -               | -                | -             | -              |
 | Día 25       | -               | -               | :neutral_face:   | -             | -              |
 | Día 26       | -               | -               | -                | :worried:     | :fearful:      |
 | Día 27       | -               | :worried:       | -                | :worried:     | -              |
 | Día 28       | -               | -               | -                | -             | -              |
-| Día 29 mar 2 | -               | :smile:         | -                | -             | -              |
+| Día 29 abr 2 | :smile:         | :smile:         | -                | -             | -              |
 | Día 30       | -               | -               | -                | -             | -              |
 
 
