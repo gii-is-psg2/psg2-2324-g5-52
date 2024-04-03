@@ -212,7 +212,7 @@ En nuestro caso particular, será el tiempo transcurrido desde que creamos la ta
 La explicación e interpretación de los distintos elementos del gráfico de Control se ha realizado en este apartado para el Sprint 1, con lo cual, no lo repetiremos para este segundo sprint y únicamente pasaremos a incrustar el gráfico y realizar su interpretación.
 
 Gráfico de Control "Lead Time" de Sprint 2
-![Gráfico de Control "Lead Time" de Sprint 2 del proyecto](/docs/static/Sp2_LeadTime_Control_Chart_6Mar31Mar.png)
+![Gráfico de Control "Lead Time" de Sprint 2 del proyecto](/docs/static/Sp2_LeadTime_Control_Chart_6Mar3Abr.png)
 Métricas y estadísticas del gráfico de Control "Lead Time" de Sprint 2
 ![Estadísticas de Gráfico de Control "Lead Time" de Sprint 2 del proyecto](/docs/static/Sp2_LeadTime_Control_Chart_Statistics.png)
 Métricas del gráfico de Control "Lead Time" de Sprint 2: tareas Completadas y Tiempo de finalización
@@ -229,7 +229,7 @@ El "Cycle Time" es otra métrica usada en la gestión de proyectos y desarrollos
 Para el caso de nuestro proyecto será el tiempo transcurrido desde que colocamos la issue en el pipeline `InProgress` hasta que la colocamos en `Done`, o `Close`  tras la indicación del Product Owner.
 
 Gráfico de Control "Cycle Time" de Sprint 2
-![Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](/docs/static/Sp2_CycleTime_Control_Chart_6Mar31Mar.png)
+![Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](/docs/static/Sp2_CycleTime_Control_Chart_6Mar3Abr.png)
 Métricas y estadísticas de Gráfico de Control "Cycle Time" de Sprint 2
 ![Estadísticas de Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](/docs/static/Sp2_CycleTime_Control_Chart_Statistics.png)
 Métricas del gráfico de Control "Cycle Time" de Sprint 2: tareas Completadas y Tiempo de finalización
