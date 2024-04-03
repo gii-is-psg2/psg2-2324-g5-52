@@ -5,28 +5,31 @@ const user = tokenService.getUser();
 const jwt = tokenService.getLocalAccessToken();
 
 const fetchUserPets = async () => {
-    const response = await fetch(`/api/v1/pets?ownerId=${user.id}`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-          Accept: "application/json",
-          "Content-Type": "application/json",
+    try{
+        const response = await fetch(`/api/v1/pets?ownerId=${user.id}`, {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${jwt}`,
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            }
+          });
+        const data = await response.json();
+        console.log(data);
+        if(data.message) {
+            return [];
         }
-      });
-    const data = await response.json();
-    console.log(data);
-
-
-    if(data.message) {
+        else{
+            const userPets = data.map((pets) => {
+                return pets.name;
+            })
+            return userPets;
+        }
+    }
+    catch(error){
+        console.log(error);
         return [];
     }
-    else{
-        const userPets = data.map((pets) => {
-            return pets.name;
-        })
-        return userPets;
-    }
-    
 
 };
 

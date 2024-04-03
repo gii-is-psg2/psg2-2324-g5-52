@@ -45,8 +45,22 @@ export default function EditpetHotelBooking() {
         body: JSON.stringify(booking),
       })
       .then((res) => {
-        if (res.status === 201) {
+        if (res.ok) {
           navigator("/petHotelRooms");
+        }
+        else{
+          const contentType = res.headers.get("Content-Type");
+          if (contentType && contentType.includes("application/json")) {
+            return res.json().then((errorData) => {
+              let errorMessage = errorData.message;
+              alert(errorMessage);
+            });
+          } else {
+            return res.text().then((errorMessage) => {
+              setMessage(errorMessage);
+              setVisible(true);
+            });
+          }
         }
       })
       .catch((err) => {
