@@ -69,7 +69,7 @@ De esta forma, y tras hablarlo con el Product Owner, hemos decidido incluir todo
 
 Gráfico con TODOS los pipelines e incluyendo Pull Requests del Sprint 1.
 ![Gráfico Burn Down de Sprint 1 del proyecto Pipeline ToDo](/docs/static/Sp1_BurnDown_Chart_6Feb7Mar_Todos_Pipelines.png)
-![Captura con porcentajes de Puntos de Historia Sp1](/docs/static/Sp1_Porcentaje_puntos_historia_tareas_y_pull_req_completados_Epics_ToDo.png)
+![Captura con porcentajes de Puntos de Historia Sp1](/docs/static/Sp1_porc_punt_hists_tareas_y_PR_completados_EpicsToDo.png)
 
 #### Análisis e intrepretación del gráfico
 
@@ -154,12 +154,12 @@ El total de puntos de historia entregados/completados, en `Done`, en este Sprint
 
 Si para emitir el informe establecemos el Pipeline final sólo en `ToDo`, como sería de esperar, el porcentaje de puntos de historia, Tareas/Issues y `Pull Request` entregados para este primer Sprint del proyecto se muestra en la siguiente captura de pantalla, y habría sido de un 73% de puntos de historia entregados y del 83% de tareas y Pull Requests.
 
-![Captura con porcentajes en Sp1](/docs/static/Sp1_Porcentaje_puntos_historia_tareas_y_pull_req_completados.png)
+![Captura con porcentajes en Sp1](/docs/static/Sp1_porc_punt_hists_tareas_y_PR_completados.png)
 
 En cambio, si incluimos en el filtro del informe la fecha final del día 7/Marzo/2024 y en Pipelines todos los pipelines desde `Epics` a `Done`, debido al problema ya mencionado con esas tres tareas y la propia Épica, se obtienen los siguientes porcentajes de tareas completadas:
 
 ![Total de puntos de historia entregados en Sp1](/docs/static/Sp1_Completed_And_Percentage_Issues_Summary.png)
-![Captura con porcentajes en Sp1](/docs/static/Sp1_porcentaje_puntos_historia_tareas_y_pull_req_completados_Epics_ToDo.png)
+![Captura con porcentajes en Sp1](/docs/static/Sp1_porc_punt_hists_tareas_y_PR_completados_EpicsToDo.png)
 
 
 ## Métricas para el Sprint 2
