@@ -278,22 +278,22 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 
 | Día          |Benjamín Maureira| David Godoy     | Miguel Hernández | Rafael Caro   | Ramón Guerrero |
 | :----------- | :-------------: | :-------------: | :-------------:  |:-------------:| :-------------:|
-| Día 1 mar 5  | -               | -               | -                | :smile:       | :smile:        |
+| Día 1 mar 5  | -               | :smile:         | -                | :smile:       | :smile:        |
 | Día 2        | -               | -               | -                | :smile:       | -              |
 | Día 3        | -               | -               | -                | -             | -              |
 | Día 4        | -               | -               | -                | :smile:       | -              |
-| Día 5        | -               | -               | -                | -             | -              |
-| Día 6        | -               | -               | -                | :smile:       | :smile:        |
+| Día 5        | -               | :smile:         | -                | -             | -              |
+| Día 6        | -               | :smile:         | -                | :smile:       | :smile:        |
 | Día 7        | -               | -               | -                | -             | -              |
 | Día 8 mar 12 | -               | -               | -                | :smile:       | :smile:        |
 | Día 9        | -               | -               | -                | :smile:       | -              |
 | Día 10       | -               | -               | -                | :smile:       | -              |
 | Día 11       | -               | -               | -                | -             | -              |
-| Día 12       | -               | -               | -                | :smile:       | :neutral_face: |
-| Día 13       | -               | -               | -                | :smile:       | -              |
-| Día 14       | -               | -               | -                | -             | :neutral_face: |
+| Día 12       | -               | :smile          | -                | :smile:       | :neutral_face: |
+| Día 13       | -               | :neutral_face:  | -                | :smile:       | -              |
+| Día 14       | -               | :neutral_face:  | -                | -             | :neutral_face: |
 | Día 15 mar 19| -               | -               | -                | :smile:       | :smile:        |
-| Día 16       | -               | -               | -                | -             | -              |
+| Día 16       | -               | :smile:         | -                | -             | -              |
 | Día 17       | -               | -               | -                | -             | -              |
 | Día 18       | -               | -               | -                | -             | -              |
 | Día 19       | -               | -               | -                | :neutral_face:| :neutral_face: |
@@ -304,9 +304,9 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 | Día 24       | -               | -               | -                | -             | -              |
 | Día 25       | -               | -               | -                | -             | -              |
 | Día 26       | -               | -               | -                | :worried:     | :fearful:      |
-| Día 27       | -               | -               | -                | :worried:     | -              |
+| Día 27       | -               | :worried:       | -                | :worried:     | -              |
 | Día 28       | -               | -               | -                | -             | -              |
-| Día 29 mar 2 | -               | -               | -                | -             | -              |
+| Día 29 mar 2 | -               | :Smile:         | -                | -             | -              |
 | Día 30       | -               | -               | -                | -             | -              |
 
 
