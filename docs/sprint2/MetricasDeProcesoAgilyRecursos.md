@@ -6,7 +6,7 @@
 
 ### **Grupo de Prácticas G5-52**
   
-  ![Logo US](/docs/static/Logo_US.png)
+  ![Logo US](../static/Logo_US.png)
 
 ### Grado en Ingeniería Informática – Ingeniería del Software 
 
@@ -23,36 +23,26 @@
 
 
 # Indice
-- [Métricas de Proceso Ágil y Recursos](#métricas-de-proceso-ágil-y-recursos)
-- [Universidad de Sevilla](#universidad-de-sevilla)
-  - [Escuela Técnica Superior de Ingeniería Informática](#escuela-técnica-superior-de-ingeniería-informática)
-    - [**Grupo de Prácticas G5-52**](#grupo-de-prácticas-g5-52)
-    - [Grado en Ingeniería Informática – Ingeniería del Software](#grado-en-ingeniería-informática--ingeniería-del-software)
-    - [Proceso Software y Gestión II](#proceso-software-y-gestión-ii)
-    - [Product Owner: Carlos Guillermo Müller Cejas](#product-owner-carlos-guillermo-müller-cejas)
-    - [Curso 2023 – 2024](#curso-2023--2024)
-    - [Miembros del equipo](#miembros-del-equipo)
-- [Indice](#indice)
   - [Introducción](#introducción)
   - [Métricas para el Sprint 1](#métricas-para-el-sprint-1)
-    - [**Gráfico Burn Down**](#gráfico-burn-down)
+    - [Gráfico Burn Down](#gráfico-burn-down)
       - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico)
-    - [**Gráfico de Control mostrando el Lead Time**](#gráfico-de-control-mostrando-el-lead-time)
+    - [Gráfico de Control mostrando el Lead Time](#gráfico-de-control-mostrando-el-lead-time)
       - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-1)
-    - [**Gráfico de Control mostrando el Cycle Time**](#gráfico-de-control-mostrando-el-cycle-time)
+    - [Gráfico de Control mostrando el Cycle Time](#gráfico-de-control-mostrando-el-cycle-time)
       - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-2)
-    - [**Total de puntos de historia entregados**](#total-de-puntos-de-historia-entregados)
-    - [**Porcentaje de puntos de historia entregados**](#porcentaje-de-puntos-de-historia-entregados)
+    - [Total de puntos de historia entregados](#total-de-puntos-de-historia-entregados)
+    - [Porcentaje de puntos de historia entregados](#porcentaje-de-puntos-de-historia-entregados)
   - [Métricas para el Sprint 2](#métricas-para-el-sprint-2)
-    - [**Gráfico Burn Down Sp2**](#gráfico-burn-down-sp2)
+    - [Gráfico Burn Down Sp2](#gráfico-burn-down-sp2)
       - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-3)
-    - [**Gráfico de Control mostrando el Lead Time Sp2**](#gráfico-de-control-mostrando-el-lead-time-sp2)
+    - [Gráfico de Control mostrando el Lead Time Sp2](#gráfico-de-control-mostrando-el-lead-time-sp2)
       - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-4)
-    - [**Gráfico de Control mostrando el Cycle Time Sp2**](#gráfico-de-control-mostrando-el-cycle-time-sp2)
+    - [Gráfico de Control mostrando el Cycle Time Sp2](#gráfico-de-control-mostrando-el-cycle-time-sp2)
       - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-5)
-    - [**Total de puntos de historia entregados Sp2**](#total-de-puntos-de-historia-entregados-sp2)
-    - [**Porcentaje de puntos de historia entregados Sp2**](#porcentaje-de-puntos-de-historia-entregados-sp2)
-    - [**Calendario Niko-Niko para el Sprint 2**](#calendario-niko-niko-para-el-sprint-2)
+    - [Total de puntos de historia entregados Sp2](#total-de-puntos-de-historia-entregados-sp2)
+    - [Porcentaje de puntos de historia entregados Sp2](#porcentaje-de-puntos-de-historia-entregados-sp2)
+    - [Calendario Niko-Niko para el Sprint 2](#calendario-niko-niko-para-el-sprint-2)
     - [Funcionamiento y objetivo](#funcionamiento-y-objetivo)
   - [Ejemplo de Plantilla](#ejemplo-de-plantilla)
     - [Plantilla de Medición del Sprint 2](#plantilla-de-medición-del-sprint-2)
@@ -69,7 +59,7 @@ Con el fin de poder afinar aún más, o definir mejor, la naturaleza del trabajo
 
 Las cinco `Labels`, o etiquetas, personalizadas creadas han sido :
 
-![Cinco etiquetas personalizadas creadas](/docs/static/Five_customized_labels_created.png)
+![Cinco etiquetas personalizadas creadas](../static/Five_customized_labels_created.png)
 
 
 ## Métricas para el Sprint 1
@@ -87,8 +77,10 @@ Pero debido a algunos errores cometidos con el movimiento de tareas y Èpicas a 
 De esta forma, y tras hablarlo con el Product Owner, hemos decidido incluir todos los pipelines de ZenHub en "Burns Pipelines", incluido `Epics`, con el fin de que la línea de puntos de historia completados finalice el martes 5 de Marzo con los 78 puntos de historia `Completados` y 0 `Pendientes`, y con 24 tareas y Pull Requests `Completadas` y 0 `Pendientes`, como ha ocurrido en realidad aunque las tareas no se hayan movido correctamente por el tablero de ZenHub.
 
 Gráfico con TODOS los pipelines e incluyendo Pull Requests del Sprint 1.
-![Gráfico Burn Down de Sprint 1 del proyecto Pipeline ToDo](/docs/static/Sp1_BurnDown_Chart_6Feb7Mar_Todos_Pipelines.png)
-![Captura con porcentajes de Puntos de Historia Sp1](/docs/static/Sp1_porc_punt_hists_tareas_y_PR_completados_EpicsToDo.png)
+
+![Gráfico Burn Down de Sprint 1 del proyecto Pipeline ToDo](../static/Sp1_BurnDown_Chart_6Feb7Mar_Todos_Pipelines.png)
+
+![Captura con porcentajes de Puntos de Historia Sp1](../static/Sp1_porc_punt_hists_tareas_y_PR_completados_EpicsToDo.png)
 
 #### Análisis e intrepretación del gráfico
 
@@ -123,9 +115,12 @@ La explicación que viene a continuación es válida tanto para este gráfico de
 - El área sombreada en gris muestra la desviación estándar y ayuda a diferenciar entre variaciones normales y los valores atípicos (outliers): las tareas dentro de este área sombreada en gris están dentro de la variación normal y predecible, incluso si están por encima o por debajo del promedio. En cambio las tareas fuera del área gris han tardado un tiempo demasiado corto o largo en completarse, y deben examinarse más a fondo para comprender qué ocurrió con ellas, y tomar alguna acción o medida en su caso.
 
 Gráfico de Control "Lead Time" de Sprint 1
-![Gráfico de Control "Lead Time" de Sprint 1 del proyecto](/docs/static/Sp1_LeadTime_Control_Chart_6Feb7Mar.png)
+
+![Gráfico de Control "Lead Time" de Sprint 1 del proyecto](../static/Sp1_LeadTime_Control_Chart_6Feb7Mar.png)
+
 Métricas y estadísticas del gráfico de Control "Lead Time" de Sprint 1
-![Estadísticas de Gráfico de Control "Lead Time" de Sprint 1 del proyecto](/docs/static/Sp1_LeadTime_Control_Chart_Statistics.png)
+
+![Estadísticas de Gráfico de Control "Lead Time" de Sprint 1 del proyecto](../static/Sp1_LeadTime_Control_Chart_Statistics.png)
 
 #### Análisis e intrepretación del gráfico
 
@@ -147,9 +142,12 @@ El "Cycle Time" es otra métrica usada en la gestión de proyectos y desarrollos
 Para el caso de nuestro proyecto será el tiempo transcurrido desde que colocamos la issue en el pipeline `InProgress` hasta que la colocamos en `Done`, o `Close`  tras la indicación del Product Owner.
 
 Gráfico de Control "Cycle Time" de Sprint 1
-![Gráfico de Control "Cycle Time" de Sprint 1 del proyecto](/docs/static/Sp1_CycleTime_Control_Chart_6Feb7Mar.png)
+
+![Gráfico de Control "Cycle Time" de Sprint 1 del proyecto](../static/Sp1_CycleTime_Control_Chart_6Feb7Mar.png)
+
 Métricas y estadísticas de Gráfico de Control "Cycle Time" de Sprint 1
-![Estadísticas de Gráfico de Control "Cycle Time" de Sprint 1 del proyecto](/docs/static/Sp1_CycleTime_Control_Chart_Statistics.png)
+
+![Estadísticas de Gráfico de Control "Cycle Time" de Sprint 1 del proyecto](../static/Sp1_CycleTime_Control_Chart_Statistics.png)
 
 #### Análisis e intrepretación del gráfico
 
@@ -166,26 +164,27 @@ En general, se pude decir que es un buen gráfico de "Cycle Time", sin muchos va
 
 El total de puntos de historia entregados/completados, en `Done`, en este Sprint 1 puede verse en las dos siguientes capturas de pantalla de ZenHub, respectivamente, en las que se muestran la relación detallada de tareas/issues y `Pull Requests` generadas y completadas para el sprint, y el resumen de puntos de historia completados y pendientes, sobre el total de generados.
 
-![Total de puntos de historia entregados en Sp1](/docs/static/Sp1_tareas_completadas_y_Pull_Request.png)
+![Total de puntos de historia entregados en Sp1](../static/Sp1_tareas_completadas_y_Pull_Request.png)
  
 
 ### **Porcentaje de puntos de historia entregados**
 
 Si para emitir el informe establecemos el Pipeline final sólo en `ToDo`, como sería de esperar, el porcentaje de puntos de historia, Tareas/Issues y `Pull Request` entregados para este primer Sprint del proyecto se muestra en la siguiente captura de pantalla, y habría sido de un 73% de puntos de historia entregados y del 83% de tareas y Pull Requests.
 
-![Captura con porcentajes en Sp1](/docs/static/Sp1_porc_punt_hists_tareas_y_PR_completados.png)
+![Captura con porcentajes en Sp1](../static/Sp1_porc_punt_hists_tareas_y_PR_completados.png)
 
 En cambio, si incluimos en el filtro del informe la fecha final del día 7/Marzo/2024 y en Pipelines todos los pipelines desde `Epics` a `Done`, debido al problema ya mencionado con esas tres tareas y la propia Épica, se obtienen los siguientes porcentajes de tareas completadas:
 
-![Total de puntos de historia entregados en Sp1](/docs/static/Sp1_Completed_And_Percentage_Issues_Summary.png)
-![Captura con porcentajes en Sp1](/docs/static/Sp1_porc_punt_hists_tareas_y_PR_completados_EpicsToDo.png)
+![Total de puntos de historia entregados en Sp1](../static/Sp1_Completed_And_Percentage_Issues_Summary.png)
+
+![Captura con porcentajes en Sp1](../static/Sp1_porc_punt_hists_tareas_y_PR_completados_EpicsToDo.png)
 
 
 ## Métricas para el Sprint 2
 
 Para el Sprint 2 del proyecto se ha definido la siguiente relación de tareas de ZenHub con las correspondientes asignaciones a miembros del equipo:
 
-![Tareas definidas para Sprint 2](/docs/static/Sp2_Defined_Issues.png)
+![Tareas definidas para Sprint 2](../static/Sp2_Defined_Issues.png)
 
 ### **Gráfico Burn Down Sp2** 
 
@@ -194,10 +193,12 @@ A continuación se representa el gráfico BurnDown de tareas realizadas correspo
 Se incluyen en el gráfico las `Pull Requests` generadas durante el sprint 2.
 
 Gráfico actual, 31/Marzo, con "Burns Pipelines" `ToDo` e incluyendo Pull Requests para el Sprint 2.
-![Gráfico BurnDown de Sprint 2 del proyecto Pipelines ToDo](/docs/static/Sp2_Current_BurnDown_Chart_7Mar4Abr.png)
-![Captura con porcentajes de Puntos de Historia Sp2](/docs/static/Sp2_porcentaje_puntos_historia_tareas_y_pull_req_completados_ToDo.png)
 
-![Captura con porcentajes](/docs/static/Sp2_Current_Completed_And_Percentage_Issues_Summary.png)
+![Gráfico BurnDown de Sprint 2 del proyecto Pipelines ToDo](../static/Sp2_Current_BurnDown_Chart_7Mar4Abr.png)
+
+![Captura con porcentajes de Puntos de Historia Sp2](../static/Sp2_porcentaje_puntos_historia_tareas_y_pull_req_completados_ToDo.png)
+
+![Captura con porcentajes](../static/Sp2_Current_Completed_And_Percentage_Issues_Summary.png)
 
 #### Análisis e intrepretación del gráfico
 
@@ -220,11 +221,16 @@ En nuestro caso particular, será el tiempo transcurrido desde que creamos la ta
 La explicación e interpretación de los distintos elementos del gráfico de Control se ha realizado en este apartado para el Sprint 1, con lo cual, no lo repetiremos para este segundo sprint y únicamente pasaremos a incrustar el gráfico y realizar su interpretación.
 
 Gráfico de Control "Lead Time" de Sprint 2
-![Gráfico de Control "Lead Time" de Sprint 2 del proyecto](/docs/static/Sp2_LeadTime_Control_Chart_6Mar3Abr.png)
+
+![Gráfico de Control "Lead Time" de Sprint 2 del proyecto](../static/Sp2_LeadTime_Control_Chart_6Mar3Abr.png)
+
 Métricas y estadísticas del gráfico de Control "Lead Time" de Sprint 2
-![Estadísticas de Gráfico de Control "Lead Time" de Sprint 2 del proyecto](/docs/static/Sp2_LeadTime_Control_Chart_Statistics.png)
+
+![Estadísticas de Gráfico de Control "Lead Time" de Sprint 2 del proyecto](../static/Sp2_LeadTime_Control_Chart_Statistics.png)
+
 Métricas del gráfico de Control "Lead Time" de Sprint 2: tareas Completadas y Tiempo de finalización
-![Métricas del gráfico de Control "Lead Time" tareas Completadas y Tiempo de finalización](/docs/static/Sp2_LeadTime_Control_Chart_Completed_Issues_Completion_Time.png)
+
+![Métricas del gráfico de Control "Lead Time" tareas Completadas y Tiempo de finalización](../static/Sp2_LeadTime_Control_Chart_Completed_Issues_Completion_Time.png)
 
 #### Análisis e intrepretación del gráfico
 
@@ -237,11 +243,16 @@ El "Cycle Time" es otra métrica usada en la gestión de proyectos y desarrollos
 Para el caso de nuestro proyecto será el tiempo transcurrido desde que colocamos la issue en el pipeline `InProgress` hasta que la colocamos en `Done`, o `Close`  tras la indicación del Product Owner.
 
 Gráfico de Control "Cycle Time" de Sprint 2
-![Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](/docs/static/Sp2_CycleTime_Control_Chart_6Mar3Abr.png)
+
+![Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](../static/Sp2_CycleTime_Control_Chart_6Mar3Abr.png)
+
 Métricas y estadísticas de Gráfico de Control "Cycle Time" de Sprint 2
-![Estadísticas de Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](/docs/static/Sp2_CycleTime_Control_Chart_Statistics.png)
+
+![Estadísticas de Gráfico de Control "Cycle Time" de Sprint 2 del proyecto](../static/Sp2_CycleTime_Control_Chart_Statistics.png)
+
 Métricas del gráfico de Control "Cycle Time" de Sprint 2: tareas Completadas y Tiempo de finalización
-![Métricas del gráfico de Control "Cycle Time" tareas Completadas y Tiempo de finalización](/docs/static/Sp2_CycleTime_Control_Chart_Completed_Issues_Completion_Time.png)
+
+![Métricas del gráfico de Control "Cycle Time" tareas Completadas y Tiempo de finalización](../static/Sp2_CycleTime_Control_Chart_Completed_Issues_Completion_Time.png)
 
 
 #### Análisis e intrepretación del gráfico
@@ -253,9 +264,12 @@ ToDo
 El total de puntos de historia *actualmente entregados/completados*, en `Done`, en este Sprint 2 puede verse en las dos siguientes capturas de pantalla de ZenHub, respectivamente, en las que se muestran la relación detallada de tareas/issues y `Pull Requests` generadas y completadas para el sprint, y el resumen de puntos de historia completados y pendientes, sobre el total de generados.
 
 Total de puntos de historia entregados
-![Total de puntos de historia entregados](/docs/static/Sp2_Current_Completed_Issues_and_PullRequests.png)
+
+![Total de puntos de historia entregados](../static/Sp2_Current_Completed_Issues_and_PullRequests.png)
+
 Total de puntos de historia pendientes de completar
-![Total de puntos de historia pendientes de completar](/docs/static/Sp2_Current_Remainig_Issues_and_PullRequests.png)
+
+![Total de puntos de historia pendientes de completar](../static/Sp2_Current_Remainig_Issues_and_PullRequests.png)
 
 
 
@@ -263,8 +277,9 @@ Total de puntos de historia pendientes de completar
 
 Estableciendo en el filtro del informe "Milestone Report", para emitir el BurnDown Chart de este segundo Sprint, la fecha final del sprint a día 4/Abril/2024 y en "Burn Pipelines" el pipeline `Done`, se obtienen los siguientes porcentajes de tareas completadas actualmente para el sprint 2:
 
-![Total de puntos de historia entregados en Sp2](/docs/static/Sp2_Current_Completed_And_Percentage_Issues_Summary.png)
-![Captura con porcentajes ACTUALES a 31/Marzo en Sp2](/docs/static/Sp2_porcentaje_puntos_historia_tareas_y_pull_req_completados_ToDo.png)
+![Total de puntos de historia entregados en Sp2](../static/Sp2_Current_Completed_And_Percentage_Issues_Summary.png)
+
+![Captura con porcentajes ACTUALES a 31/Marzo en Sp2](../static/Sp2_porcentaje_puntos_historia_tareas_y_pull_req_completados_ToDo.png)
 
 A día de hoy, 31/Marzo, tenemos 7 tareas ( 5 tareas, 1 Pull Request y una Épica) en `InProgress` e `InReview`, entre ellas la redacción final de este informe, equivaliendo a un total de 46 Puntos de Historia, de los 121 totales, por finalizar, correspondiendo a un 63% de Tareas completadas y a un 62% de Puntos de Historia.
 
