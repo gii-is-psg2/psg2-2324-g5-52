@@ -23,21 +23,40 @@
 
 
 # Indice
-- [Introducción](#introducción)
-- [Métricas para el Sprint 1](#métricas-para-el-sprint-1)
-  * [Gráfico Burn Down](#gráfico-burn-down)
-  * [Gráfico de Control mostrando el Lead Time](#gráfico-de-control-mostrando-el-lead-time)
-  * [Gráfico de Control mostrando el Cycle Time](#gráfico-de-control-mostrando-el-cycle-time)
-  * [Total de puntos de historia entregados](#total-de-puntos-de-historia-entregados)
-  * [Porcentaje de puntos de historia entregados](#porcentaje-de-puntos-de-historia-entregados)
-  
-- [Métricas para el Sprint 2](#métricas-para-el-sprint-2)
-  * [Gráfico Burn Down Sp2](#gráfico-burn-down-sp2)
-  * [Gráfico de Control mostrando el Lead Time Sp2](#gráfico-de-control-mostrando-el-lead-time-sp2)
-  * [Gráfico de Control mostrando el Cycle Time Sp2](#gráfico-de-control-mostrando-el-cycle-time-sp2)
-  * [Total de puntos de historia entregados Sp2](#total-de-puntos-de-historia-entregados-sp2)
-  * [Porcentaje de puntos de historia entregados Sp2](#porcentaje-de-puntos-de-historia-entregados-sp2)
-  * [Calendario Niko-Niko para el Sprint 2](#calendario-niko-niko-para-el-sprint-2)
+- [Métricas de Proceso Ágil y Recursos](#métricas-de-proceso-ágil-y-recursos)
+- [Universidad de Sevilla](#universidad-de-sevilla)
+  - [Escuela Técnica Superior de Ingeniería Informática](#escuela-técnica-superior-de-ingeniería-informática)
+    - [**Grupo de Prácticas G5-52**](#grupo-de-prácticas-g5-52)
+    - [Grado en Ingeniería Informática – Ingeniería del Software](#grado-en-ingeniería-informática--ingeniería-del-software)
+    - [Proceso Software y Gestión II](#proceso-software-y-gestión-ii)
+    - [Product Owner: Carlos Guillermo Müller Cejas](#product-owner-carlos-guillermo-müller-cejas)
+    - [Curso 2023 – 2024](#curso-2023--2024)
+    - [Miembros del equipo](#miembros-del-equipo)
+- [Indice](#indice)
+  - [Introducción](#introducción)
+  - [Métricas para el Sprint 1](#métricas-para-el-sprint-1)
+    - [**Gráfico Burn Down**](#gráfico-burn-down)
+      - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico)
+    - [**Gráfico de Control mostrando el Lead Time**](#gráfico-de-control-mostrando-el-lead-time)
+      - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-1)
+    - [**Gráfico de Control mostrando el Cycle Time**](#gráfico-de-control-mostrando-el-cycle-time)
+      - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-2)
+    - [**Total de puntos de historia entregados**](#total-de-puntos-de-historia-entregados)
+    - [**Porcentaje de puntos de historia entregados**](#porcentaje-de-puntos-de-historia-entregados)
+  - [Métricas para el Sprint 2](#métricas-para-el-sprint-2)
+    - [**Gráfico Burn Down Sp2**](#gráfico-burn-down-sp2)
+      - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-3)
+    - [**Gráfico de Control mostrando el Lead Time Sp2**](#gráfico-de-control-mostrando-el-lead-time-sp2)
+      - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-4)
+    - [**Gráfico de Control mostrando el Cycle Time Sp2**](#gráfico-de-control-mostrando-el-cycle-time-sp2)
+      - [Análisis e intrepretación del gráfico](#análisis-e-intrepretación-del-gráfico-5)
+    - [**Total de puntos de historia entregados Sp2**](#total-de-puntos-de-historia-entregados-sp2)
+    - [**Porcentaje de puntos de historia entregados Sp2**](#porcentaje-de-puntos-de-historia-entregados-sp2)
+    - [**Calendario Niko-Niko para el Sprint 2**](#calendario-niko-niko-para-el-sprint-2)
+    - [Funcionamiento y objetivo](#funcionamiento-y-objetivo)
+  - [Ejemplo de Plantilla](#ejemplo-de-plantilla)
+    - [Plantilla de Medición del Sprint 2](#plantilla-de-medición-del-sprint-2)
+      - [Análisis cualitativo y conclusiones del calendario Niko-Niko](#análisis-cualitativo-y-conclusiones-del-calendario-niko-niko)
 
 ___
 
@@ -282,27 +301,27 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 | Día 2        | -               | -               | -                | :smile:       | -              |
 | Día 3        | -               | -               | -                | -             | -              |
 | Día 4        | -               | -               | -                | :smile:       | -              |
-| Día 5        | -               | :smile:         | -                | -             | -              |
+| Día 5        | -               | :smile:         | :smile:          | -             | -              |
 | Día 6        | -               | :smile:         | -                | :smile:       | :smile:        |
 | Día 7        | -               | -               | -                | -             | -              |
 | Día 8 mar 12 | -               | -               | -                | :smile:       | :smile:        |
 | Día 9        | -               | -               | -                | :smile:       | -              |
 | Día 10       | -               | -               | -                | :smile:       | -              |
-| Día 11       | -               | -               | -                | -             | -              |
-| Día 12       | -               | :smile          | -                | :smile:       | :neutral_face: |
+| Día 11       | -               | -               | :smile:          | -             | -              |
+| Día 12       | -               | :smile:         | :smile:          | :smile:       | :neutral_face: |
 | Día 13       | -               | :neutral_face:  | -                | :smile:       | -              |
 | Día 14       | -               | :neutral_face:  | -                | -             | :neutral_face: |
 | Día 15 mar 19| -               | -               | -                | :smile:       | :smile:        |
 | Día 16       | -               | :smile:         | -                | -             | -              |
 | Día 17       | -               | -               | -                | -             | -              |
 | Día 18       | -               | -               | -                | -             | -              |
-| Día 19       | -               | -               | -                | :neutral_face:| :neutral_face: |
+| Día 19       | -               | -               | :neutral_face:   | :neutral_face:| :neutral_face: |
 | Día 20       | -               | -               | -                | :neutral_face:| :fearful:      |
 | Día 21       | -               | -               | -                | -             | -              |
 | Día 22 mar 26| -               | -               | -                | -             | :fearful:      |
 | Día 23       | -               | -               | -                | -             | -              |
 | Día 24       | -               | -               | -                | -             | -              |
-| Día 25       | -               | -               | -                | -             | -              |
+| Día 25       | -               | -               | :neutral_face:   | -             | -              |
 | Día 26       | -               | -               | -                | :worried:     | :fearful:      |
 | Día 27       | -               | :worried:       | -                | :worried:     | -              |
 | Día 28       | -               | -               | -                | -             | -              |
