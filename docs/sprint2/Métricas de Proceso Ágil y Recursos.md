@@ -306,7 +306,7 @@ La plantilla corresponderá al periodo comprendido entre los días martes, 5 de 
 | Día 26       | -               | -               | -                | :worried:     | :fearful:      |
 | Día 27       | -               | :worried:       | -                | :worried:     | -              |
 | Día 28       | -               | -               | -                | -             | -              |
-| Día 29 mar 2 | -               | :Smile:         | -                | -             | -              |
+| Día 29 mar 2 | -               | :smile:         | -                | -             | -              |
 | Día 30       | -               | -               | -                | -             | -              |
 
 
