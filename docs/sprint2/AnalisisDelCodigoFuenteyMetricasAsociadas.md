@@ -14,18 +14,39 @@
 ### Product Owner: Carlos Guillermo Müller Cejas
 ### Curso 2023 – 2024
 
+### Miembros del equipo
+- Benjamín Ignacio Maureira Flores
+- David Godoy Fernández
+- Miguel Hernández Sánchez
+- Rafael David Caro Medina
+- Ramón José Guerrero Romero
+
+
+# Indice
+- [Introducción](#introducción)
+- [Release del Sprint 1](#release-del-sprint-1)
+  * [Frontend](#frontend)
+      - [Métricas](#metricas)
+      - [Bugs potenciales](#bugs-potenciales)
+      - [Tipos de code smells](#tipos-de-code-smells)
+   * [Backend](#backend)
+      - [Métricas](#metricas-1)
+      - [Bugs potenciales](#bugs-potenciales-1)
+      - [Tipos de code smells](#tipos-de-code-smells-1)
+- [Conclusión](#conlusión)
+
 ## Introducción
 
 En este documento se realizará un análisis del código fuente del proyecto gracias a la herramienta SonarQube. Se tendrán en cuenta la release del sprint1 y la de este sprint2 y se estudiarán las diferentes métricas asociadas.
 
-## Release del Sprint1
+## Release del Sprint 1
 ### Frontend
 
 #### Dashboard
 
 ![SonarQube Frontend Dashboard](/docs/static/sprint1FrontendDashboard.png)
 
-- Métricas:
+#### Metricas:
   - Bugs: esta métrica indica la cantidad de bugs que ha detectado en el código. En nuestro caso hay 4.
   - Reliability: En nuestro caso, la nota es una C al haber ya que al menos uno cuenta como un _major bug_.
   - Vulnerabilities: esta métrica indica la cantidad de vulnerabilidades que ha detectado en el código. En nuestro caso no hay ninguna.
@@ -172,7 +193,7 @@ Nuestro frontend tiene 4 bugs:
 
 ![SonarQube Backend Dashboard](/docs/static/sprint1BackendDashboard.png)
 
-- Métricas:
+#### Metricas:
   - Bugs: esta métrica indica la cantidad de bugs que ha detectado en el código. En nuestro caso hay 2.
   - Reliability: En nuestro caso, la nota es una C ya que al menos un bug se considera _major bug_.
   - Vulnerabilities: esta métrica indica la cantidad de vulnerabilidades que ha detectado en el código. En nuesto caso no hay ninguna.
