@@ -201,7 +201,15 @@ Gráfico actual, 31/Marzo, con "Burns Pipelines" `ToDo` e incluyendo Pull Reques
 
 #### Análisis e intrepretación del gráfico
 
-ToDo
+Durante la primera semana del Sprint se desarrolló la tarea correspondiente al modelo de la funcionalidad Adoptions y se revisó y aprobó su correspondiente Pull Request, suponiendo un total de 12 puntos de historia, con lo cual en este período del Sprint la línea de trabajo restante se mantuvo por encima de la línea ideal en todo momento. En la segunda semana se desarrolló la parte correspondiente al servicio y controlador de esta funcionalidad, y por la estimación que tenía el trabajo pendiente siguió quedando sobre el ideal, a la finalización de la misma.
+
+Sólo dos días más tarde, al finalizar las tareas de Backend de la funcionalidad Bookings y Frontend de Adoptions, se consigue alcanzar, casi a mitad del Sprint, la línea ideal.
+
+El frontend de Bookings es la siguiente tarea finalizada dos días después, para el martes 19, siendo la primera y única vez que se consigue ir por debajo de la línea ideal de trabajo.
+
+Durante la tercera semana no se consiguió finalizar niguna tarea, ya que se trataron de la redacción de informes técnicos, y posteriormente la tarea correspondientes a los Test, justo antes de Semana Santa.
+
+Ha sido justo en los últimos días del Sprint cuando se han finalizado varias tareas que teníamos pendientes, como finalizar la redacción e incorporación de gráficos a informes con todas las tareas finalizadas, y la correspondiente a la finalización de la Release del proyecto.
 
 ### **Gráfico de Control mostrando el Lead Time Sp2**
 
