@@ -46,7 +46,7 @@ const CustomerAgreement = () => {
                 </li>
                 <li>
                     <strong>Duration and termination</strong>
-                    <p>duration</p>
+                    <p>The agreement will be valid during the present academic course 2023/2024, specifically, between 09/11/2023 and 05/27/2024.</p>
                     <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason, including if you breach this Agreement.</p>
                 </li>
                 <li>
