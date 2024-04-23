@@ -111,6 +111,9 @@ function AppNavbar() {
                     <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
                 </NavItem>
                 <NavItem>
+                    <NavLink style={{ color: "white" }} id="CA" tag={Link} to="/CA">CA Document</NavLink>
+                </NavItem>
+                <NavItem>
                     <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
                 </NavItem>
                 <NavItem>
@@ -127,10 +130,14 @@ function AppNavbar() {
                 <NavItem>
                     <NavLink style={{ color: "white" }} tag={Link} to="/dashboard">Dashboard</NavLink>
                 </NavItem>
+
             </>
         )
         userLogout = (
             <>
+                <NavItem>
+                    <NavLink style={{ color: "white" }} id="CA" tag={Link} to="/CA">CA Document</NavLink>
+                </NavItem>
                 <NavItem>
                     <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
                 </NavItem>

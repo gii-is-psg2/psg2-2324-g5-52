@@ -52,6 +52,7 @@ import PetHotelRoomNew from "./clinicOwner/petHotelRoomNew";
 import PetHotelBooking from "./clinicOwner/petHotelBooking"
 import OwnerAdoptionsList from "./owner/adoptions/adoptionsList";
 import NewAdoption from "./owner/adoptions/adoptionsNew";
+import CustomerAgreement from "./CustomerAgreementDocument.jsx"
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -171,6 +172,7 @@ function App() {
           <Route path="/" exact={true} element={<Home />} />
           <Route path="/plans" element={<PlanList />} />
           <Route path="/docs" element={<SwaggerDocs />} />
+          <Route path="/CA" element={<CustomerAgreement />} />
           {publicRoutes}
           {userRoutes}
           {adminRoutes}
