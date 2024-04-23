@@ -5,37 +5,75 @@ const CustomerAgreement = () => {
         <>
             <h1>Customer Agreement</h1>
 
-            <h2>Associated Services and Description</h2>
-            <p>In addition to the main PetClinic Services, there must exist at least an additional Petclinic4ClinicOwner Service that allows their users (clinic owners) to request incident resolution, send user requests, and request for changes (RFC) estimations.</p>
+            <p>Welcome to [Service Name]! By using [Service Name] ("Service"), you agree to be bound by the following terms and conditions ("Agreement"). Please read them carefully.</p>
 
-            <h2>Pricing</h2>
-            <p>There must exist at least three plans (Basic, Gold, and Platinum), whose conditions each group can establish at their convenience, provided that the following constraints are fulfilled:</p>
-            <ul>
-                <li>The Basic plan does not offer SLA.</li>
-                <li>The Gold plan is the first to offer additional functionalities (such as Pet Hotel or Adoptions).</li>
-                <li>The Platinum plan is the only one offering online consultations.</li>
-                <li>The maximum number of pets and monthly visits supported for pet owners must differ for each plan.</li>
-                <li>Service availability must be different for each plan. This information should be represented using a table or matrix, as is customary nowadays.</li>
-            </ul>
+            <ol>
+                <li>
+                    <strong>Acceptance of Terms</strong>
+                    <p>This Agreement outlines the terms under which the Service is provided to you ("Customer"). By accessing or using the Service, you agree to comply with and be bound by this Agreement. If you do not agree to these terms, please do not use the Service.</p>
+                </li>
+                <li>
+                    <strong>Description of Service</strong>
+                    <p>[Service Name] provides [brief description of the service and its features]. The Service may be updated, expanded, or limited from time to time at our discretion.</p>
+                </li>
+                <li>
+                    <strong>Associated services and description</strong>
+                    <p></p>
+                </li>
+                <li>
+                    <strong>Use of Service</strong>
+                    <p>You agree to use the Service only for lawful purposes and in accordance with this Agreement. You are responsible for all activities conducted under your account.</p>
+                </li>
+                <li>
+                    <strong>User Accounts</strong>
+                    <p>To access certain features of the Service, you may be required to create an account. You agree to provide accurate and complete information and to keep this information up-to-date.</p>
+                </li>
+                <li>
+                    <strong>Privacy Policy</strong>
+                    <p>Your privacy is important to us. Our Privacy Policy, [link to Privacy Policy], explains how we collect, use, and protect your personal information.</p>
+                </li>
+                <li>
+                    <strong>Pricing</strong>
+                    <p></p>
+                </li>
+                <li>
+                    <strong>Payment</strong>
+                    <p>If the Service requires payment, you agree to pay all applicable fees as described on the Service website or within the Service. All fees are non-refundable, except as expressly provided in this Agreement.</p>
+                </li>
+                <li>
+                    <strong>Intellectual Property</strong>
+                    <p>All content and materials provided on the Service are the intellectual property of [Service Name] or its licensors and are protected by copyright and other intellectual property laws.</p>
+                </li>
+                <li>
+                    <strong>Duration and termination</strong>
+                    <p>duration</p>
+                    <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason, including if you breach this Agreement.</p>
+                </li>
+                <li>
+                    <strong>SLA</strong>
+                    <p></p>
+                </li>
+                <li>
+                    <strong>Limitation of Liability</strong>
+                    <p>[Service Name] shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the Service.</p>
+                </li>
+                <li>
+                    <strong>Changes to Agreement</strong>
+                    <p>We reserve the right to modify this Agreement at any time. Your continued use of the Service after any such changes constitutes your acceptance of the new terms.</p>
+                </li>
+                <li>
+                    <strong>Governing Law</strong>
+                    <p>This Agreement shall be governed by the laws of [Jurisdiction], without regard to its conflict of law provisions.</p>
+                </li>
+                <li>
+                    <strong>Contact Information</strong>
+                    <p>If you have any questions about this Agreement, please contact us at [Contact Information].</p>
+                </li>
+            </ol>
 
-            <h2>Duration and Termination</h2>
-            <p>At least the contract must be valid during the whole academic course. The agreement must specify the termination conditions.</p>
+            <p>By using [Service Name], you acknowledge that you have read, understood, and agree to be bound by this Agreement.</p>
 
-            <h2>Service Level Agreement (SLA)</h2>
-            <ul>
-                <li>The SLA can vary for each service, service subcategories, and chosen plan.</li>
-                <li>Additionally, the document must consider the following requirements:</li>
-                <ul>
-                    <li>In addition to Time to Own (TTO) and Time to Resolve (TTR) metrics, at least an additional metric that is sound and is not available in iTop.</li>
-                    <li>Description of the monitoring mechanism.</li>
-                    <li>User support periods. For example, from Monday to Saturday from 9:00 to 22:00, 12x5, 24x7, etc.</li>
-                    <li>At least one SLA with three different levels of priority (urgency and impact).</li>
-                    <li>Compensations (service credits) in case of non-compliance.</li>
-                </ul>
-            </ul>
-
-            <h2>Other General Terms</h2>
-            <p>Usual terms should be included to cover other aspects, such as acceptable use, privacy policy, payment terms, intellectual property, change policy, governing law, etc.</p>
+            
         </>
     );
 };
