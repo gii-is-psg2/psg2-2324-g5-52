@@ -51,7 +51,105 @@ const CustomerAgreement = () => {
                 </li>
                 <li>
                     <strong>SLA</strong>
-                    <p></p>
+                    <ol>
+                        <li>
+                            <strong>Scope</strong>
+                            <p>This SLA covers technical support services for all Pet Clinic features for Gold or Platinum customers.</p>
+                        </li>
+                        <li>
+                            <strong>Service availability</strong>
+                            <p>In the case of <i>Gold</i> plan customers, we can guarantee a service availability of more than 95% at all times, every day of the year.
+                            </p>
+                            <p>
+                            In the case of <i>Platinum</i> plan customers, we can guarantee a service availability of more than 99.9% at all times, every day of the year.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Incident reporting procedure</strong>
+                            <p>Incidents can be reported through the iTop platform. The client will create a report on the platform which will be responded to by a member of the team to confirm receipt and, if necessary, to request further information. In addition, at this point in the process a priority will be assigned and the resolution procedure will begin.
+                            </p>                    
+                        </li>
+                        <li>
+                            <strong>Resolution procedure</strong>
+                            <p><strong>Diagnosis</strong>: The technical support team will diagnose the problem within the established response time.
+                            </p>
+                            <p><strong>Resolution</strong>: The problem will be resolved within the agreed resolution time according to the priority of the incident.
+                            </p>
+                            <p><strong>Communication</strong>: The customer will be informed about the status of their incident and the resolution provided.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Incident response time</strong>
+                            <p>In the case of a report of a client with the <i>Gold</i> plan:
+                            </p>
+                            <table className='table'>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i>Gold</i></th>
+                                        <th scope="col">High priority</th>
+                                        <th scope="col">Medium priority</th>
+                                        <th scope="col">Low priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Response Time</th>
+                                        <td>12 hour</td>
+                                        <td>24 hour</td>
+                                        <td>48 hour</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Resolution Time</th>
+                                        <td>48 hour</td>
+                                        <td>72 hour</td>
+                                        <td>96 hour</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <p>In the case of a report of a client with the <i>Platinum</i> plan:
+                            </p>
+                            <table className='table'>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i>Platinum</i></th>
+                                        <th scope="col">High priority</th>
+                                        <th scope="col">Medium priority</th>
+                                        <th scope="col">Low priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Response Time</th>
+                                        <td>10 hour</td>
+                                        <td>16 hour</td>
+                                        <td>24 hour</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Resolution Time</th>
+                                        <td>24 hour</td>
+                                        <td>48 hour</td>
+                                        <td>72 hour</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                       <li>
+                            <strong>Penalties</strong>
+                            <p>In case of non-compliance with the commitments established in this SLA, the following penalties will be applied:
+                            </p>
+                            <p>
+                            <p>Failure to comply with response time: 15% discount on the next invoice.</p>
+                            <p>Failure to meet resolution time: 8% discount on the next invoice.</p>
+                            <p>Non-fulfillment of availability: double the value of the lost time.</p>
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Review and update of the SLA</strong>
+                            <p>This SLA will be reviewed and updated annually or as needed to reflect changes in the services provided.
+                            </p>
+                        </li>
+                    </ol>
                 </li>
                 <li>
                     <strong>Limitation of Liability</strong>
