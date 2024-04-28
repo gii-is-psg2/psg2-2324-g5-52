@@ -18,7 +18,35 @@ const CustomerAgreement = () => {
                 </li>
                 <li>
                     <strong>Associated services and description</strong>
-                    <p></p>
+                    <p>PetClinic is a web application that offers the request and creation of appointments, or veterinary consultations, for pets as its main services.
+                       For which it offers various subservices and functionalities (with limits determined by the Price Plan that the client has acquired) to different user 
+                       profiles.</p>
+
+                    <p>The user profiles included in the application are: clinic owners, veterinarians and pet owners. And there are three Price Plans (Basic, Gold and Platinum) 
+                        that will be detailed in the following section of the document.</p>   
+
+                    <p>For clinic owners, the basic service offered by the application consists of creating as many clinics and veterinarians as they have, up to a limit 
+                        determined by the contracted Price Plan, and allowing their clients (pet owners) to create appointments, or veterinary consultations, in their clinics</p>    
+
+                    <p>In turn, Veterinary profile users will have the possibility of consulting the list of appointments or consultations that pet owners have scheduled 
+                        with them.</p>
+
+                    <p>Finally, for pet owners, the application allows you to register as a clinic user, register as many pets as you own (with the limit of the Price Plan 
+                        acquired by the owner of your clinic), and schedule veterinary appointments with your preferred veterinarian in that clinic, on the days and hours 
+                        that said veterinarian is available.</p>
+
+                    <p>This is the fundamental service offered by the application in its 'Basic' Plan.</p>
+
+                    <p>The 'Gold' Price Plan, in addition to the services offered by the 'Basic' Plan, offers the clinic owner, and their clients by extension, a pet "Adoptions" service, 
+                        which allows pet owners announce and publish adoption requests for your pets in the application, and the possibility of connection between owners and carrying out 
+                        the management from within the application itself.</p>
+
+                    <p>For the 'Platinum' Price Plan, in addition to the services offered by the 'Gold' Plan, the "Room Reservation" service is offered, so that the owner of the clinic can 
+                        in turn offer this service to his owner pets clients, in order to be able to leave their pets for a few days, in which they cannot take care of them for some reason 
+                        (travel, work, etc...), in the clinic facilities.</p>
+
+                    <p>Finally, for both the 'Gold' and 'Platinum' Plan, in addition to the main PetClinic services, the additional Petclinic4ClinicOwner service is offered that allows 
+                        clinic owners to request the resolution of incidents, submit user requests and request for changes estimations (RFC).</p>                           
                 </li>
                 <li>
                     <strong>Use of Service</strong>
