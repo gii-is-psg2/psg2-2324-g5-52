@@ -65,13 +65,17 @@ const CustomerAgreement = () => {
                             </p>
                         </li>
                         <li>
+                            <strong>User support periods</strong>
+                            <p>User support periods will be available from Monaday to Sunday from 9.00 am to 6.00 pm.</p>
+                        </li>
+                        <li>
                             <strong>Incident reporting procedure</strong>
-                            <p>Incidents can be reported through the iTop platform. The client will create a report on the platform which will be responded to by a member of the team to confirm receipt and, if necessary, to request further information. In addition, at this point in the process a priority will be assigned and the resolution procedure will begin.
+                            <p>Incidents can be reported through the iTop platform. The client will create a report on the platform which will be responded to by a member of the team to confirm receipt and, if necessary, to request further information.
                             </p>                    
                         </li>
                         <li>
                             <strong>Resolution procedure</strong>
-                            <p><strong>Diagnosis</strong>: The technical support team will diagnose the problem within the established response time.
+                            <p><strong>Diagnosis</strong>: The technical support team will diagnose the problem within the established response time and assign a priority to the reported problem.
                             </p>
                             <p><strong>Resolution</strong>: The problem will be resolved within the agreed resolution time according to the priority of the incident.
                             </p>
@@ -106,6 +110,7 @@ const CustomerAgreement = () => {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p><i>These hours are working hours, corresponding to the working hours described in the user support.</i></p>
                             <br/>
                             <p>In the case of a report of a client with the <i>Platinum</i> plan:
                             </p>
@@ -133,6 +138,7 @@ const CustomerAgreement = () => {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p><i>These hours are working hours, corresponding to the working hours described in the user support.</i></p>
                         </li>
                        <li>
                             <strong>Penalties</strong>
@@ -143,6 +149,11 @@ const CustomerAgreement = () => {
                             <p>Failure to meet resolution time: 8% discount on the next invoice.</p>
                             <p>Non-fulfillment of availability: double the value of the lost time.</p>
                             </p>
+                        </li>
+                        <li>
+                            <strong>Monitoring mechanism</strong>
+                            <p>Key performance indicators such as response time, resolution time, and customer satisfaction will be monitored regularly to assess the performance of the technical support service.</p>
+                            <p>Performance metrics will be collected and analyzed using monitoring tools and performance management systems.</p>
                         </li>
                         <li>
                             <strong>Review and update of the SLA</strong>
