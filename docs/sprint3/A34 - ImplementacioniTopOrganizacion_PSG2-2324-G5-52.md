@@ -23,16 +23,68 @@
 
 
 # Indice
+ - [Introducción](#introducción)
+ - [Creación del equipo](#creación-del-equipo)
+ - [Actualización de contraseñas para usuarios cliente](#actualización-de-contraseñas-para-usuarios-cliente)
+ - [Capturas de pantalla del portal iTop disponible para clientes](#capturas-de-pantalla-del-portal-itop-disponible-para-clientes)
+ - [Dificultades encontradas durante la configuración de iTop](#dificultades-encontradas-durante-la-configuración-de-itop)
+ - [Funcionalidades que faltan en iTop para cubrir las tareas de este Sprint](#funcionalidades-que-faltan-en-itop-para-cubrir-las-tareas-de-este-sprint)
+ - [Contribuciones de cada miembro del grupo](#contribuciones-de-cada-miembro-del-grupo)
 
-# Introducción
+## Introducción
 
-As a group, create a **technical report** (in Spanish) titled "Implementación de iTop para la Organización PSG2-2324-GX-XY" which sums up the work performed on iTop during this Sprint. This work includes the configuration of all iTop elements to support incident and requests management for the Petclinic services, such as Customer contracts, Services, Service subcategories, SLAs, SLTs, and Delivery models, among others. The technical report must be stored in a **docs** folder within the same repository using the Markdown syntax, updating the stored versions as the group works with it following the strategy defined in S1. The technical report **must contain** at least the following items, some of them for each service:
+En este informe técnico se resumirá el trabajo realizado sobre la CMDB iTop durante el Sprint3 del proyecto PetClinic. Este trabajo incluirá la configuración de todos los elementos de iTop necesarios para dar soporte a la gestión de incidencias y peticiones de usuarios para los servicios de PetClinic, tales como Contratos de Clientes, Servicios, Subcategorías de servicios, SLAs, SLTs, etc... 
 
-  a. Screenshot of the iTop portal that is available for customers (clinic owners).
+## Creación del equipo
 
-  b. Difficulties that were found when configuring iTop in this scenario during the Sprint. For instance, discuss how the elements of the CA were defined in iTop, and why some could not be defined if that were the case.
-  
-  c. Features missing in iTop to properly register and provide information to support all the tasks of this Sprint.
-  
-  d. Contributions of each author. Include details on concrete tasks performed by each member of the group. We suggest using a matrix or table to sum up this information.
+Una vez comprobado que la organización de nuestro grupo, PSG2-2324-G5-52, tiene creados y asociados un Contacto por cada miembro del grupo, procedemos a crear el Equipo de iTop (Team) con el nombre solicitado, "PSG2-2324-G5-52 Team", asociarlo a nuestra Organización y asociarle a su vez todos los miembros de ella.
 
+## Actualización de contraseñas para usuarios cliente
+
+Como además de los usuarios creados en iTop para cada miembro del grupo, cada grupo tiene acceso a dos usuarios cliente que representan a dos propietarios de clínica y que accederán al portal de usuarios iTop con su propio usuario y contraseña, se procede a continuación a actulizar dichas contraseñas por unas conocidas exclusivamente por nuestro grupo.
+
+## Capturas de pantalla del portal iTop disponible para clientes
+
+A continuación se muestran algunas capturas de pantalla de cómo el portal iTop queda disponible para clientes, para la creación de incidencias y peticiones de usuario, y otras configuraciones realizadas.
+
+Captura de la pantalla inicial de iTop para el cliente John Doe, ClinicOwner1 en la BD de la aplicación.
+
+![Captura portal iTop cliente John Doe](../static/sprint3/Captura_portal_iTop_disponible_para_ClinicOwner1_antes_de_asignar_contrato.png)
+
+Captura de pantalla inicial de creación del Equipo (Team) de iTop asociado a los servicios de PetClinic para nuestra Organización.
+
+![Captura creación Team en iTop](../static/sprint3/Creacion_de_nuevo_Team_para_la_Organizacion.png)
+
+Captura de pantalla del Equipo una vez creado.
+
+![Captura de Team una vez creado](../static/sprint3/Creado_nuevo_Team_para_la%20Organizacion.png)
+
+Captura de pantalla trás la asociación de miembros de la Organización al Equipo recien creado.
+
+![Captura asociacion miembros a Team](../static/sprint3/Adicion_de%20miembros_al_equipo.png)
+
+Captura de pantalla trás la asociación de CIs de la Organización al Equipo.
+
+![Captura asociacion CIs a Team](../static/sprint3/CIs_de_la_Organizacion_asociados_al_Equipo.png)
+
+Captura de pantalla tras la actualización de contraseña para el cliente Jane Doe
+
+![Captura actualizacion contraseña John Doe](../static/sprint3/Actualizadas_password_para%20ClinicOwners_%20en_iTop.png)
+
+Ambas contraseñas han sido establecidas a C0wn3r#1 y C0wn3r#2, respectivamente, para los clientes ClinicOwner1 (John Doe) y ClinicOwner2 (Jane Doe).
+
+
+## Dificultades encontradas durante la configuración de iTop
+
+## Funcionalidades que faltan en iTop para cubrir las tareas de este Sprint
+
+## Contribuciones de cada miembro del grupo
+
+| Miembro                          | Contribución                                                           |
+| :------------                    | :-----------                                                           |
+| Benjamín Ignacio Maureira Flores |                                                                        |
+| David Godoy Fernández            |                                                                        |  
+| Miguel Hernández Sánchez         |                                                                        |
+| Rafael David Caro Medina         | Creación del Equipo (Team) en iTop y asociación de miembros y CIs      |
+| Rafael David Caro Medina         | Actualización de contraseñas para usuarios Cliente                     |
+| Ramón José Guerrero Romero       |
