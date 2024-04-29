@@ -14,11 +14,11 @@ const CustomerAgreement = () => {
                 </li>
                 <li>
                     <strong>Description of Service</strong>
-                    <p>[Service Name] provides [brief description of the service and its features]. The Service may be updated, expanded, or limited from time to time at our discretion.</p>
+                    <p>PetClinic is a web application that offers the request and creation of appointments, or veterinary consultations, for pets as its main services.</p>
                 </li>
                 <li>
                     <strong>Associated services and description</strong>
-                    <p>PetClinic is a web application that offers the request and creation of appointments, or veterinary consultations, for pets as its main services.
+                    <p>As I said before, PetClinic is a web application that offers the request and creation of appointments, or veterinary consultations, for pets as its main services.
                        For which it offers various subservices and functionalities (with limits determined by the Price Plan that the client has acquired) to different user 
                        profiles.</p>
 
