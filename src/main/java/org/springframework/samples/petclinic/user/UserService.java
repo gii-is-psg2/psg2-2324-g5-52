@@ -16,6 +16,7 @@
 package org.springframework.samples.petclinic.user;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -28,6 +29,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.pet.Pet;
+import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.samples.petclinic.vet.Vet;
 import org.springframework.samples.petclinic.vet.VetService;
 import org.springframework.security.core.Authentication;
@@ -41,14 +44,17 @@ public class UserService {
 	private UserRepository userRepository;
 
 //	private OwnerService ownerService;
+
+	private PetRepository petRepository;
 //
 	private VetService vetService;
 
 	@Autowired
-	public UserService(UserRepository userRepository, VetService vetService) {
+	public UserService(UserRepository userRepository, VetService vetService, PetRepository petRepository) {
 		this.userRepository = userRepository;
 //		this.ownerService = ownerService;
 		this.vetService = vetService;
+		this.petRepository = petRepository;
 	}
 
 	@Transactional
@@ -151,8 +157,19 @@ public class UserService {
 
 		Map<String, Object> context = new HashMap<>();
 
+		List<Pet> pets = petRepository.findAllPetsByOwnerId(owner.getId());
+
 		context.put("username", username);
+		context.put("pets", pets.size());
 		context.put("visits", 0);
+
+		return context;
+	}
+
+	private Map<String, Object> findClinicOwnerContext(ClinicOwner clinicOwner, String username) {
+		Map<String, Object> context = new HashMap<>();
+
+		context.put("username", username);
 
 		return context;
 	}
@@ -182,9 +199,18 @@ public class UserService {
 			case "OWNER":
 				Owner owner = findOwnerByUser(user.getId());
 				return findOwnerContext(owner, user.getUsername());
+			case "CLINIC_OWNER":
+				ClinicOwner clinicOwner = findClinicOwnerByUser(user.getId());
+				return findClinicOwnerContext(clinicOwner, user.getUsername());
 			default:
 				throw new AuthException("Invalid role");
 		}
+	}
+
+	@Transactional(readOnly = true)
+	public ClinicOwner findClinicOwnerByUser(int userId) {
+		return userRepository.findClinicOwnerByUser(userId)
+				.orElseThrow(() -> new ResourceNotFoundException("ClinicOwner", "id", userId));
 	}
 
 	@Transactional(readOnly = true)
@@ -203,9 +229,10 @@ public class UserService {
 			case "OWNER":
 				Owner owner = findOwnerByUser(user.getId());
 				return owner.getClinic().getPlan().toString();
+			case "CLINIC_OWNER":
+				return null;
 			default:
 				throw new AuthException("Invalid role");
 		}
 	}
-
 }

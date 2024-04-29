@@ -62,6 +62,7 @@ public class PricingConfiguration extends PricingContext {
     public Object getUserAuthorities(){
         Map<String, String> authorities = new HashMap<>();
         authorities.put("role", "OWNER");
+        authorities.put("role", "CLINIC_OWNER");
         return authorities;
     }
 
