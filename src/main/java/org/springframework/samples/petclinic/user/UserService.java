@@ -15,13 +15,17 @@
  */
 package org.springframework.samples.petclinic.user;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
+import jakarta.security.auth.message.AuthException;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.vet.Vet;
@@ -141,6 +145,67 @@ public class UserService {
 			break;
 		}
 
+	}
+
+	private Map<String, Object> findOwnerContext(Owner owner, String username) {
+
+		Map<String, Object> context = new HashMap<>();
+
+		context.put("username", username);
+		context.put("visits", 0);
+
+		return context;
+	}
+
+	private Map<String, Object> findPublicContext() {
+
+		Map<String, Object> featureMap = new HashMap<>();
+
+		featureMap.put("public", true);
+
+		return featureMap;
+	}
+
+    @Transactional(readOnly = true)
+	public Map<String, Object> findUserContext() throws AuthException {
+
+		User user = null;
+
+		try {
+			user = findCurrentUser();
+		} catch (ResourceNotFoundException e) {
+			System.out.println("User not found");
+			return findPublicContext();
+		}
+
+		switch (user.getAuthority().getAuthority()) {
+			case "OWNER":
+				Owner owner = findOwnerByUser(user.getId());
+				return findOwnerContext(owner, user.getUsername());
+			default:
+				throw new AuthException("Invalid role");
+		}
+	}
+
+	@Transactional(readOnly = true)
+	public String findUserPlan() throws AuthException {
+
+		User user = null;
+
+		try {
+			user = findCurrentUser();
+		} catch (ResourceNotFoundException e) {
+			System.out.println("User not found");
+			return null;
+		}
+
+		switch (user.getAuthority().getAuthority()) {
+			case "OWNER":
+				Owner owner = findOwnerByUser(user.getId());
+				return owner.getClinic().getPlan().toString();
+			default:
+				throw new AuthException("Invalid role");
+		}
 	}
 
 }

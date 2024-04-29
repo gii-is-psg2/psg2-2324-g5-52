@@ -3,3 +3,60 @@ day: 27
 month: 04
 year: 2024
 currency: EUR
+features:
+  adoptions:
+    description: Allows pet owners announce and publish adoption requests for your pets in the application, and the possibility of connection between owners and carrying out the management from within the application itself.
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['adoptions']
+    type: DOMAIN
+  pets:
+    description: Pets description
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: userContext['pets'] < planContext['usageLimits']['maxPets']
+    serverExpression: userContext['pets'] <= planContext['usageLimits']['maxPets']
+    type: DOMAIN
+usageLimits:
+  maxPets:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 2
+    unit: pet
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - pets
+plans:
+  BASIC:
+    description: Basic plan
+    monthlyPrice: 0.0
+    annualPrice: 0.0
+    unit: user/month
+    features:
+      adoptions:
+        value: false
+    usageLimits:
+      maxPets:
+        value: 3
+  GOLD:
+    description: Gold plan
+    monthlyPrice: 5.0
+    annualPrice: 5.0
+    unit: user/month
+    features:
+      adoptions:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 4
+  PLATINUM:
+    description: Pro plan
+    monthlyPrice: 10.0
+    annualPrice: 10.0
+    unit: user/month
+    features:
+      adoptions:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 7
