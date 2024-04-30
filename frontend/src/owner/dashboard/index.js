@@ -5,6 +5,8 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "../../static/css/owner/dashboard.css";
 import { useState, useEffect } from "react";
+import {fetchWithPricingInterceptor} from "pricing4react";
+import { Feature, On, Default, feature } from "pricing4react";
 
 require("moment/locale/es.js");
 
@@ -24,7 +26,7 @@ export default function OwnerDashboard() {
 
   async function setUp() {
     const visits = await (
-      await fetch(`/api/v1/visits/`, {
+      await fetchWithPricingInterceptor(`/api/v1/visits/`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
@@ -50,7 +52,7 @@ export default function OwnerDashboard() {
     }
 
     const owner = await (
-      await fetch(`/api/v1/plan`, {
+      await fetchWithPricingInterceptor(`/api/v1/plan`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
@@ -70,9 +72,9 @@ export default function OwnerDashboard() {
     <>
       <div className="owner-dashboard-page-container">
         <h1 className="text-center dashboard-title">Dashboard</h1>
-        {plan === "GOLD" ||
-          (plan === "PLATINUM" && (
-            <div style={{ height: `${600}px` }} className="calendar-container">
+        <Feature>
+          <On expression={feature("haveCalendar")}>
+          <div style={{ height: `${600}px` }} className="calendar-container">
               <Calendar
                 localizer={localizer}
                 events={events}
@@ -89,7 +91,12 @@ export default function OwnerDashboard() {
                 }
               />
             </div>
-          ))}
+          </On>
+          <Default>
+            <p>Adoptions disabled due to constraints in your plan</p>
+          </Default>
+        </Feature>
+            
       </div>
       <Modal
         isOpen={modalShow}

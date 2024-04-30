@@ -1,3 +1,4 @@
+import { fetchWithPricingInterceptor } from "pricing4react";
 import { useEffect, useState } from "react";
 
 export default function useFetchState(initial, url, jwt, setMessage, setVisible, id = null) {
@@ -6,7 +7,7 @@ export default function useFetchState(initial, url, jwt, setMessage, setVisible,
         if (url) {
             if (!id || id !== "new") {
                 let ignore = false;
-                fetch(url, jwt?{
+                fetchWithPricingInterceptor(url, jwt?{
                     headers: {
                         "Authorization": `Bearer ${jwt}`,
                     },

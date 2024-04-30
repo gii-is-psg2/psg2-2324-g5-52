@@ -32,6 +32,12 @@ public class ClinicService {
 	}
 
 	@Transactional(readOnly = true)
+	public List<Clinic> findClinicsByUserIdAndByPlan(int userId, String plan) throws DataAccessException {
+		return clinicRepository.findClinicsByUserId(userId).stream().filter(clinic -> clinic.getPlan().toString().equals(plan))
+				.toList();
+	}
+
+	@Transactional(readOnly = true)
 	public Clinic findClinicByName(String name) throws DataAccessException {
 		return clinicRepository.findClinicByName(name);
 	}

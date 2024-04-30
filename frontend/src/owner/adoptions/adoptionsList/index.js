@@ -3,6 +3,8 @@ import tokenService from "../../../services/token.service";
 import getErrorModal from "../../../util/getErrorModal";
 import { Button, Table } from "reactstrap";
 import { Link } from "react-router-dom";
+import { Feature, On, Default, Loading, feature, ErrorFallback } from "pricing4react";
+import {fetchWithPricingInterceptor} from "pricing4react";
 
 
 const user = tokenService.getUser();
@@ -16,7 +18,7 @@ export default function OwnerAdoptionsList() {
 
     async function setUp() {
         let petsOnAdoption = await (
-            await fetch(`/api/v1/pets/onAdoption`, {
+            await fetchWithPricingInterceptor(`/api/v1/pets/onAdoption`, {
                 headers: {
                     Authorization: `Bearer ${jwt}`,
                     "Content-Type": "application/json",
@@ -25,7 +27,7 @@ export default function OwnerAdoptionsList() {
         ).json();
         setPetsOnAdoption(petsOnAdoption);
         let myPetsAdoptions = await (
-            await fetch(`/api/v1/adoptions`, {
+            await fetchWithPricingInterceptor(`/api/v1/adoptions`, {
                 headers: {
                     Authorization: `Bearer ${jwt}`,
                     "Content-Type": "application/json",
@@ -43,7 +45,7 @@ export default function OwnerAdoptionsList() {
     const [alerts, setAlerts] = useState([]);
 
     function acceptAdoption(id) {
-        fetch(`/api/v1/adoptions/accept/${id}`, {
+        fetchWithPricingInterceptor(`/api/v1/adoptions/accept/${id}`, {
             method: "PUT",
             headers: {
                 Authorization: `Bearer ${jwt}`,
@@ -94,42 +96,57 @@ export default function OwnerAdoptionsList() {
 
     const modal = getErrorModal(setVisible, visible, message);
 
+    
+
     return (
         <div>
-            <div className="adoptions-list-container">
-                <h1 className="text-center">Adoptions available</h1>
-                {alerts.map((a) => a.alert)}
-                {modal}
-                <div>
-                    <Table aria-label="petsOnAdoption" className="mt-4">
-                        <thead>
-                            <tr>
-                                <th width="15%" className="text-center">Pet</th>
-                                <th width="15%" className="text-center">Type</th>
-                                <th width="15%" className="text-center">Owner</th>
-                            </tr>
-                        </thead>
-                        <tbody>{adoptionsList}</tbody>
-                    </Table>
-                </div>
-            </div>
-            <div className="myAdoptions-list-container">
-                <h1 className="text-center">My pets adoptions requests</h1>
-                {alerts.map((a) => a.alert)}
-                {modal}
-                <div>
-                    <Table aria-label="myPetsOnAdoption" className="mt-4">
-                        <thead>
-                            <tr>
-                                <th width="15%" className="text-center">Pet</th>
-                                <th width="15%" className="text-center">Owner solicitant</th>
-                                <th width="15%" className="text-center">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>{myAdoptionsList}</tbody>
-                    </Table>
-                </div>
-            </div>
+            <Feature>
+                    <On expression={feature("adoptions")}>
+                    <div className="adoptions-list-container">
+                        <h1 className="text-center">Adoptions available</h1>
+                        {alerts.map((a) => a.alert)}
+                        {modal}
+                        <div>
+                            <Table aria-label="petsOnAdoption" className="mt-4">
+                                <thead>
+                                    <tr>
+                                        <th width="15%" className="text-center">Pet</th>
+                                        <th width="15%" className="text-center">Type</th>
+                                        <th width="15%" className="text-center">Owner</th>
+                                    </tr>
+                                </thead>
+                                <tbody>{adoptionsList}</tbody>
+                            </Table>
+                        </div>
+                    </div>
+                    <div className="myAdoptions-list-container">
+                        <h1 className="text-center">My pets adoptions requests</h1>
+                        {alerts.map((a) => a.alert)}
+                        {modal}
+                        <div>
+                            <Table aria-label="myPetsOnAdoption" className="mt-4">
+                                <thead>
+                                    <tr>
+                                        <th width="15%" className="text-center">Pet</th>
+                                        <th width="15%" className="text-center">Owner solicitant</th>
+                                        <th width="15%" className="text-center">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>{myAdoptionsList}</tbody>
+                            </Table>
+                        </div>
+                    </div>
+                </On>
+                <Default>
+                    <p>Adoptions disabled due to constraints in your plan</p>
+                </Default>
+                <Loading>
+                    <p>Loading...</p>
+                </Loading>
+                <ErrorFallback>
+                    <p>Something went wrong</p>
+                </ErrorFallback>
+            </Feature>
         </div>
     );
 

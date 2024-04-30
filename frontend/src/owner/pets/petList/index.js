@@ -6,6 +6,8 @@ import tokenService from "../../../services/token.service";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
 import { useState, useEffect } from "react";
+import {fetchWithPricingInterceptor} from "pricing4react";
+import { Feature, On, Default, feature } from "pricing4react";
 
 export default function OwnerPetList() {
   let [pets, setPets] = useState([]);
@@ -16,7 +18,7 @@ export default function OwnerPetList() {
   const jwt = tokenService.getLocalAccessToken();
 
   function removePet(id) {
-    fetch(`/api/v1/pets/${id}`, {
+    fetchWithPricingInterceptor(`/api/v1/pets/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -38,7 +40,7 @@ export default function OwnerPetList() {
   }
 
   function changeAdoptStatus(id) {
-    fetch(`/api/v1/pets/onAdoption/${id}`, {
+    fetchWithPricingInterceptor(`/api/v1/pets/onAdoption/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -53,7 +55,7 @@ export default function OwnerPetList() {
 
   async function removeVisit(petId, visitId) {
     let status = "";
-    await fetch(`/api/v1/pets/${petId}/visits/${visitId}`, {
+    await fetchWithPricingInterceptor(`/api/v1/pets/${petId}/visits/${visitId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -89,7 +91,7 @@ export default function OwnerPetList() {
 
   async function setUp() {
     let pets = await (
-      await fetch(`/api/v1/pets?userId=${user.id}`, {
+      await fetchWithPricingInterceptor(`/api/v1/pets?userId=${user.id}`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
@@ -165,13 +167,17 @@ export default function OwnerPetList() {
                   >
                     Delete
                   </button>
-                  <button
-                    onClick={() => changeAdoptStatus(pet.id)}
-                    className="auth-button brown"
-                    style={{ background: "#573A34", color: "white" }}
-                  >
-                    {pet.onAdoption ? "Change adoption status" : "Put on adoption"}
-                  </button>
+                  <Feature>
+                    <On expression={feature("adoptions")}>
+                      <button
+                      onClick={() => changeAdoptStatus(pet.id)}
+                      className="auth-button brown"
+                      style={{ background: "#573A34", color: "white" }}
+                      >
+                      {pet.onAdoption ? "Change adoption status" : "Put on adoption"}
+                      </button>
+                    </On>
+                  </Feature>
                 </div>
                 <div className="pet-visits">
                   {pet.visits && pet.visits.length > 0 ? (
