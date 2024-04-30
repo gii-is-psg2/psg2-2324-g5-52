@@ -35,6 +35,7 @@ class TokenService {
     removeUser() {
         window.localStorage.removeItem("user");
         window.localStorage.removeItem("jwt");
+        window.localStorage.removeItem("pricingToken")
     }
 
 }

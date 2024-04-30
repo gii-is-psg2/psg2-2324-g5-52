@@ -1,0 +1,154 @@
+saasName: Pet Clinic
+day: 27
+month: 04
+year: 2024
+currency: EUR
+features:
+  adoptions:
+    description: Allows pet owners announce and publish adoption requests for your pets in the application, and the possibility of connection between owners and carrying out the management from within the application itself.
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['adoptions']
+    type: DOMAIN
+  roomService:
+    description: Allows clinic owners publish pet rooms.
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['roomService']
+    type: DOMAIN
+  booking:
+    description: Allows pet users book a room for their pets.
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['booking']
+    type: DOMAIN
+  pets:
+    description: Pets description
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: userContext['pets'] < planContext['usageLimits']['maxPets']
+    serverExpression: userContext['pets'] <= planContext['usageLimits']['maxPets']
+    type: DOMAIN
+  visits:
+    description: visits description
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: userContext['visits'] < planContext['usageLimits']['maxVisitsPerMonthAndPet']
+    type: DOMAIN
+  supportPriority:
+    description: supportPriority description
+    valueType: TEXT
+    defaultValue: LOW
+    expression: ''
+    type: SUPPORT
+  haveCalendar:
+    description: haveCalendar description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveCalendar']
+    type: DOMAIN
+  haveVetSelection:
+    description: haveVetSelection description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveVetSelection']
+    type: DOMAIN
+  haveOnlineConsultation:
+    description: haveOnlineConsultation description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveOnlineConsultation']
+    type: DOMAIN
+usageLimits:
+  maxPets:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 2
+    unit: pet
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - pets
+  maxVisitsPerMonthAndPet:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: visit
+    type: RENEWABLE
+    linkedFeatures:
+    - visits
+plans:
+  BASIC:
+    description: Basic plan
+    monthlyPrice: 0.0
+    annualPrice: 0.0
+    unit: user/month
+    features:
+      adoptions:
+        value: false
+      roomService:
+        value: false
+      booking:
+        value: false
+      supportPriority:
+        value: LOW
+      haveCalendar:
+        value: false
+      haveVetSelection:
+        value: false
+      haveOnlineConsultation:
+        value: false
+    usageLimits:
+      maxPets:
+        value: 2
+      maxVisitsPerMonthAndPet:
+        value: 1
+  GOLD:
+    description: Gold plan
+    monthlyPrice: 5.0
+    annualPrice: 5.0
+    unit: user/month
+    features:
+      adoptions:
+        value: true
+      roomService:
+        value: false
+      booking:
+        value: false
+      supportPriority:
+        value: MEDIUM
+      haveCalendar:
+        value: true
+      haveVetSelection:
+        value: true
+      haveOnlineConsultation:
+        value: false
+    usageLimits:
+      maxPets:
+        value: 5
+      maxVisitsPerMonthAndPet:
+        value: 3
+  PLATINUM:
+    description: Pro plan
+    monthlyPrice: 12.0
+    annualPrice: 12.0
+    unit: user/month
+    features:
+      adoptions:
+        value: true
+      roomService:
+        value: true
+      booking:
+        value: true
+      supportPriority:
+        value: HIGH
+      haveCalendar:
+        value: true
+      haveVetSelection:
+        value: true
+      haveOnlineConsultation:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 12
+      maxVisitsPerMonthAndPet:
+        value: 6

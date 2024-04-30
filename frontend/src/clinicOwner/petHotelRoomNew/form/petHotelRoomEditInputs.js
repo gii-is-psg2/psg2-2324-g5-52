@@ -29,7 +29,7 @@ const fetchPetTypes = async () => {
 const petTypes = await fetchPetTypes();
 
 const fetchClinics = async () => {
-    const response = await fetch(`/api/v1/clinics`, {
+    const response = await fetch(`/api/v1/clinics?plan=PLATINUM`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${jwt}`,
@@ -38,7 +38,6 @@ const fetchClinics = async () => {
         }
       });
     const data = await response.json();
-
     if(data.message) {
         return [];
     }

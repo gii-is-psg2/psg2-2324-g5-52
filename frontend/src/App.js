@@ -52,6 +52,7 @@ import PetHotelRoomNew from "./clinicOwner/petHotelRoomNew";
 import PetHotelBooking from "./clinicOwner/petHotelBooking"
 import OwnerAdoptionsList from "./owner/adoptions/adoptionsList";
 import NewAdoption from "./owner/adoptions/adoptionsNew";
+import CustomerAgreement from "./CustomerAgreementDocument.jsx"
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -109,7 +110,6 @@ function App() {
       ownerRoutes = (
         <>
           <Route path="/dashboard" element={<PrivateRoute><OwnerDashboard /></PrivateRoute>} />
-          <Route path="/plan" exact={true} element={<PrivateRoute><PricingPlan /></PrivateRoute>} />
           <Route path="/myPets" exact={true} element={<PrivateRoute><OwnerPetList /></PrivateRoute>} />
           <Route path="/myPets/:id" exact={true} element={<PrivateRoute><OwnerPetEdit /></PrivateRoute>} />
           <Route path="/myPets/:id/visits/:id" exact={true} element={<PrivateRoute><OwnerVisitEdit /></PrivateRoute>} />
@@ -171,6 +171,7 @@ function App() {
           <Route path="/" exact={true} element={<Home />} />
           <Route path="/plans" element={<PlanList />} />
           <Route path="/docs" element={<SwaggerDocs />} />
+          <Route path="/CA" element={<CustomerAgreement />} />
           {publicRoutes}
           {userRoutes}
           {adminRoutes}

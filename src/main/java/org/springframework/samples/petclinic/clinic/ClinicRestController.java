@@ -10,9 +10,12 @@ import org.springframework.samples.petclinic.auth.payload.response.MessageRespon
 import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwnerService;
 import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.user.User;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.samples.petclinic.util.RestPreconditions;
 import org.springframework.samples.petclinic.vet.Vet;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -45,8 +48,18 @@ public class ClinicRestController {
 	}
 
 	@GetMapping
-	public ResponseEntity<List<Clinic>> findAllClinics(@RequestParam(required = false) Integer userId) {
+	public ResponseEntity<List<Clinic>> findAllClinics(@RequestParam(required = false) Integer userId, @RequestParam(required = false) String plan) {
 		
+		if (plan != null) {
+			Integer uid = userId;
+			if(uid == null) {
+				Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        		User user = userService.findUser(auth.getName());
+				uid = user.getId();
+			}
+			return new ResponseEntity<>(clinicService.findClinicsByUserIdAndByPlan(uid, plan), HttpStatus.OK);
+		}
+
 		if (userId != null) {
 			return new ResponseEntity<>(clinicService.findClinicsByUserId(userId), HttpStatus.OK);
 		}
