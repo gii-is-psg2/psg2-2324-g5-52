@@ -112,6 +112,34 @@ const CustomerAgreement = () => {
                         </li>
                         <li>
                             <strong>Incident response time</strong>
+                            <p>In the case of a report of a client with the <i>Basic</i> plan:
+                            </p>
+                            <table className='table'>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i>Basic</i></th>
+                                        <th scope="col">High priority</th>
+                                        <th scope="col">Medium priority</th>
+                                        <th scope="col">Low priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Response Time(TTO)</th>
+                                        <td>14 hour</td>
+                                        <td>32 hour</td>
+                                        <td>56 hour</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Resolution Time(TTR)</th>
+                                        <td>56 hour</td>
+                                        <td>82 hour</td>
+                                        <td>104 hour</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><i>These hours are working hours, corresponding to the working hours described in the user support.</i></p>
+                            <br/>
                             <p>In the case of a report of a client with the <i>Gold</i> plan:
                             </p>
                             <table className='table'>
@@ -125,13 +153,13 @@ const CustomerAgreement = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Response Time</th>
+                                        <th scope="row">Response Time(TTO)</th>
                                         <td>12 hour</td>
                                         <td>24 hour</td>
                                         <td>48 hour</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Resolution Time</th>
+                                        <th scope="row">Resolution Time(TTR)</th>
                                         <td>48 hour</td>
                                         <td>72 hour</td>
                                         <td>96 hour</td>
@@ -153,13 +181,13 @@ const CustomerAgreement = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Response Time</th>
+                                        <th scope="row">Response Time(TTO)</th>
                                         <td>10 hour</td>
                                         <td>16 hour</td>
                                         <td>24 hour</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Resolution Time</th>
+                                        <th scope="row">Resolution Time(TTR)</th>
                                         <td>24 hour</td>
                                         <td>48 hour</td>
                                         <td>72 hour</td>
