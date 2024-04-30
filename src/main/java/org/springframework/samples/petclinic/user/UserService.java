@@ -15,10 +15,7 @@
  */
 package org.springframework.samples.petclinic.user;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import jakarta.security.auth.message.AuthException;
 import jakarta.validation.Valid;
@@ -26,6 +23,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.samples.petclinic.clinic.Clinic;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
@@ -213,6 +211,18 @@ public class UserService {
 				.orElseThrow(() -> new ResourceNotFoundException("ClinicOwner", "id", userId));
 	}
 
+    private String findMaxPlanByClinicOwner(ClinicOwner clinicOwner){
+        String maxPlan = "BASIC";
+        Set<Clinic> clinics = clinicOwner.getClinics();
+
+        if(clinics.stream().anyMatch(c -> c.getPlan().toString().equals("PLATINUM")))
+            maxPlan = "PLATINUM";
+        else if(clinics.stream().anyMatch(c -> c.getPlan().toString().equals("GOLD")))
+            maxPlan = "GOLD";
+
+        return  maxPlan;
+    }
+
 	@Transactional(readOnly = true)
 	public String findUserPlan() throws AuthException {
 
@@ -230,7 +240,8 @@ public class UserService {
 				Owner owner = findOwnerByUser(user.getId());
 				return owner.getClinic().getPlan().toString();
 			case "CLINIC_OWNER":
-				return null;
+                ClinicOwner clinicOwner = findClinicOwnerByUser(user.getId());
+                return findMaxPlanByClinicOwner(clinicOwner);
 			default:
 				throw new AuthException("Invalid role");
 		}

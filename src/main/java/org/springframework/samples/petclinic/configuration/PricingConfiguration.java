@@ -74,7 +74,7 @@ public class PricingConfiguration extends PricingContext {
         List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
             .collect(Collectors.toList());
 
-        return roles.contains("OWNER");
+        return roles.contains("OWNER") || roles.contains("CLINIC_OWNER");
 
     }
 }

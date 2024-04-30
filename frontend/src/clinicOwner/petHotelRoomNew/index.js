@@ -6,6 +6,8 @@ import { petHotelRoomEditInputs } from "./form/petHotelRoomEditInputs";
 import FormGenerator from "../../components/formGenerator/formGenerator";
 import { useState, useEffect, useRef } from "react";
 import {useNavigate} from "react-router-dom";
+import { Default, Feature, On, feature } from "pricing4react";
+import { fetchWithPricingInterceptor } from "pricing4react";
 
 const jwt = tokenService.getLocalAccessToken();
 
@@ -29,7 +31,7 @@ export default function EditpetHotelRoom() {
   function handleSubmit({ values }) {
     if (!editpetHotelRoomFormRef.current.validate()) return;
 
-    fetch(`/api/v1/clinicOwners/petHotelRooms`, {
+    fetchWithPricingInterceptor(`/api/v1/clinicOwners/petHotelRooms`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,17 +60,24 @@ export default function EditpetHotelRoom() {
 
   return (
     <div className="auth-page-container">
-      {<h2>{"Add a Pet Hotel Room"}</h2>}
-      {modal}
-      <div className="auth-form-container">
-          <FormGenerator
-            ref={editpetHotelRoomFormRef}
-            inputs={petHotelRoomEditInputs}
-            onSubmit={handleSubmit}
-            buttonText="Add"
-            buttonClassName="auth-button"
-          />
-      </div>
+      <Feature>
+        <On expression={feature("roomService")}>
+          {<h2>{"Add a Pet Hotel Room"}</h2>}
+          {modal}
+          <div className="auth-form-container">
+              <FormGenerator
+                ref={editpetHotelRoomFormRef}
+                inputs={petHotelRoomEditInputs}
+                onSubmit={handleSubmit}
+                buttonText="Add"
+                buttonClassName="auth-button"
+              />
+          </div>
+        </On>
+        <Default>
+          <p>Adoptions disabled due to constraints in your plan</p>
+        </Default>
+      </Feature>
     </div>
   );
 }
