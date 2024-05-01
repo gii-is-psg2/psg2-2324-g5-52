@@ -76,13 +76,19 @@ Ambas contraseñas han sido establecidas a C0wn3r#1 y C0wn3r#2, respectivamente,
 
 ## Dificultades encontradas durante la configuración de iTop
 
+Una de las grandes dificultades encontradas ha sido que la web es muy poco intuitiva para el usuario, entonces para nuestra tarea a realizar, que era crear servicios, contratos, SLA y SLTs, que a priori suena como una tarea insignificante, nos ha llevado aproximadamente 2 horas. Además, de no ser por el documento proporcionado por los profesores, habría sido imposible llevar a cabo la tarea, ya que iTop no proporciona ningún tipo de guía o ayuda.
+
+Por otro lado, hemos tenido que repetir muchas veces la gran parte de los pasos a seguir, por ejemplo, a la hora de crear los SLTs para asignarlos a los SLA, hemos tenido que ir creando uno por uno hasta un total de 12 SLTs por cada SLA, que al final se ha hecho muy mecanico y pesado. Hubieramos agradecido que se pudiera hacer una creacion en lotes o algo parecido.
+
+Por último, lo más destacable ha sido a la hora de crear los Customer Contracts, que en lugar de crear un contrato para cada Clinic Owner con sus SLA correspondientes a los planes de precios, iTop sólo nos permite asignar un SLA a un contrato, por tanto hemos tenido que crear 3 contratos por cliente, para cada plan de precios.
+
 ## Funcionalidades que faltan en iTop para cubrir las tareas de este Sprint
 
 ## Contribuciones de cada miembro del grupo
 
 | Miembro                          | Contribución                                                           |
 | :------------                    | :-----------                                                           |
-| Benjamín Ignacio Maureira Flores |                                                                        |
+| Benjamín Ignacio Maureira Flores | Creación de servicios y subservicios: Adoptions, Pet Hotel Room, Booking, PetClinic4ClinicOwner. Booking service: creación de contratos, SLA y SLTs. |
 | David Godoy Fernández            |                                                                        |  
 | Miguel Hernández Sánchez         |                                                                        |
 | Rafael David Caro Medina         | Creación del Equipo (Team) en iTop y asociación de miembros y CIs      |
