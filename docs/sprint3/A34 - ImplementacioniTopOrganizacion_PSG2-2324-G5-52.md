@@ -93,4 +93,5 @@ Por último, lo más destacable ha sido a la hora de crear los Customer Contract
 | Miguel Hernández Sánchez         |                                                                        |
 | Rafael David Caro Medina         | Creación del Equipo (Team) en iTop y asociación de miembros y CIs      |
 | Rafael David Caro Medina         | Actualización de contraseñas para usuarios Cliente                     |
-| Ramón José Guerrero Romero       |
+| Ramón José Guerrero Romero       | Creación de los TTO y TTR asociados a la categoría Gold. Luego la asociación de todos los planes referentes a PetHotelRoom de los SLA. Posteriormente la asociación de los contratos.|
+
