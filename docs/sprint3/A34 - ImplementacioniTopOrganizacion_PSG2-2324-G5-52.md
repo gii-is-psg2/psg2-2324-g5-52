@@ -27,6 +27,7 @@
  - [Creación del equipo](#creación-del-equipo)
  - [Actualización de contraseñas para usuarios cliente](#actualización-de-contraseñas-para-usuarios-cliente)
  - [Capturas de pantalla del portal iTop disponible para clientes](#capturas-de-pantalla-del-portal-itop-disponible-para-clientes)
+ - [Algunas capturas de pantalla de la Configuración de iTop](#algunas-capturas-de-pantalla-de-la-configuración-de-itop)
  - [Dificultades encontradas durante la configuración de iTop](#dificultades-encontradas-durante-la-configuración-de-itop)
  - [Funcionalidades que faltan en iTop para cubrir las tareas de este Sprint](#funcionalidades-que-faltan-en-itop-para-cubrir-las-tareas-de-este-sprint)
  - [Contribuciones de cada miembro del grupo](#contribuciones-de-cada-miembro-del-grupo)
@@ -73,6 +74,22 @@ Captura de pantalla tras la actualización de contraseña para el cliente Jane D
 
 Ambas contraseñas han sido establecidas a C0wn3r#1 y C0wn3r#2, respectivamente, para los clientes ClinicOwner1 (John Doe) y ClinicOwner2 (Jane Doe).
 
+## Algunas capturas de pantalla de la Configuración de iTop
+
+Algunas capturas de pantalla sobre la configuración final de iTop para la gestión de incidencias del Servicio PetClinic son las siguientes:
+
+Captura de la creación de SLTs para la métrica TTO ( Time to Own) del Plan Platinum
+
+![Captura creación SLTs Platinun](../static/sprint3/Captura_SLTs_TTO_Platinum.png)
+
+Captura detalle de un SLT creado, TTO de prioridad High para el Plan Platinum, establecido en 10 horas
+
+![Captura detalle SLT TTO Platinum High](../static/sprint3/Captura_TTO_Platinum_High.png)
+
+Captura de la creación del SLA del Servicio Adoptions para el Plan Basic
+
+![Captura creación SLA servicio Adoptions Plan Basic](../static/sprint3/Captura_SLA_Adoption_Service-BASIC.png)
+
 
 ## Dificultades encontradas durante la configuración de iTop
 
@@ -93,5 +110,10 @@ Por último, lo más destacable ha sido a la hora de crear los Customer Contract
 | Miguel Hernández Sánchez         |                                                                        |
 | Rafael David Caro Medina         | Creación del Equipo (Team) en iTop y asociación de miembros y CIs      |
 | Rafael David Caro Medina         | Actualización de contraseñas para usuarios Cliente                     |
+| Rafael David Caro Medina         | Creación de 12 SLTs (TTOs y TTRs) del Plan Platinum ( para Sucategorias Incidents y User Request, prioridades High, Medium y Low)                                                                             |
+| Rafael David Caro Medina         | Creación de 3 SLAs del Service Adoptions ( para Planes Basic, Gold y Platinum) |
+| Rafael David Caro Medina         | Asociación de sus 12 SLTS correspondientes a estos SLAs                     |
+| Rafael David Caro Medina         | Configuración y asociación del servicio Adoptions a Contratos de clientes y SLAs   |
+| Rafael David Caro Medina         | Creación del Service Family asociado a la Organización y Services necesario para la creación de incidencias desde iTop                     |
 | Ramón José Guerrero Romero       | Creación de los TTO y TTR asociados a la categoría Gold. Luego la asociación de todos los planes referentes a PetHotelRoom de los SLA. Posteriormente la asociación de los contratos.|
 
