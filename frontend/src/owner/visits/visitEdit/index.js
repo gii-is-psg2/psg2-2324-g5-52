@@ -55,8 +55,7 @@ export default function OwnerVisitEdit() {
 
   function handleCityChange({ value }) {
     setCity(value);
-
-    const plan = pet.owner.clinic.plan;
+    const plan = pet?.owner.clinic.plan;
     if (!plan.haveVetSelection) {
       vets = vets.filter((vet) => vet.city === value);
       let randomIndex = Math.floor(Math.random() * vets.length);
@@ -68,7 +67,7 @@ export default function OwnerVisitEdit() {
     setModalShow(!modalShow);
   }
 
-  function getVetSelectionInput(visit, datetime, vets, city, plan) {
+  function getVetSelectionInput(visit, datetime, vets, city) {
     if (visit.id && datetime < Date.now()) {
       return (
         <Input
@@ -259,8 +258,7 @@ export default function OwnerVisitEdit() {
               visit,
               new Date(visit.datetime),
               vets,
-              city,
-              pet.owner.clinic.plan
+              city
             )}
           </FormGenerator>
         )}
