@@ -106,7 +106,7 @@ Por último, lo más destacable ha sido a la hora de crear los Customer Contract
 | Miembro                          | Contribución                                                           |
 | :------------                    | :-----------                                                           |
 | Benjamín Ignacio Maureira Flores | Creación de servicios y subservicios: Adoptions, Pet Hotel Room, Booking, PetClinic4ClinicOwner. Booking service: creación de contratos, SLA y SLTs. |
-| David Godoy Fernández            |                                                                        |  
+| David Godoy Fernández            |Creación de los SLA para los diferentes planes al servicio Petclinic4ClinicOwner, creación de los diferentes contratos referentes al servicio. Posteriormente la  asociación de los contratos al servicio.            |  
 | Miguel Hernández Sánchez         |                                                                        |
 | Rafael David Caro Medina         | Creación del Equipo (Team) en iTop y asociación de miembros y CIs      |
 | Rafael David Caro Medina         | Actualización de contraseñas para usuarios Cliente                     |
