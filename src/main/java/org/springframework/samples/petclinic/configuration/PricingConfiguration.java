@@ -63,6 +63,7 @@ public class PricingConfiguration extends PricingContext {
         Map<String, String> authorities = new HashMap<>();
         authorities.put("role", "OWNER");
         authorities.put("role", "CLINIC_OWNER");
+        authorities.put("role", "VET");
         return authorities;
     }
 
@@ -74,7 +75,7 @@ public class PricingConfiguration extends PricingContext {
         List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
             .collect(Collectors.toList());
 
-        return roles.contains("OWNER") || roles.contains("CLINIC_OWNER");
+        return roles.contains("OWNER") || roles.contains("CLINIC_OWNER") || roles.contains("VET");
 
     }
 }

@@ -41,16 +41,16 @@ public class UserService {
 
 	private UserRepository userRepository;
 
-//	private OwnerService ownerService;
+	// private OwnerService ownerService;
 
 	private PetRepository petRepository;
-//
+	//
 	private VetService vetService;
 
 	@Autowired
 	public UserService(UserRepository userRepository, VetService vetService, PetRepository petRepository) {
 		this.userRepository = userRepository;
-//		this.ownerService = ownerService;
+		// this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petRepository = petRepository;
 	}
@@ -125,28 +125,28 @@ public class UserService {
 	public void deleteUser(Integer id) {
 		User toDelete = findUser(id);
 		deleteRelations(id, toDelete.getAuthority().getAuthority());
-//		this.userRepository.deleteOwnerRelation(id);
-//		this.userRepository.deleteVetRelation(id);
+		// this.userRepository.deleteOwnerRelation(id);
+		// this.userRepository.deleteVetRelation(id);
 		this.userRepository.delete(toDelete);
 	}
 
 	private void deleteRelations(Integer id, String auth) {
 		switch (auth) {
-		case "OWNER":
-//			Optional<Owner> owner = ownerService.optFindOwnerByUser(id);
-//			if (owner.isPresent())
-//				ownerService.deleteOwner(owner.get().getId());
-			this.userRepository.deleteOwnerRelation(id);
-			break;
-		case "VET":
-			Optional<Vet> vet = vetService.optFindVetByUser(id);
-			if (vet.isPresent()) {
-				vetService.deleteVet(vet.get().getId());
-			}
-			break;
-		default:
-			// The only relations that have user are Owner and Vet
-			break;
+			case "OWNER":
+				// Optional<Owner> owner = ownerService.optFindOwnerByUser(id);
+				// if (owner.isPresent())
+				// ownerService.deleteOwner(owner.get().getId());
+				this.userRepository.deleteOwnerRelation(id);
+				break;
+			case "VET":
+				Optional<Vet> vet = vetService.optFindVetByUser(id);
+				if (vet.isPresent()) {
+					vetService.deleteVet(vet.get().getId());
+				}
+				break;
+			default:
+				// The only relations that have user are Owner and Vet
+				break;
 		}
 
 	}
@@ -160,6 +160,15 @@ public class UserService {
 		context.put("username", username);
 		context.put("pets", pets.size());
 		context.put("visits", 0);
+
+		return context;
+	}
+
+	private Map<String, Object> findVetContext(Vet vet, String username) {
+
+		Map<String, Object> context = new HashMap<>();
+
+		context.put("username", username);
 
 		return context;
 	}
@@ -181,7 +190,7 @@ public class UserService {
 		return featureMap;
 	}
 
-    @Transactional(readOnly = true)
+	@Transactional(readOnly = true)
 	public Map<String, Object> findUserContext() throws AuthException {
 
 		User user = null;
@@ -197,6 +206,9 @@ public class UserService {
 			case "OWNER":
 				Owner owner = findOwnerByUser(user.getId());
 				return findOwnerContext(owner, user.getUsername());
+			case "VET":
+				Vet vet = findVetByUser(user.getId());
+				return findVetContext(vet, user.getUsername());
 			case "CLINIC_OWNER":
 				ClinicOwner clinicOwner = findClinicOwnerByUser(user.getId());
 				return findClinicOwnerContext(clinicOwner, user.getUsername());
@@ -211,17 +223,17 @@ public class UserService {
 				.orElseThrow(() -> new ResourceNotFoundException("ClinicOwner", "id", userId));
 	}
 
-    private String findMaxPlanByClinicOwner(ClinicOwner clinicOwner){
-        String maxPlan = "BASIC";
-        Set<Clinic> clinics = clinicOwner.getClinics();
+	private String findMaxPlanByClinicOwner(ClinicOwner clinicOwner) {
+		String maxPlan = "BASIC";
+		Set<Clinic> clinics = clinicOwner.getClinics();
 
-        if(clinics.stream().anyMatch(c -> c.getPlan().toString().equals("PLATINUM")))
-            maxPlan = "PLATINUM";
-        else if(clinics.stream().anyMatch(c -> c.getPlan().toString().equals("GOLD")))
-            maxPlan = "GOLD";
+		if (clinics.stream().anyMatch(c -> c.getPlan().toString().equals("PLATINUM")))
+			maxPlan = "PLATINUM";
+		else if (clinics.stream().anyMatch(c -> c.getPlan().toString().equals("GOLD")))
+			maxPlan = "GOLD";
 
-        return  maxPlan;
-    }
+		return maxPlan;
+	}
 
 	@Transactional(readOnly = true)
 	public String findUserPlan() throws AuthException {
@@ -240,8 +252,11 @@ public class UserService {
 				Owner owner = findOwnerByUser(user.getId());
 				return owner.getClinic().getPlan().toString();
 			case "CLINIC_OWNER":
-                ClinicOwner clinicOwner = findClinicOwnerByUser(user.getId());
-                return findMaxPlanByClinicOwner(clinicOwner);
+				ClinicOwner clinicOwner = findClinicOwnerByUser(user.getId());
+				return findMaxPlanByClinicOwner(clinicOwner);
+			case "VET":
+				Vet vet = findVetByUser(user.getId());
+				return vet.getClinic().getPlan().toString();
 			default:
 				throw new AuthException("Invalid role");
 		}
