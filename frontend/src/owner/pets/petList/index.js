@@ -121,6 +121,11 @@ export default function OwnerPetList() {
     setUp();
   }, []);
 
+  const getRandomTraffic = () => {
+    const traffic = ["low", "medium", "high"];
+    return traffic[Math.floor(Math.random() * traffic.length)];
+  }
+
   return (
     <div>
       {/* <AppNavbar /> */}
@@ -197,6 +202,9 @@ export default function OwnerPetList() {
                             <span>
                               <strong>Vet:</strong> {visit.vet.firstName}{" "}
                               {visit.vet.lastName}
+                            </span>
+                            <span>
+                              <strong>Traffic:</strong> {getRandomTraffic()}
                             </span>
                             <div className="options-row">
                               {new Date(visit.datetime) > Date.now() && (
