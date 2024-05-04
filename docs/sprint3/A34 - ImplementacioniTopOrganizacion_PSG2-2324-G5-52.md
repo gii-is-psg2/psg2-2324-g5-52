@@ -54,7 +54,7 @@ Captura de la pantalla inicial de iTop para el cliente John Doe, ClinicOwner1 en
 
 Posteriormente cómo queda el Portal de iTop para un cliente, tras la configuración de todos los elementos: Familia de Servicios, Servicios, Subcategoria de servicios, entre otros. Finalmente hemos decidido dar de alta 4 servicios en la aplicación: Adoptions, Pet Hotel Room, Booking y PetClinic4ClinicOwner que sería el principal y sobre el que vamos a crear las Incidencias y Peticiones solicitadas.
 
-![Captura portal iTop tras configuracion](../static/sprint3/CapturaliTopPortalDisponibleClientesTrasConfiguracióniTop.png)
+![Captura portal iTop tras configuracion](../static/sprint3/CapturaiTopPortalDisponibleClientesTrasConfiguracioniTop.png)
 
 ## Algunas capturas de pantalla sobre la Configuración de iTop
 
