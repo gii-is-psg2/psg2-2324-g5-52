@@ -32,6 +32,13 @@ class TokenService {
         window.localStorage.setItem("user", JSON.stringify(user));
     }
 
+    getPlan(){
+        return JSON.parse(localStorage.getItem("plan"));
+    }
+    setPlan(plan) {
+        window.localStorage.setItem("plan", JSON.stringify(plan));
+    }
+
     removeUser() {
         window.localStorage.removeItem("user");
         window.localStorage.removeItem("jwt");

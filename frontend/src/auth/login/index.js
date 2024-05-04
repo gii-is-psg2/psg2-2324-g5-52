@@ -28,6 +28,7 @@ export default function Login() {
         console.log(data)
         tokenService.setUser(data);
         tokenService.updateLocalAccessToken(data.token);
+        tokenService.setPlan(data.plan);
         window.location.href = "/dashboard";
       })
       .catch((error) => {         
