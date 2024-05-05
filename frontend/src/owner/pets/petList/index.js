@@ -103,13 +103,14 @@ export default function OwnerPetList() {
       for (let pet of pets) {
         let index = pets.findIndex((obj) => obj.id === pet.id);
         const visits = await (
-          await fetch(`/api/v1/pets/${pet.id}/visits`, {
+          await fetchWithPricingInterceptor(`/api/v1/pets/${pet.id}/visits/weather`, {
             headers: {
               Authorization: `Bearer ${jwt}`,
               "Content-Type": "application/json",
             },
           })
         ).json();
+        console.log(visits)
         if (visits.message) setMessage(visits.message);
         else pets[index]["visits"] = visits;
       }
@@ -120,6 +121,11 @@ export default function OwnerPetList() {
   useEffect(() => {
     setUp();
   }, []);
+
+  const getRandomTraffic = () => {
+    const traffic = ["low", "medium", "high"];
+    return traffic[Math.floor(Math.random() * traffic.length)];
+  }
 
   return (
     <div>
@@ -190,25 +196,35 @@ export default function OwnerPetList() {
                           <SplideSlide className="carousel-slide" key={index}>
                             <span>
                               <strong>Date and Time:</strong>{" "}
-                              {moment(visit.datetime).format(
+                              {moment(visit.visit.datetime).format(
                                 "DD/MM/YYYY HH:mm"
                               )}
                             </span>
                             <span>
-                              <strong>Vet:</strong> {visit.vet.firstName}{" "}
-                              {visit.vet.lastName}
+                              <strong>Vet:</strong> {visit.visit.vet.firstName}{" "}
+                              {visit.visit.vet.lastName}
                             </span>
+
+                            <span>
+                              <strong>Traffic:</strong> {getRandomTraffic()}
+                            </span>
+
+                            <span>
+                              <strong>Weather:</strong>
+                            </span>
+                            <span>Temperature: {visit.weather.temp}ºC</span>
+                            <span>Sky: {visit.weather.weatherType}</span>
                             <div className="options-row">
-                              {new Date(visit.datetime) > Date.now() && (
+                              {new Date(visit.visit.datetime) > Date.now() && (
                                 <button
                                   className="cancel-visit-button"
-                                  onClick={() => removeVisit(pet.id, visit.id)}
+                                  onClick={() => removeVisit(pet.id, visit.visit.id)}
                                 >
                                   Cancel
                                 </button>
                               )}
                               <Link
-                                to={`/myPets/${pet.id}/visits/${visit.id}`}
+                                to={`/myPets/${pet.id}/visits/${visit.visit.id}`}
                                 className="edit-visit-button"
                                 style={{ textDecoration: "none", color: "white", background: "#31110B" }}
                               >

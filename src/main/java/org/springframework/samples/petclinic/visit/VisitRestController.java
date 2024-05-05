@@ -96,6 +96,23 @@ public class VisitRestController {
 		}
 	}
 
+	@GetMapping("/api/v1/pets/{petId}/visits/weather")
+	public ResponseEntity<List<VisitWeather>> findAllWithWeather(@PathVariable("petId") int petId) {
+		Pet pet = RestPreconditions.checkNotNull(petService.findPetById(petId), "Pet", "ID", petId);
+		User user = userService.findCurrentUser();
+		if (user.hasAnyAuthority(ADMIN_AUTH, VET_AUTH).equals(true)) {
+			List<VisitWeather> res = visitService.findVisitsByPetIdWithWeather(petId);
+			return new ResponseEntity<>(res, HttpStatus.OK);
+		} else {
+			Owner owner = userService.findOwnerByUser(user.getId());
+			if (owner.getId().equals(pet.getOwner().getId())) {
+				List<VisitWeather> res = visitService.findVisitsByPetIdWithWeather(petId);
+				return new ResponseEntity<>(res, HttpStatus.OK);
+			} else
+				throw new ResourceNotOwnedException(pet);
+		}
+	}
+
 	@PostMapping("/api/v1/pets/{petId}/visits")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Visit> create(@PathVariable("petId") int petId, @RequestBody @Valid Visit visit) {

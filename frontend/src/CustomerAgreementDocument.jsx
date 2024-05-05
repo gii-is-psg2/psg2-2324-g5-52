@@ -1,4 +1,5 @@
 import React from 'react';
+import pricingPlansImage from './static/images/PricingPlans.png';
 
 const CustomerAgreement = () => {
     return (
@@ -62,7 +63,9 @@ const CustomerAgreement = () => {
                 </li>
                 <li>
                     <strong>Pricing</strong>
-                    <p></p>
+                    <p>
+                    <img src={pricingPlansImage} alt="Pricing plans"/>
+                    </p>
                 </li>
                 <li>
                     <strong>Payment</strong>

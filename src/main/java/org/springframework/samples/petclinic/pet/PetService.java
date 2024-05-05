@@ -147,9 +147,10 @@ public class PetService {
 	}
 
 	public boolean underLimit(Owner owner) {
+		String userPlan = pricingConfiguration.getUserPlan();
 		Integer petCount = this.petRepository.countPetsByOwner(owner.getId());
 		PricingManager pricingManager = pricingConfiguration.getPricingManager();
-		Plan plan = pricingManager.getPlans().get(owner.getClinic().getPlan());
+		Plan plan = pricingManager.getPlans().get(userPlan);
 
 		Integer limitValue = (Integer) plan.getUsageLimits().get("maxPets").getValue();
 		Integer limitDefaultValue = (Integer) plan.getUsageLimits().get("maxPets").getDefaultValue();
