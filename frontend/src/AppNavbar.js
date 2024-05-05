@@ -116,6 +116,9 @@ function AppNavbar() {
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/petHotelRooms">Pet Hotel Rooms</NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
+                    </NavItem>
                 </>
             )
         }
@@ -158,9 +161,7 @@ function AppNavbar() {
                 <NavItem>
                     <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
-                </NavItem>
+                
                 <NavbarText style={{ color: "white" }} className="justify-content-end">{username}</NavbarText>
                 {validRoleToShowPricing && plan === 'PLATINUM' && <NavbarText style={{ color: "silver" }} className="justify-content-end">--{plan} {getPlanIcon(plan)}</NavbarText>}
                 {validRoleToShowPricing && plan === 'GOLD' && <NavbarText style={{ color: "gold" }} className="justify-content-end">--{plan} {getPlanIcon(plan)}</NavbarText>}
