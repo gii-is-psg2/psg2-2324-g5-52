@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -14,6 +16,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.configuration.PricingConfiguration;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
+import org.springframework.samples.petclinic.weather.WeatherService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,6 +42,14 @@ public class VisitService {
 	@Transactional(readOnly = true)
 	public Iterable<Visit> findAll() {
 		return visitRepository.findAll();
+	}
+
+	@Transactional(readOnly = true)
+	public List<VisitWeather> findVisitsByPetIdWithWeather(Integer petId) {
+		Iterable<Visit> visitsIterable = visitRepository.findByPetId(petId);
+		List<Visit> visits = (List<Visit>) visitsIterable;
+		List<VisitWeather> visitWeathers = WeatherService.groupVisitWeathers(visits);
+		return visitWeathers;
 	}
 
 	@Transactional(readOnly = true)
@@ -78,10 +89,11 @@ public class VisitService {
 	}
 
 	public boolean underLimit(Visit visit) {
+		String userPlan = pricingConfiguration.getUserPlan();
 		Integer visitCount = this.visitRepository.countVisitsByPetInMonth(visit.getPet().getId(),
 				visit.getDatetime().getMonthValue(), visit.getDatetime().getYear());
 		PricingManager pricingManager = pricingConfiguration.getPricingManager();
-		Plan plan = pricingManager.getPlans().get(visit.getVet().getClinic().getPlan());
+		Plan plan = pricingManager.getPlans().get(userPlan);
 
 		Integer limitValue = (Integer) plan.getUsageLimits().get("maxVisitsPerMonthAndPet").getValue();
 		Integer limitDefaultValue = (Integer) plan.getUsageLimits().get("maxVisitsPerMonthAndPet").getDefaultValue();

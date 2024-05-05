@@ -3,6 +3,7 @@ package org.springframework.samples.petclinic.auth;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import jakarta.security.auth.message.AuthException;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,7 @@ public class AuthController {
 	}
 
 	@PostMapping("/signin")
-	public ResponseEntity authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+	public ResponseEntity authenticateUser(@Valid @RequestBody LoginRequest loginRequest) throws AuthException {
 		try{
 			Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
@@ -61,8 +62,10 @@ public class AuthController {
 			UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
 			List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
 				.collect(Collectors.toList());
+			
+			String plan = userService.findUserPlan();
 
-			return ResponseEntity.ok().body(new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), roles));
+			return ResponseEntity.ok().body(new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), roles, plan));
 		}catch(BadCredentialsException exception){
 			return ResponseEntity.badRequest().body("Bad Credentials!");
 		}
