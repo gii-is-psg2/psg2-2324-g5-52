@@ -59,3 +59,32 @@ Tras este análisis se pueden sacar 2 conclusiones:
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 0%, ya que transcurren más de 24 horas desde la asignación hasta el despliegue de los cambios, pero del TTO sería del 100% ya que sí se asignó en el tiempo acordado.
 
 Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
+
+
+## Remove the "Plan" page fot pet owners
+
+![Captura iTop A3.5.c Vista normal](../static/sprint3/A3-5-c-1.png)
+
+![Captura iTop A3.5.c Vista cliente](../static/sprint3/A3-5-c-2.png)
+
+![Captura iTop A3.5.c Vista Panel de incidencias](../static/sprint3/A3-5-c-3.png)
+
+Como se puede ver en las capturas, la petición se abre en iTop el 3 de mayo a las 11:13 y se asigna a las 11:30, dando lugar a un TTO de 17 minutos, bastante rápido gracias a la comunicación del equipo de soporte y el poco volumen de incidencias y trabajo. Además, se resolvió a las 12:18 del día 05 de mayo, dando lugar a un TTR de 2 días, 1 hora y 48 minutos.
+
+Se cumple al 100% el SLT asociado, ya que la urgencia es media (hemos supuesto que es usuario Gold) y la prioridad es media:
+  - Nos daría un TTO objetivo de 24 horas y el TTO ha sido de 17 minutos.
+  - Nos daría un TTR objetivo de 72 horas y el TTR ha sido de 2 días, 1 hora y 48 minutos.
+  
+Cabe destacar que se ha marcado como resuelta en iTop una vez estaba la funcionalidad implementada, a falta de la revisión del equipo y el merge a la rama de desarrollo y posterior despliegue.
+
+![Captura github A3.5.c Issue](../static/sprint3/A3-5-c-4.png)
+
+![Captura github A3.5.c Issue 2](../static/sprint3/A3-5-c-5.png)
+
+Tras la revisión del equipo, se hace merge de la rama a la rama de desarrollo (develop) y el despliegue de la nueva versión, cuando todas las issues se pasan a Done.
+
+Tras este análisis se pueden sacar 2 conclusiones:
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurren 2 días, 1 hora y 48 minutos desde que se asigna hasta que se implementa.
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 0%, ya que transcurren más de 24 horas desde la asignación hasta el despliegue de los cambios, pero del TTO sería del 100% ya que sí se asignó en el tiempo acordado.
+
+Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
