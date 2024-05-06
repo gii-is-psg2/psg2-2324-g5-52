@@ -28,6 +28,38 @@
 
 As a group, create a **technical report** (in Spanish) titled “Monitorización del Acuerdo de cliente de PetClinic Services (PSG2-2324-GX-XY)” which sums up the work performed to monitor the CA. For each request enumerated in A3.5, this document must contain at least a report of the degree to which the associated SLT is fulfilled, as well as the time elapsed between creating the issue in GitHub and its closure. You can use screenshots of iTop and GitHub that show when the issues were opened and closed. **Each member of the group should review at least one request** and assign it to another member. The assigned member should create a corresponding issue in GitHub and implement the request, updating both the issue in GitHub and the user request or incident in iTop once it is implemented. The technical report must be stored in a **docs** folder within the same repository using the Markdown syntax, updating the stored versions as the group works with it following the strategy defined in S1.
 
+## Pricing plans description
+
+![Captura iTop A3.5.a Vista cliente](../static/sprint3/CapturaiTopA3.5.aCliente.png)
+
+![Captura iTop A3.5.a Vista Panel de incidencias](../static/sprint3/CapturaiTopA3.5.aPanel.png)
+
+
+Como se puede ver en las capturas, la petición se abre en iTop el 3 de mayo a las 10:28 y se asigna a las 12:29, dando lugar a un TTO de 5 segundos, este tiempo tan pequeño se debe a que fue asignado por el creador de la request de forma automatica por error, dando lugar a un TTR de 72 horas.
+
+Se cumple al 100% el SLT asociado, ya que la urgencia es media (hemos supuesto que es usuario basic) y la prioridad es media:
+  - Nos daría un TTO objetivo de 32 horas y el TTO ha sido de 5 segundos.
+  - Nos daría un TTR objetivo de 82 horas y el TTR ha sido de 72 horas.
+
+Cabe destacar que la taea habia sido ralizada antes de las 72 horas pero no ha sido marcada como resuelta hasta el dia 6 por lo que se ha decidido contemplar la hora de resolución de iTop.
+
+![Captura A3.5.a Github 1](../static/sprint3/A3-5-a-1.png)
+
+Como se puede ver, en Github se creó la issue el dia 4 de mayo, 24 horas después de asignarse.
+
+![Captura A3.5.a Github 2](../static/sprint3/A3-5-a-2.png)
+
+Entrando en más detalle, podemos ver que se movió a la pipeline de To Do inmediatamente y se procedió a su implementación, cabe destacar que se movio directamente a in review ya que la tarea se realizo muy rapidamente, momento en el que se marca como resuelta en iTop y se mueve a In Review con su respectiva pull request.
+
+Tras la revisión del equipo, se hace merge de la rama a la rama de desarrollo, el despliegue de la nueva versión se realiza el domingo 5 de mayo por la mañana, momento en el que todas las issues se pasan a Done.
+
+Tras este análisis se pueden sacar 2 conclusiones:
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurren 72 horas desde que se asigna hasta que se implementa.
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100%, ya que transcurren 48 horas desde la asignación hasta el despliegue de los cambios, el TTO sería del 100% ya que sí se asignó en el tiempo acordado.
+
+Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
+
+
 
 ## Identify current plan task
 
