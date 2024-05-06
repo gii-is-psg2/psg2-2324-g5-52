@@ -88,3 +88,30 @@ Tras este análisis se pueden sacar 2 conclusiones:
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 0%, ya que transcurren más de 24 horas desde la asignación hasta el despliegue de los cambios, pero del TTO sería del 100% ya que sí se asignó en el tiempo acordado.
 
 Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
+
+## API Weather for PetClinic
+
+![Captura iTop A3.5.d Weather Vista Panel de incidencias](../static/sprint3/weather%20itop%20resuelto.png)
+
+Como se puede ver en las capturas, la petición se abre en iTop el 2 de mayo a las 15:16 y se asigna a las 16:24, dando lugar a un TTO de 1 hora y 8 minutos, bastante rápido gracias a la comunicación del equipo de soporte y el poco volumen de incidencias y trabajo. Además, se resolvió a las 11:39 del día 5 de mayo, dando lugar a un TTR de 68h.
+
+Se cumple totalmente el SLT asociado, ya que la urgencia es baja al ser el usuario BASIC y la prioridad es baja al ser una nueva funcionalidad que no afecta considerablemente a la plataforma:
+
+- Nos daría un TTO objetivo de 52 horas y el TTO ha sido de 1 horas y 8 minutos.
+- Nos daría un TTR objetivo de 104 horas y el TTO ha sido de 68 horas.
+
+Cabe destacar que se ha marcado como resuelta en iTop una vez estaba la funcionalidad revisada por el equipo y mergeada a la rama de desarrollo a falta del posterior despliegue.
+
+
+## API Traffic for PetClinic
+
+![Captura iTop A3.5.d Traffic Vista Panel de incidencias](../static/sprint3/trafico%20itop%20resuelto.png)
+
+Como se puede ver en las capturas, la petición se abre en iTop el 2 de mayo a las 16:13 y se asigna a las 16:26, dando lugar a un TTO de 13 minutos, bastante rápido gracias a la comunicación del equipo de soporte y el poco volumen de incidencias y trabajo. Además, se resolvió a las 11:37 del día 5 de mayo, dando lugar a un TTR de 68h.
+
+Se cumple totalmente el SLT asociado, ya que la urgencia es baja al ser el usuario BASIC y la prioridad es baja al ser una nueva funcionalidad que no afecta considerablemente a la plataforma:
+
+- Nos daría un TTO objetivo de 52 horas y el TTO ha sido de 13 minutos.
+- Nos daría un TTR objetivo de 104 horas y el TTO ha sido de 68 horas.
+
+Cabe destacar que se ha marcado como resuelta en iTop una vez estaba la funcionalidad revisada por el equipo y mergeada a la rama de desarrollo a falta del posterior despliegue.
