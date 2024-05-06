@@ -102,6 +102,19 @@ Se cumple totalmente el SLT asociado, ya que la urgencia es baja al ser el usuar
 
 Cabe destacar que se ha marcado como resuelta en iTop una vez estaba la funcionalidad revisada por el equipo y mergeada a la rama de desarrollo a falta del posterior despliegue.
 
+![Captura github 1 A3.5.d Weather](../static/sprint3/github%201%20weather%20in%20visits.png)
+
+Como se puede ver, en GitHub se creó la issue el mismo día en la que fue asignada la incidencia en iTop.
+
+![Captura github 2 A3.5.d Weather](../static/sprint3/github%202%20weather%20in%20visits.png)
+
+Entrando en más detalle, podemos ver que se movió a la pipeline de To Do inmediatamente y se procedió a su implementación. Más tarde se pasó la tarea a Done.
+
+Tras este análisis se pueden sacar 2 conclusiones:
+
+Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurre menos de un día.
+Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100% en este caso, ya que transcurren 68 horas desde la asignación hasta el despliegue de los cambios.
+
 
 ## API Traffic for PetClinic
 
@@ -115,3 +128,16 @@ Se cumple totalmente el SLT asociado, ya que la urgencia es baja al ser el usuar
 - Nos daría un TTR objetivo de 104 horas y el TTO ha sido de 68 horas.
 
 Cabe destacar que se ha marcado como resuelta en iTop una vez estaba la funcionalidad revisada por el equipo y mergeada a la rama de desarrollo a falta del posterior despliegue.
+
+![Captura github 1 A3.5.d Traffic](../static/sprint3/github%201%20traffic.png)
+
+Como se puede ver, en GitHub se creó la issue el mismo día en la que fue asignada la incidencia en iTop.
+
+![Captura github 2 A3.5.d Traffic](../static/sprint3/github%202%20traffic.png)
+
+En este caso no se conectó a tiempo la pull request a la issue de Zenhub y no se muestran los datos de cuando se movió entre las diferentes columnas.
+
+Tras este análisis se pueden sacar 2 conclusiones:
+
+Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurre menos de un día.
+Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100% en este caso, ya que transcurren 68 horas desde la asignación hasta el despliegue de los cambios.
