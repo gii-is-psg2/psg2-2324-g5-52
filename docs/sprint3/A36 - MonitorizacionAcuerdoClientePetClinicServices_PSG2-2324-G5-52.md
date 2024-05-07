@@ -24,11 +24,21 @@
 
 # Indice
 
+- [Introducción](#introducción)
+- [A3.5.a - Pricing plans description](#a35a---pricing-plans-description)
+- [A3.5.b - Identify current plan task](#a35b---identify-current-plan-task)
+- [A3.5.c - Remove the "Plan" page fot pet owners](#a35c---remove-the-plan-page-fot-pet-owners)
+- [A3.5.d. - Upgrade plan to Clinic 3](#a35d---upgrade-plan-to-clinic-3)
+- [A3.5.e1 - API-based extensions: API Weather for PetClinic](#a35e1---api-based-extensions-api-weather-for-petclinic)
+- [A3.5.e2 - API-based extensions: API Traffic for PetClinic](#a35e2---api-based-extensions-api-traffic-for-petclinic)
+
+
 # Introducción
 
-As a group, create a **technical report** (in Spanish) titled “Monitorización del Acuerdo de cliente de PetClinic Services (PSG2-2324-GX-XY)” which sums up the work performed to monitor the CA. For each request enumerated in A3.5, this document must contain at least a report of the degree to which the associated SLT is fulfilled, as well as the time elapsed between creating the issue in GitHub and its closure. You can use screenshots of iTop and GitHub that show when the issues were opened and closed. **Each member of the group should review at least one request** and assign it to another member. The assigned member should create a corresponding issue in GitHub and implement the request, updating both the issue in GitHub and the user request or incident in iTop once it is implemented. The technical report must be stored in a **docs** folder within the same repository using the Markdown syntax, updating the stored versions as the group works with it following the strategy defined in S1.
+En este informe resumiremos el trabajo realizado para monitorizar el Customer Agreement (CA en adelante) del servicio PetClinic. Para cada solicitud implementada en el punto A3.5 del Product Backlog (PB en adelante), realizaremos un pequeño estudio y análisis del grado de cumplimiento del SLT asociado, así como el tiempo transcurrido entre la creación de la tarea/issue en GitHub y su cierre. Utilizarremos capturas de pantalla de iTop y GitHub para mostrar cuándo se abrieron y cerraron dichas peticiones y tareas.
 
-## Pricing plans description
+
+## A3.5.a - Pricing plans description
 
 ![Captura iTop A3.5.a Vista cliente](../static/sprint3/CapturaiTopA3.5.aCliente.png)
 
@@ -41,7 +51,7 @@ Se cumple al 100% el SLT asociado, ya que la urgencia es media (hemos supuesto q
   - Nos daría un TTO objetivo de 32 horas y el TTO ha sido de 5 segundos.
   - Nos daría un TTR objetivo de 82 horas y el TTR ha sido de 72 horas.
 
-Cabe destacar que la taea habia sido ralizada antes de las 72 horas pero no ha sido marcada como resuelta hasta el dia 6 por lo que se ha decidido contemplar la hora de resolución de iTop.
+Cabe destacar que la tarea habia sido ralizada antes de las 72 horas pero no ha sido marcada como resuelta hasta el dia 6 por lo que se ha decidido contemplar la hora de resolución de iTop.
 
 ![Captura A3.5.a Github 1](../static/sprint3/A3-5-a-1.png)
 
@@ -55,13 +65,14 @@ Tras la revisión del equipo, se hace merge de la rama a la rama de desarrollo, 
 
 Tras este análisis se pueden sacar 2 conclusiones:
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurren 72 horas desde que se asigna hasta que se implementa.
+
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100%, ya que transcurren 48 horas desde la asignación hasta el despliegue de los cambios, el TTO sería del 100% ya que sí se asignó en el tiempo acordado.
 
 Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
 
 
 
-## Identify current plan task
+## A3.5.b - Identify current plan task
 
 ![Captura iTop A3.5.b Vista cliente](../static/sprint3/CapturaiTopA3.5.bCliente.png)
 
@@ -87,13 +98,16 @@ Entrando en más detalle, podemos ver que se movió a la pipeline de In Progress
 Tras la revisión del equipo, se hace merge de la rama a la rama de desarrollo el 4 de mayo a las 21:26 y el despliegue de la nueva versión se realiza el domingo 5 de mayo por la mañana, momento en el que todas las issues se pasan a Done.
 
 Tras este análisis se pueden sacar 2 conclusiones:
+
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurren 5 horas y 56 minutos desde que se asigna hasta que se implementa.
+
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 0%, ya que transcurren más de 24 horas desde la asignación hasta el despliegue de los cambios, pero del TTO sería del 100% ya que sí se asignó en el tiempo acordado.
 
 Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
 
 
-## Remove the "Plan" page fot pet owners
+
+## A3.5.c - Remove the "Plan" page fot pet owners
 
 ![Captura iTop A3.5.c Vista normal](../static/sprint3/A3-5-c-1.png)
 
@@ -116,12 +130,31 @@ Cabe destacar que se ha marcado como resuelta en iTop una vez estaba la funciona
 Tras la revisión del equipo, se hace merge de la rama a la rama de desarrollo (develop) y el despliegue de la nueva versión, cuando todas las issues se pasan a Done.
 
 Tras este análisis se pueden sacar 2 conclusiones:
+
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurren 2 días, 1 hora y 48 minutos desde que se asigna hasta que se implementa.
+
 - Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 0%, ya que transcurren más de 24 horas desde la asignación hasta el despliegue de los cambios, pero del TTO sería del 100% ya que sí se asignó en el tiempo acordado.
 
 Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la nueva versión cuando todos los cambios solicitados estuvieran correctamente implementados y revisados a través de las pull requests, cosa que ha retrasado bastante todos los tiempos.
 
-## API Weather for PetClinic
+
+## A3.5.d. - Upgrade plan to Clinic 3
+
+En la siguiente captura de pantalla se muestra la petición de usuario R-000617, correspondiente a la tarea A3.5.d del PB, en la que se nos indica que la propietaria de la clínica 3, Jane Doe, quiere actualizar su plan asociado a esta clínica al inmediatamente superior. Y que nos aseguremos de que la actualización persiste una vez realizada.
+
+![Captura iTop A3.5.d actualizada](../static/sprint3/A35d_UserRequestUpdated.png)
+
+Podemos comprobar en la imagen que la petición se creó en iTop el 03 de Mayo de 2024 a las 10:57, y que se asigna al técnico correspondiente a las 12:14 del mismo día, es decir, 1 hora y 17 minutos después, con lo cual éste sería el valor TTO para esta petición.
+
+Un TTO de 1 hora y 17 minutos está dentro del SLT establecido para el Plan BASIC que tiene contratado la cliente para su clínica 3, y para una prioridad asignada Alta, que nos daba un valor máximo de tiempo o valor objetivo de 14 horas según se especifica en el CA, con lo cual, se ha cumplido el SLA para esta petición en cuanto a métrica TTO.
+
+Asímismo, se puede comprobar que la fecha y hora de resolución de la petición fue el día 04 de mayo a las 22:32, dando un tiempo de resolucón o TTR de 1 día, 11 horas 24 minutos, debido a retrasos en la revisión y aprobación de la Pull Request asociada en GitHub. Aún así, el TTR conseguido está dentro de los límites del valor objetivo especificado en el SLA del CA, que es un valor de 56 horas para el Plan BASIC de la cliente y una prioridad Alta.
+
+Por tanto, podemos concluir que se han cumplido ambas métricas, TTO y TTR, para esta petición de usuario R-000617.
+
+
+
+## A3.5.e1 - API-based extensions: API Weather for PetClinic
 
 ![Captura iTop A3.5.d Weather Vista cliente](../static/sprint3/itop%20weather%20client%20view.png)
 
@@ -146,11 +179,13 @@ Entrando en más detalle, podemos ver que se movió a la pipeline de To Do inmed
 
 Tras este análisis se pueden sacar 2 conclusiones:
 
-Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurre menos de un día.
-Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100% en este caso, ya que transcurren 68 horas desde la asignación hasta el despliegue de los cambios.
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurre menos de un día.
+
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100% en este caso, ya que transcurren 68 horas desde la asignación hasta el despliegue de los cambios.
 
 
-## API Traffic for PetClinic
+
+## A3.5.e2 - API-based extensions: API Traffic for PetClinic
 
 ![Captura iTop A3.5.d Traffic Vista Cliente](../static/sprint3/itop%20traffic%20client%20view.png)
 
@@ -175,5 +210,6 @@ En este caso no se conectó a tiempo la pull request a la issue de Zenhub y no s
 
 Tras este análisis se pueden sacar 2 conclusiones:
 
-Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurre menos de un día.
-Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100% en este caso, ya que transcurren 68 horas desde la asignación hasta el despliegue de los cambios.
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que se implementa la funcionalidad solicitada o se corrije un bug, entonces podemos decir que para esta tarea, el SLT se cumple al 100%, ya que transcurre menos de un día.
+
+- Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo el equipo la aprueba y se despliegan los nuevos cambios, entonces el cumplimiento del SLT para el TTR sería del 100% en este caso, ya que transcurren 68 horas desde la asignación hasta el despliegue de los cambios.
