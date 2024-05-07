@@ -123,6 +123,8 @@ Por último, cabe destacar que el equipo ha acordado hacer el despliegue de la n
 
 ## API Weather for PetClinic
 
+![Captura iTop A3.5.d Weather Vista cliente](../static/sprint3/itop%20weather%20client%20view.png)
+
 ![Captura iTop A3.5.d Weather Vista Panel de incidencias](../static/sprint3/weather%20itop%20resuelto.png)
 
 Como se puede ver en las capturas, la petición se abre en iTop el 2 de mayo a las 15:16 y se asigna a las 16:24, dando lugar a un TTO de 1 hora y 8 minutos, bastante rápido gracias a la comunicación del equipo de soporte y el poco volumen de incidencias y trabajo. Además, se resolvió a las 11:39 del día 5 de mayo, dando lugar a un TTR de 68h.
@@ -149,6 +151,8 @@ Si para el TTR se tiene en cuenta el tiempo desde que se asigna hasta que todo e
 
 
 ## API Traffic for PetClinic
+
+![Captura iTop A3.5.d Traffic Vista Cliente](../static/sprint3/itop%20traffic%20client%20view.png)
 
 ![Captura iTop A3.5.d Traffic Vista Panel de incidencias](../static/sprint3/trafico%20itop%20resuelto.png)
 
