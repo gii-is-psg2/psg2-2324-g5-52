@@ -23,14 +23,14 @@
 
 
 # Indice
- - [Introducción](#introducción)
- - [Creación del equipo](#creación-del-equipo)
- - [Actualización de contraseñas para usuarios cliente](#actualización-de-contraseñas-para-usuarios-cliente)
- - [Capturas de pantalla del portal iTop disponible para clientes](#capturas-de-pantalla-del-portal-itop-disponible-para-clientes)
- - [Algunas capturas de pantalla sobre la Configuración de iTop](#algunas-capturas-de-pantalla-sobre-la-configuración-de-itop)
- - [Dificultades encontradas durante la configuración de iTop](#dificultades-encontradas-durante-la-configuración-de-itop)
- - [Funcionalidades que faltan en iTop para cubrir las tareas de este Sprint](#funcionalidades-que-faltan-en-itop-para-cubrir-las-tareas-de-este-sprint)
- - [Contribuciones de cada miembro del grupo](#contribuciones-de-cada-miembro-del-grupo)
+  - [Introducción](#introducción)
+  - [Creación del equipo](#creación-del-equipo)
+  - [Actualización de contraseñas para usuarios cliente](#actualización-de-contraseñas-para-usuarios-cliente)
+  - [Capturas de pantalla del portal iTop disponible para clientes](#capturas-de-pantalla-del-portal-itop-disponible-para-clientes)
+  - [Algunas capturas de pantalla sobre la Configuración de iTop](#algunas-capturas-de-pantalla-sobre-la-configuración-de-itop)
+  - [Dificultades encontradas durante la configuración de iTop](#dificultades-encontradas-durante-la-configuración-de-itop)
+  - [Funcionalidades que faltan en iTop para cubrir las tareas de este Sprint](#funcionalidades-que-faltan-en-itop-para-cubrir-las-tareas-de-este-sprint)
+  - [Contribuciones de cada miembro del grupo](#contribuciones-de-cada-miembro-del-grupo)
 
 ## Introducción
 
@@ -38,7 +38,7 @@ En este informe técnico se resumirá el trabajo realizado sobre la CMDB iTop du
 
 ## Creación del equipo
 
-Una vez comprobado que la organización de nuestro grupo, PSG2-2324-G5-52, tiene creados y asociados un Contacto por cada miembro del grupo, procedemos a crear el Equipo de iTop (Team) con el nombre solicitado, "PSG2-2324-G5-52 Team", asociarlo a nuestra Organización y asociarle a su vez todos los miembros de ella.
+Una vez comprobado que la organización de nuestro grupo, PSG2-2324-G5-52, tiene creados y asociados un Contacto por cada miembro del grupo, procedemos a crear el Equipo de iTop (Team) con el nombre solicitado, "PSG2-2324-G5-52 Team", asociarlo a nuestra Organización y asociarlo a su vez todos los miembros de ella.
 
 ## Actualización de contraseñas para usuarios cliente
 
@@ -66,7 +66,7 @@ Confirmación de iTop del Equipo una vez creado, con sus datos correspondientes 
 
 ![Captura de Team una vez creado](../static/sprint3/Creado_nuevo_Team_para_la%20Organizacion.png)
 
-A continuación se debe Editar el Equipo para realizar la asociación de miembros de la Organización al Equipo recien creado. La siguiente imagen muestra cómo queda el Equipo una vez asociados todos los miembros de nuestro grupo.
+A continuación se debe Editar el Equipo para realizar la asociación de miembros de la Organización al Equipo recién creado. La siguiente imagen muestra cómo queda el Equipo una vez asociados todos los miembros de nuestro grupo.
 
 ![Captura asociacion miembros a Team](../static/sprint3/Adicion_de%20miembros_al_equipo.png)
 
@@ -139,13 +139,13 @@ Una vez una incidencia o petición de usuario ha sido resuelta, podríamos ver s
 ![Incidencia resuelta para ClinicOwner1](../static/sprint3/IncidenciaResueltaClinicOwner1.png)
 
 
-Es en este momento, cuando una petición queda marcada como resuelta en iTop, cuando podriamos ver su tiempo de métrica TTR (Time To Resolve) y comprobar, por tanto, si hemos cumplido o no con el SLA establecido para el cliente en su Plan de precios contratado, y para la prioridad de petición que nos hubieran solicitado en este caso.
+Es en este momento, cuando una petición queda marcada como resuelta en iTop, cuando podríamos ver su tiempo de métrica TTR (Time To Resolve) y comprobar, por tanto, si hemos cumplido o no con el SLA establecido para el cliente en su Plan de precios contratado, y para la prioridad de petición que nos hubieran solicitado en este caso.
 
 ## Dificultades encontradas durante la configuración de iTop
 
 Una de las grandes dificultades encontradas ha sido que la web es muy poco intuitiva para el usuario, entonces para nuestra tarea a realizar, que era crear servicios, contratos, SLA y SLTs, que a priori suena como una tarea insignificante, nos ha llevado aproximadamente 2 horas. Además, de no ser por el documento proporcionado por los profesores, habría sido imposible llevar a cabo la tarea, ya que iTop no proporciona ningún tipo de guía o ayuda.
 
-Por otro lado, hemos tenido que repetir muchas veces la gran parte de los pasos a seguir, por ejemplo, a la hora de crear los SLTs para asignarlos a los SLA, hemos tenido que ir creando uno por uno hasta un total de 12 SLTs por cada SLA, que al final se ha hecho muy mecanico y pesado. Hubieramos agradecido que se pudiera hacer una creacion en lotes o algo parecido.
+Por otro lado, hemos tenido que repetir muchas veces la gran parte de los pasos a seguir, por ejemplo, a la hora de crear los SLTs para asignarlos a los SLA, hemos tenido que ir creando uno por uno hasta un total de 12 SLTs por cada SLA, que al final se ha hecho muy mecánico y pesado. Hubiéramos agradecido que se pudiera hacer una creación en lotes o algo parecido.
 
 Por último, lo más destacable ha sido a la hora de crear los Customer Contracts, que en lugar de crear un contrato para cada Clinic Owner con sus SLA correspondientes a los planes de precios, iTop sólo nos permite asignar un SLA a un contrato, por tanto hemos tenido que crear 3 contratos por cliente, para cada plan de precios.
 
@@ -160,7 +160,7 @@ Por último, lo más destacable ha sido a la hora de crear los Customer Contract
 | Miguel Hernández Sánchez         |                                                                        |
 | Rafael David Caro Medina         | Creación del Equipo (Team) en iTop y asociación de miembros y CIs      |
 | Rafael David Caro Medina         | Actualización de contraseñas para usuarios Cliente                     |
-| Rafael David Caro Medina         | Creación de 12 SLTs (TTOs y TTRs) del Plan Platinum ( para Sucategorias Incidents y User Request, prioridades High, Medium y Low)                                                                             |
+| Rafael David Caro Medina         | Creación de 12 SLTs (TTOs y TTRs) del Plan Platinum ( para Subcategorias Incidents y User Request, prioridades High, Medium y Low)                                                                             |
 | Rafael David Caro Medina         | Creación de 3 SLAs del Service Adoptions ( para Planes Basic, Gold y Platinum) |
 | Rafael David Caro Medina         | Asociación de sus 12 SLTS correspondientes a estos SLAs                     |
 | Rafael David Caro Medina         | Configuración y asociación del servicio Adoptions a Contratos de clientes y SLAs   |
