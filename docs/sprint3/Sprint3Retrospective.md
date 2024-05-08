@@ -25,7 +25,7 @@
 ## Introducción
 En este documento vamos a dejar reflejada la reunión que ha tratado la reunión a continuación de la clase.
 
-Se va a dejar costancia de las cosas positivas, negativas, errores que se han cometido y cosas a mejorar, que hemos visto en este Sprint de cara a futuros trabajos que vayamos a realizar.
+Se va a dejar constancia de las cosas positivas, negativas, errores que se han cometido y cosas a mejorar, que hemos visto en este Sprint de cara a futuros trabajos que vayamos a realizar.
 
 También, se va a realizar la valoración individual a cada uno de los miembros del grupo en base a su desempeño durante este primer Sprint.
 
@@ -42,7 +42,7 @@ ___
 ## Bad
 ¿Qué cosas hemos detectado que han ido mal en el grupo? 
 ___
-- Se han producido algunos retrasos debido a las Pull Request por el hecho de que teniamos que aceptarla todos.
+- Se han producido algunos retrasos debido a las Pull Request por el hecho de que teníamos que aceptarla todos.
 - Mala comunicación en algunas partes del Sprint.
 - Retraso de la realización de las tareas al comienzo del sprint debido a otras asignaturas.
 - Dejar alguna tarea de tamaño para los últimos días del Sprint.

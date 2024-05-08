@@ -97,7 +97,7 @@ const CustomerAgreement = () => {
                         </li>
                         <li>
                             <strong>User support periods</strong>
-                            <p>User support periods will be available from Monaday to Sunday from 9.00 am to 6.00 pm.</p>
+                            <p>User support periods will be available from Monday to Sunday from 9.00 am to 6.00 pm.</p>
                         </li>
                         <li>
                             <strong>Incident reporting procedure</strong>
@@ -236,6 +236,16 @@ const CustomerAgreement = () => {
                 <li>
                     <strong>Contact Information</strong>
                     <p>If you have any questions about this Agreement, please contact us at ramguerom@alum.us.es.</p>
+                </li>
+                <li>
+                    <strong>Contract termination</strong>
+                <p>Either party may terminate this agreement under the following circumstances:</p>
+                <p>1.Material Breach: If either party commits a material breach of any provision of this agreement and fails to remedy such breach within 7 days of receiving written notice from the other party specifying the breach.</p>
+                <p>2.Insolvency: If either party becomes insolvent, bankrupt, or enters into liquidation or receivership proceedings.</p>
+                <p>3.Force Majeure: If performance under this agreement is rendered impossible or unfeasible due to events beyond the reasonable control of either party, including but not limited to acts of nature, war, terrorism, government actions, or any other force majeure event lasting for a period of 20 days or more.</p>
+                <p>4.Mutual Agreement: If both parties mutually agree to terminate this agreement in writing.</p>
+                <p>5.In the event of termination, either party shall provide 14 days' prior written notice to the other party, except in cases of material breach where immediate termination may occur. </p>
+                <p>Upon termination, the Client shall immediately cease all use of the software service, and the Provider shall cease providing access to the software service. Any outstanding fees shall be paid within 7 days of termination. Termination of this agreement shall not relieve either party of any obligations incurred prior to termination."</p>
                 </li>
             </ol>
 
