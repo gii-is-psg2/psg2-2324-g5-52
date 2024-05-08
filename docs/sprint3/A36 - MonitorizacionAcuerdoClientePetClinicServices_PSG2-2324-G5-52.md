@@ -45,7 +45,7 @@ En este informe resumiremos el trabajo realizado para monitorizar el Customer Ag
 ![Captura iTop A3.5.a Vista Panel de incidencias](../static/sprint3/CapturaiTopA3.5.aPanel.png)
 
 
-Como se puede ver en las capturas, la petición se abre en iTop el 3 de mayo a las 10:28 y se asigna a las 12:29, dando lugar a un TTO de 5 segundos, este tiempo tan pequeño se debe a que fue asignado por el creador de la request de forma automatica por error, dando lugar a un TTR de 72 horas.
+Hemos considerado que era una solicitud de cambio y no una incidencia debido a que no impide el correcto funcionamiento de la aplicación. Como se puede ver en las capturas, la petición se abre en iTop el 3 de mayo a las 10:28 y se asigna a las 12:29, dando lugar a un TTO de 5 segundos, este tiempo tan pequeño se debe a que fue asignado por el creador de la request de forma automatica por error, dando lugar a un TTR de 72 horas.
 
 Se cumple al 100% el SLT asociado, ya que la urgencia es media (hemos supuesto que es usuario basic) y la prioridad es media:
   - Nos daría un TTO objetivo de 32 horas y el TTO ha sido de 5 segundos.
