@@ -64,7 +64,7 @@ const CustomerAgreement = () => {
                 <li>
                     <strong>Pricing</strong>
                     <p>
-                    <img src={pricingPlansImage} alt="Pricing plans"/>
+                    See pricing plans on Pricing Plans page.
                     </p>
                 </li>
                 <li>
