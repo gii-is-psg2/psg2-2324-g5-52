@@ -66,7 +66,7 @@ Fecha de finalización: 07 de mayo de 2024
 ## Sprint Backlog
 | Elemento | Estimación | Responsable |
 |----------|------------|-------------|
-| **A3.2-** Creat el Costumer Agreement | A dividir | Grupo |
+| **A3.2-** Crear el Costumer Agreement | A dividir | Grupo |
 | **A3.2.a-** Servicios asociados y descripción | 30 minutos | Rafael |
 | **A3.2.b-** Planes de Pricing| 1 hora | David |
 | **A3.2.c-** Duración y terminación| 30 minutos | Benjamín |
@@ -76,7 +76,7 @@ Fecha de finalización: 07 de mayo de 2024
 | **A3.4-** Implementación de iTop para la Organización| sin estimar | Grupo |
 | **A3.5.a-** Descripción de plan de pago | 1 hora | Miguel |
 | **A3.5.b-** Identificar el plan actual | 1 hora | David |
-| **A3.5.c-** Borrar el plan de la pagina de Owner | 1 hora | Benjamín |
+| **A3.5.c-** Borrar el plan de la página de Owner | 1 hora | Benjamín |
 | **A3.5.d-** Mejorar el plan de Clinc 3 | 1 hora | Ramón |
 | **A3.5.e-** Extensiones basadas en API | 1 hora | Rafael |
 | **A3.6-** Monitorización del Acuerdo de cliente de PetClinic Services | 2 horas | Benjamín |

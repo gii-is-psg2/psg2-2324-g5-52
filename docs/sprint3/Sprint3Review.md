@@ -33,7 +33,7 @@ Tras presentar esto, se recibió el siguiente feedback:
   - Cambiar los precios puestos en la tabla de pricing (son demasiado bajos actualmente).
   - Realizar el análisis de riesgo y capacidad.
   - Justificar porque hemos puesto ese estado en el A3.5.a
-  - Cambiar la definición de hecho, debido a que ahora hay que marcarlo como resuelto en iTop tambien.
+  - Cambiar la definición de hecho, debido a que ahora hay que marcarlo como resuelto en iTop también.
 
 ## Conclusiones
 En conclusión, los principales conflictos se han detectado en la configuración del iTop y en el momento de hacer la release.
