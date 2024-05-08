@@ -97,7 +97,7 @@ const CustomerAgreement = () => {
                         </li>
                         <li>
                             <strong>User support periods</strong>
-                            <p>User support periods will be available from Monaday to Sunday from 9.00 am to 6.00 pm.</p>
+                            <p>User support periods will be available from Monday to Sunday from 9.00 am to 6.00 pm.</p>
                         </li>
                         <li>
                             <strong>Incident reporting procedure</strong>
