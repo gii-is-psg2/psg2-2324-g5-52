@@ -9,6 +9,8 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import {fetchWithPricingInterceptor} from "pricing4react";
+import { Feature, On, Default, feature } from "pricing4react";
 
 export default function OwnerConsultationList() {
   let [consultations, setConsultations] = useState([]);
@@ -115,7 +117,7 @@ export default function OwnerConsultationList() {
 
   async function setUp() {
     const consultations = await (
-      await fetch("/api/v1/consultations", {
+      await fetchWithPricingInterceptor("/api/v1/consultations", {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
@@ -127,7 +129,7 @@ export default function OwnerConsultationList() {
     setFiltered(consultations);
 
     const owner = await (
-      await fetch(`/api/v1/plan`, {
+      await fetchWithPricingInterceptor(`/api/v1/plan`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
@@ -145,7 +147,9 @@ export default function OwnerConsultationList() {
 
   return (
     <div>
-      <Container style={{ marginTop: "15px" }} fluid>
+      <Feature>
+        <On expression={feature("haveOnlineConsultation")}>
+        <Container style={{ marginTop: "15px" }} fluid>
         <h1 className="text-center" style={{ backgroundColor: '#90EE90' }}>Consultations</h1>
         <Row className="row-cols-auto g-3 align-items-center">
           <Col>
@@ -201,6 +205,12 @@ export default function OwnerConsultationList() {
           </tbody>
         </Table>
       </Container>
+        </On>
+        <Default>
+          <p>Adoptions disabled due to constraints in your plan</p>
+        </Default>
+      </Feature>
+      
     </div>
   );
 }

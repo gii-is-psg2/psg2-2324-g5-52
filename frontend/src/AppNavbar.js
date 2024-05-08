@@ -3,12 +3,30 @@ import { Navbar, NavbarBrand, NavLink, NavItem, Nav, NavbarText, NavbarToggler, 
 import { Link } from 'react-router-dom';
 import tokenService from './services/token.service';
 import jwt_decode from "jwt-decode";
+import { IoDiamond } from "react-icons/io5";
+import { BsCoin } from "react-icons/bs";
+import { GrMoney } from "react-icons/gr";
 
 function AppNavbar() {
     const [roles, setRoles] = useState([]);
     const [username, setUsername] = useState("");
     const jwt = tokenService.getLocalAccessToken();
     const [collapsed, setCollapsed] = useState(true);
+    const plan = tokenService.getPlan();
+    const validRoleToShowPricing = roles[0] === 'OWNER' || roles[0] === 'VET';
+
+    function getPlanIcon(planName) {
+        switch (planName.toLowerCase()) {
+            case "platinum":
+                return <IoDiamond />;
+            case "gold":
+                return <BsCoin />;
+            case "basic":
+                return <GrMoney />;
+            default:
+                return null; // Manejar el caso de un plan desconocido o nulo
+        }
+    }
 
     const toggleNavbar = () => setCollapsed(!collapsed);
 
@@ -24,6 +42,7 @@ function AppNavbar() {
     let userLinks = <></>;
     let userLogout = <></>;
     let publicLinks = <></>;
+
 
     roles.forEach((role) => {
         if (role === "ADMIN") {
@@ -63,11 +82,9 @@ function AppNavbar() {
                         <NavLink style={{ color: "white" }} tag={Link} to="/consultations">Consultations</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/plan">Plan</NavLink>
-                    </NavItem>
-                    <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/adoptions">Adoptions</NavLink>
                     </NavItem>
+
                 </>
             )
         }
@@ -99,6 +116,9 @@ function AppNavbar() {
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/petHotelRooms">Pet Hotel Rooms</NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
+                    </NavItem>
                 </>
             )
         }
@@ -109,6 +129,9 @@ function AppNavbar() {
             <>
                 <NavItem>
                     <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink style={{ color: "white" }} id="CA" tag={Link} to="/CA">CA Document</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
@@ -127,17 +150,22 @@ function AppNavbar() {
                 <NavItem>
                     <NavLink style={{ color: "white" }} tag={Link} to="/dashboard">Dashboard</NavLink>
                 </NavItem>
+
             </>
         )
         userLogout = (
             <>
                 <NavItem>
-                    <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
+                    <NavLink style={{ color: "white" }} id="CA" tag={Link} to="/CA">CA Document</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
+                    <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
                 </NavItem>
+                
                 <NavbarText style={{ color: "white" }} className="justify-content-end">{username}</NavbarText>
+                {validRoleToShowPricing && plan === 'PLATINUM' && <NavbarText style={{ color: "silver" }} className="justify-content-end">--{plan} {getPlanIcon(plan)}</NavbarText>}
+                {validRoleToShowPricing && plan === 'GOLD' && <NavbarText style={{ color: "gold" }} className="justify-content-end">--{plan} {getPlanIcon(plan)}</NavbarText>}
+                {validRoleToShowPricing && plan === 'BASIC' && <NavbarText style={{ color: "white" }} className="justify-content-end">--{plan} {getPlanIcon(plan)}</NavbarText>}
                 <NavItem className="d-flex">
                     <NavLink style={{ color: "white" }} id="logout" tag={Link} to="/logout">Logout</NavLink>
                 </NavItem>

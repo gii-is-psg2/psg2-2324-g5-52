@@ -38,7 +38,7 @@
     align-items: center;
     width: 100%;
     max-width: 300px;
-    height: 600px;
+    height: 650px;
     background: linear-gradient(-45deg, rosybrown, saddlebrown);
     border-radius: 15px;
     padding: 40px 20px;
@@ -315,3 +315,62 @@
   .pricing-button:hover {
     transform: scale(1.1);
   }
+
+  
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:large;
+}
+
+.pricing-table-feature {
+  background: linear-gradient(-45deg, rgb(213, 204, 204), rgb(188, 130, 80));
+  color: white;
+}
+
+.pricing-table-free {
+  background: linear-gradient(-45deg, rgb(185, 174, 174), rgb(145, 94, 58));
+  color: white;
+  }
+
+.pricing-table-gold {
+  background: linear-gradient(-45deg, rgb(142, 132, 132), rgb(142, 81, 37));
+  color: white;
+}
+
+.pricing-table-platinum {
+  background: linear-gradient(-45deg, rgb(243, 216, 216), rgb(75, 37, 10));
+  color: white;
+}
+
+.pricing-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.pricing-table tr:hover {
+  background-color: #ddd;
+}
+
+.pricing-table .plan-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.pricing-table .plan-price {
+  font-size: 1.4em;
+  color: #2a9fd6;
+}
+
+.pricing-table .plan-features {
+  font-size: 1em;
+  color: #777;
+}

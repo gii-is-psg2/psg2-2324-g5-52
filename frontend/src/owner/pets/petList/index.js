@@ -6,6 +6,8 @@ import tokenService from "../../../services/token.service";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
 import { useState, useEffect } from "react";
+import {fetchWithPricingInterceptor} from "pricing4react";
+import { Feature, On, Default, feature } from "pricing4react";
 
 export default function OwnerPetList() {
   let [pets, setPets] = useState([]);
@@ -16,7 +18,7 @@ export default function OwnerPetList() {
   const jwt = tokenService.getLocalAccessToken();
 
   function removePet(id) {
-    fetch(`/api/v1/pets/${id}`, {
+    fetchWithPricingInterceptor(`/api/v1/pets/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -38,7 +40,7 @@ export default function OwnerPetList() {
   }
 
   function changeAdoptStatus(id) {
-    fetch(`/api/v1/pets/onAdoption/${id}`, {
+    fetchWithPricingInterceptor(`/api/v1/pets/onAdoption/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -53,7 +55,7 @@ export default function OwnerPetList() {
 
   async function removeVisit(petId, visitId) {
     let status = "";
-    await fetch(`/api/v1/pets/${petId}/visits/${visitId}`, {
+    await fetchWithPricingInterceptor(`/api/v1/pets/${petId}/visits/${visitId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -89,7 +91,7 @@ export default function OwnerPetList() {
 
   async function setUp() {
     let pets = await (
-      await fetch(`/api/v1/pets?userId=${user.id}`, {
+      await fetchWithPricingInterceptor(`/api/v1/pets?userId=${user.id}`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
@@ -101,13 +103,14 @@ export default function OwnerPetList() {
       for (let pet of pets) {
         let index = pets.findIndex((obj) => obj.id === pet.id);
         const visits = await (
-          await fetch(`/api/v1/pets/${pet.id}/visits`, {
+          await fetchWithPricingInterceptor(`/api/v1/pets/${pet.id}/visits/weather`, {
             headers: {
               Authorization: `Bearer ${jwt}`,
               "Content-Type": "application/json",
             },
           })
         ).json();
+        console.log(visits)
         if (visits.message) setMessage(visits.message);
         else pets[index]["visits"] = visits;
       }
@@ -118,6 +121,11 @@ export default function OwnerPetList() {
   useEffect(() => {
     setUp();
   }, []);
+
+  const getRandomTraffic = () => {
+    const traffic = ["low", "medium", "high"];
+    return traffic[Math.floor(Math.random() * traffic.length)];
+  }
 
   return (
     <div>
@@ -165,13 +173,17 @@ export default function OwnerPetList() {
                   >
                     Delete
                   </button>
-                  <button
-                    onClick={() => changeAdoptStatus(pet.id)}
-                    className="auth-button brown"
-                    style={{ background: "#573A34", color: "white" }}
-                  >
-                    {pet.onAdoption ? "Change adoption status" : "Put on adoption"}
-                  </button>
+                  <Feature>
+                    <On expression={feature("adoptions")}>
+                      <button
+                      onClick={() => changeAdoptStatus(pet.id)}
+                      className="auth-button brown"
+                      style={{ background: "#573A34", color: "white" }}
+                      >
+                      {pet.onAdoption ? "Change adoption status" : "Put on adoption"}
+                      </button>
+                    </On>
+                  </Feature>
                 </div>
                 <div className="pet-visits">
                   {pet.visits && pet.visits.length > 0 ? (
@@ -184,25 +196,35 @@ export default function OwnerPetList() {
                           <SplideSlide className="carousel-slide" key={index}>
                             <span>
                               <strong>Date and Time:</strong>{" "}
-                              {moment(visit.datetime).format(
+                              {moment(visit.visit.datetime).format(
                                 "DD/MM/YYYY HH:mm"
                               )}
                             </span>
                             <span>
-                              <strong>Vet:</strong> {visit.vet.firstName}{" "}
-                              {visit.vet.lastName}
+                              <strong>Vet:</strong> {visit.visit.vet.firstName}{" "}
+                              {visit.visit.vet.lastName}
                             </span>
+
+                            <span>
+                              <strong>Traffic:</strong> {getRandomTraffic()}
+                            </span>
+
+                            <span>
+                              <strong>Weather:</strong>
+                            </span>
+                            <span>Temperature: {visit.weather.temp}ºC</span>
+                            <span>Sky: {visit.weather.weatherType}</span>
                             <div className="options-row">
-                              {new Date(visit.datetime) > Date.now() && (
+                              {new Date(visit.visit.datetime) > Date.now() && (
                                 <button
                                   className="cancel-visit-button"
-                                  onClick={() => removeVisit(pet.id, visit.id)}
+                                  onClick={() => removeVisit(pet.id, visit.visit.id)}
                                 >
                                   Cancel
                                 </button>
                               )}
                               <Link
-                                to={`/myPets/${pet.id}/visits/${visit.id}`}
+                                to={`/myPets/${pet.id}/visits/${visit.visit.id}`}
                                 className="edit-visit-button"
                                 style={{ textDecoration: "none", color: "white", background: "#31110B" }}
                               >

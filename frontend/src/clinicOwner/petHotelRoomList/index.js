@@ -6,6 +6,7 @@ import useFetchState from "../../util/useFetchState";
 import getErrorModal from "../../util/getErrorModal";
 import "../../static/css/admin/adminPage.css";
 import { useNavigate } from "react-router-dom";
+import { Default, ErrorFallback, Feature, On, feature } from "pricing4react";
 
 const user = tokenService.getUser();
 const jwt = tokenService.getLocalAccessToken();
@@ -50,28 +51,39 @@ export default function PetHotelRoomList() {
   return (
     <div>
       <div className="admin-page-container">
-        <h1 className="text-center">Pet Hotel Rooms</h1>
-        {alerts.map((a) => a.alert)}
-        {modal}
-        <div className="float-right">
-          <Button color="success" tag={Link} to="/petHotelRooms/new">
-            Add a Pet Hotel Room
-          </Button>
-        </div>
-        <span>&nbsp;&nbsp;</span>
-        <div>
-          <Table aria-label="clinics" className="mt-4">
-            <thead>
-              <tr>
-                <th width="15%" className="text-center">Name</th>
-                <th width="15%" className="text-center">Pet Type</th>
-                <th width="15%" className="text-center">Clinic</th>
-                <th width="15%" className="text-center">Size</th>
-              </tr>
-            </thead>
-            <tbody>{petHotelList}</tbody>
-          </Table>
-        </div>
+        <Feature>
+          <On expression={feature("roomService")}>
+            <h1 className="text-center">Pet Hotel Rooms</h1>
+            {alerts.map((a) => a.alert)}
+            {modal}
+            <div className="float-right">
+              <Button color="success" tag={Link} to="/petHotelRooms/new">
+                Add a Pet Hotel Room
+              </Button>
+            </div>
+            <span>&nbsp;&nbsp;</span>
+            <div>
+              <Table aria-label="clinics" className="mt-4">
+                <thead>
+                  <tr>
+                    <th width="15%" className="text-center">Name</th>
+                    <th width="15%" className="text-center">Pet Type</th>
+                    <th width="15%" className="text-center">Clinic</th>
+                    <th width="15%" className="text-center">Size</th>
+                  </tr>
+                </thead>
+                <tbody>{petHotelList}</tbody>
+              </Table>
+            </div>
+          </On>
+          <Default>
+            <p>Adoptions disabled due to constraints in your plan</p>
+          </Default>
+          <ErrorFallback>
+            <p>Something went wrong</p>
+          </ErrorFallback>
+        </Feature>
+        
       </div>
     </div>
   );

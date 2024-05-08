@@ -393,6 +393,7 @@ Si esta se trata de código:
 - Toda la funcionalidad de la tarea está satisfecha.
 - El código ha sido revisado y aprobado por el equipo.
 - La funcionalidad ha sido integrada con éxito en la rama principal (`develop` o `main` según corresponda).
+- La tarea ha sido resuelta en iTop.
 
 Si esta se trata de documentación:
 - El documento recoja toda la información referente a este.
